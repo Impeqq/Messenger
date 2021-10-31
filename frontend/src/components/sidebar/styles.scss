@@ -1,0 +1,17 @@
+.sidebar {
+  width: 378px;
+  padding: 24px 24px 40px 24px;
+  flex-shrink: 0;
+
+  & > div:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .sidebar-footer {
+    margin-top: 80px;
+
+    & > button {
+      margin: 10px 0;
+    }
+  }
+}

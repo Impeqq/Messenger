@@ -1,0 +1,28 @@
+.avatar {
+  position: relative;
+
+  .online {
+    position: absolute;
+    background: linear-gradient(180deg, #08b395 0%, #0c977f 100%);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    bottom: 1px;
+    right: 1px;
+    transition: 0.1s ease all;
+  }
+
+  .notifications {
+    position: absolute;
+    background: linear-gradient(180deg, #ff5959 0%, #ef2c2c 100%);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    right: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,37 @@
+.images {
+  height: 800px;
+  width: 55%;
+  text-align: center;
+  position: relative;
+
+  .title {
+    font-size: 24px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .images-group {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 45%;
+    }
+  }
+
+  .mobile-info {
+    margin-top: 50px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+}

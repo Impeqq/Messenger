@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #757d8a;
+  padding: 14px 0;
+}
+
+.friends-list {
+  & > div {
+    padding: 16px;
+    transition: 0.1s ease all;
+    cursor: pointer;
+
+    & span {
+      transition: 0.1s ease all;
+    }
+
+    &:hover {
+      background: #4e73f8;
+      & span {
+        color: #ffffff;
+      }
+
+      & > div:first-child > div {
+        background: #ffffff;
+        border: 2px solid #4e73f8;
+      }
+
+      & > div:last-child > div {
+        color: #4e73f8;
+        background: #ffffff;
+      }
+    }
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.button {
+  box-shadow: 0px 2px 4px -2px rgba(27, 46, 94, 0.08);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #4e73f8;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 24px;
+  & svg {
+    margin-right: 8px;
+    fill: #4e73f8;
+  }
+}

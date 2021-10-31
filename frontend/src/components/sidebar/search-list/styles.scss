@@ -1,0 +1,48 @@
+.search {
+  position: relative;
+
+  .search-list {
+    position: absolute;
+    border: 1px solid #e1e3e6;
+    background: #fff;
+    border-radius: 8px;
+    width: 100%;
+    top: calc(100% + 10px);
+    z-index: 1;
+
+    & > div {
+      padding: 16px;
+      transition: 0.1s ease all;
+      cursor: pointer;
+
+      & span {
+        transition: 0.1s ease all;
+      }
+
+      &:hover {
+        & span {
+          color: #4e73f8;
+        }
+
+        & svg {
+          fill: #4e73f8;
+        }
+
+        & > div:first-child > div {
+          background: #ffffff;
+          border: 2px solid #4e73f8;
+        }
+
+        & > div:last-child > div {
+          color: #4e73f8;
+          background: #ffffff;
+        }
+      }
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

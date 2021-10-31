@@ -1,0 +1,19 @@
+type Chat {
+  id: String!
+  users: [User]
+  messages: [Message]
+  createdAt: String!
+}
+
+type Query {
+  getChat(id: String, offset: Int, limit: Int): Chat!
+  getMyChats: [Chat]
+}
+
+type Mutation {
+  createChat(user_to: String): Chat!
+}
+
+type Subscription {
+  chatUpdated(user_id: String): Chat
+}

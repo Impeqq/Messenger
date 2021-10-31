@@ -1,0 +1,66 @@
+.header {
+  padding: 19px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e3e6;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 32px;
+    color: #5a6474;
+  }
+
+  .arrow {
+    background: #f1f2f3;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .not-auth-block {
+    padding: 9px 0;
+    font-size: 18px;
+
+    .login {
+      color: #5a6474;
+      margin-right: 40px;
+      &:hover {
+        color: #4e73f8;
+      }
+    }
+
+    .register {
+      color: #fff;
+      background: #4e73f8;
+      padding: 10px 20px;
+      border-radius: 8px;
+      &:hover {
+        background: #3a59c9;
+      }
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+
+    .info {
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      width: 240px;
+
+      & > span:first-child {
+        font-size: 18px;
+        font-weight: 500;
+        color: #5a6474;
+      }
+
+      & > span:last-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4e73f8;
+      }
+    }
+  }
+}

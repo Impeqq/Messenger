@@ -1,0 +1,51 @@
+.user-item {
+  display: flex;
+  border-radius: 8px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:nth-child(2) {
+      width: calc(100% - 86px);
+    }
+    &:last-child {
+      align-items: center;
+    }
+  }
+
+  svg {
+    transition: 0.1s ease all;
+    fill: #5a6474;
+  }
+
+  .info {
+    margin-left: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5a6474;
+
+    & span {
+      margin-left: 8px;
+    }
+  }
+
+  .message {
+    font-size: 16px;
+    font-weight: 400;
+    color: #757d8a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .time {
+    font-size: 14px;
+    font-weight: 400;
+    color: #757d8a;
+    margin-bottom: 4px;
+  }
+}

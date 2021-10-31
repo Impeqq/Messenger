@@ -1,0 +1,32 @@
+.error-message {
+  border: 1px solid #f43c3c;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fffbfb;
+  text-align: left;
+
+  .title {
+    font-weight: 600;
+    color: #f43c3c;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #f43c3c;
+      bottom: -2px;
+      left: 0;
+    }
+  }
+
+  .description {
+    color: #5a6474;
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,20 @@
+type Message {
+  id: String
+  message: String
+  chat: Chat
+  user_from: User
+  createdAt: String
+}
+
+type Mutation {
+  sendMessage(input: SendMessageInput): Message
+}
+
+input SendMessageInput {
+  chat_id: String!
+  message: String!
+}
+
+type Subscription {
+  messageSent(chatId: String): Message
+}

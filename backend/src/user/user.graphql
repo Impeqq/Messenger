@@ -1,0 +1,30 @@
+type User {
+  id: ID!
+  email: String!
+  password: String!
+  firstName: String!
+  lastName: String!
+}
+
+type Query {
+  me: User
+  myMessages: [Message]
+  searchUser(name: String): [User]
+}
+
+type Mutation {
+  signUp(input: SignUpInput): String
+  signIn(input: SignInInput): String
+}
+
+input SignUpInput {
+  email: String!
+  password: String!
+  firstName: String!
+  lastName: String!
+}
+
+input SignInInput {
+  email: String!
+  password: String!
+}

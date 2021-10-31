@@ -1,0 +1,28 @@
+.content {
+  max-width: 1240px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  & > * {
+    color: #fff;
+  }
+}
+
+.lightning {
+  position: fixed;
+  left: 85px;
+  top: 0;
+}
+
+.pattern {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  height: 100vh;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+}

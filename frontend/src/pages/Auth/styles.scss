@@ -1,0 +1,16 @@
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+
+  .auth-block {
+    width: 40%;
+    color: #5a6474;
+
+    input {
+      margin-bottom: 30px;
+    }
+  }
+}

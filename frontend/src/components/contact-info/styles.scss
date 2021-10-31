@@ -1,0 +1,85 @@
+.contact-info {
+  width: 378px;
+  flex-shrink: 0;
+  margin: 24px 24px 40px 24px;
+  background: #ffffff;
+  border-radius: 8px;
+
+  .header {
+    border-bottom: 1px solid #e1e3e6;
+    font-size: 18px;
+    font-weight: 700;
+    color: #404d61;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 24px;
+  }
+
+  .avatar {
+    background: linear-gradient(180deg, #fca549 0%, #f39531 100%);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    padding: 19px 0;
+  }
+
+  .title {
+    margin-top: 16px;
+    color: #5a6474;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .members {
+    color: #757d8a;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .first-info {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #e1e3e6;
+  }
+
+  .buttons {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+      border: 1px solid #e1e3e6;
+      padding: 8px 0;
+      box-shadow: 0px 4px 2px -2px rgba(27, 46, 94, 0.02);
+      text-align: center;
+      width: 48%;
+      border-radius: 8px;
+      transition: 0.1s ease all;
+      background: #ffffff;
+
+      &:hover {
+        background: #4e73f8;
+        border: 1px solid #4e73f8;
+
+        & svg {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
+  .second-info {
+    border-bottom: 1px solid #e1e3e6;
+    padding: 16px 24px;
+
+    & > div {
+      padding: 6px 0;
+    }
+  }
+}
