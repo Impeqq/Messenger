@@ -76,7 +76,12 @@ export const RegisterBlock = () => {
         message={error?.message}
       />
       <InputGroup>
-        <Button text={"Sign Up"} type={ButtonType.SUBMIT} loading={loading} />
+        <Button
+          text={"Sign Up"}
+          type={ButtonType.SUBMIT}
+          loading={loading}
+          withDisable={true}
+        />
         <Button
           text={"Sign Up"}
           iconDirection={IconDirection.RIGHT}

@@ -61,6 +61,7 @@ export const ChangePassword = () => {
         <Button
           text={"Change password"}
           type={ButtonType.SUBMIT}
+          withDisable={true}
           loading={loading}
         />
         <Input

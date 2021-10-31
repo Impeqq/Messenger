@@ -72,6 +72,7 @@
   &.disabled {
     background: $c_button_disabled;
     color: $c_white;
+    cursor: unset;
     &:hover {
       background: $c_button_disabled_hover;
     }

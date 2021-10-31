@@ -117,7 +117,12 @@ export const ChangeInformation = () => {
           style={ButtonStyle.OUTLINE}
           onClick={handleReset}
         />
-        <Button text={"Update"} type={ButtonType.SUBMIT} loading={loading} />
+        <Button
+          text={"Update"}
+          type={ButtonType.SUBMIT}
+          withDisable={true}
+          loading={loading}
+        />
       </InputGroup>
     </BaseForm>
   );

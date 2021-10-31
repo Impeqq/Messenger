@@ -10,10 +10,10 @@ import { RouteParams } from "@features/types";
 import { useParams } from "react-router-dom";
 import { BaseForm } from "@components";
 import { useForm } from "react-hook-form";
-import { Button, Input } from "@ui";
+import { Button, ButtonType, Input } from "@ui";
 
 export const Typing = () => {
-  const [sendMessage] = useMutation(SEND_MESSAGE);
+  const [sendMessage, { loading }] = useMutation(SEND_MESSAGE);
 
   const { id } = useParams<RouteParams>();
 
@@ -55,8 +55,11 @@ export const Typing = () => {
       <div>
         <MicIcon />
         <Button
+          type={ButtonType.SUBMIT}
           className={styles.button}
           text={""}
+          withDisable={true}
+          loading={loading}
           icon={<SendIcon fill="#ffffff" />}
         />
       </div>
