@@ -786,7 +786,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"AUTH_TOKEN\": function() { return /* binding */ AUTH_TOKEN; },\n/* harmony export */   \"API\": function() { return /* binding */ API; }\n/* harmony export */ });\nvar AUTH_TOKEN = \"auth-token\";\nvar API = undefined || \"localhost:5000\";\n\n//# sourceURL=webpack://frontend/./src/features/constants/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"AUTH_TOKEN\": function() { return /* binding */ AUTH_TOKEN; },\n/* harmony export */   \"API\": function() { return /* binding */ API; }\n/* harmony export */ });\nvar AUTH_TOKEN = \"auth-token\";\nvar API = \"messenger-bravedevelopers.herokuapp.com:5000\";\n\n//# sourceURL=webpack://frontend/./src/features/constants/index.ts?");
 
 /***/ }),
 
