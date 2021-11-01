@@ -1,0 +1,648 @@
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/organisms/header/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+.styles__header___6NjK {
+  padding: 19px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e3e6;
+  display: flex;
+  justify-content: space-between; }
+  .styles__header___6NjK .styles__logo__ZUKdv {
+    font-size: 32px;
+    color: #5a6474; }
+  .styles__header___6NjK .styles__arrow__CJEtq {
+    background: #f1f2f3;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px; }
+  .styles__header___6NjK .styles__not-auth-block__kjMnF {
+    padding: 9px 0;
+    font-size: 18px; }
+    .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__login__jqunA {
+      color: #5a6474;
+      margin-right: 40px; }
+      .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__login__jqunA:hover {
+        color: #4e73f8; }
+    .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__register____9B_ {
+      color: #fff;
+      background: #4e73f8;
+      padding: 10px 20px;
+      border-radius: 8px; }
+      .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__register____9B_:hover {
+        background: #3a59c9; }
+  .styles__header___6NjK .styles__user-info___UTWY {
+    display: flex;
+    align-items: center; }
+    .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 {
+      margin-left: 16px;
+      display: flex;
+      flex-direction: column;
+      width: 240px; }
+      .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:first-child {
+        font-size: 18px;
+        font-weight: 500;
+        color: #5a6474; }
+      .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:last-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4e73f8; }
+
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/styles.scss ***!
+  \********************************************************************************************************************************************************************************************************************************/
+.styles__sidebar__WtHVo {
+  width: 378px;
+  padding: 24px 24px 40px 24px;
+  flex-shrink: 0; }
+  .styles__sidebar__WtHVo > div:not(:first-child) {
+    margin-top: 24px; }
+  .styles__sidebar__WtHVo .styles__sidebar-footer__bf55E {
+    margin-top: 80px; }
+    .styles__sidebar__WtHVo .styles__sidebar-footer__bf55E > button {
+      margin: 10px 0; }
+
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/friends-list/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+.styles__header__FLMyW {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #757d8a;
+  padding: 14px 0; }
+
+.styles__friends-list__aWT_R > div {
+  padding: 16px;
+  transition: 0.1s ease all;
+  cursor: pointer; }
+  .styles__friends-list__aWT_R > div span {
+    transition: 0.1s ease all; }
+  .styles__friends-list__aWT_R > div:hover {
+    background: #4e73f8; }
+    .styles__friends-list__aWT_R > div:hover span {
+      color: #ffffff; }
+    .styles__friends-list__aWT_R > div:hover > div:first-child > div {
+      background: #ffffff;
+      border: 2px solid #4e73f8; }
+    .styles__friends-list__aWT_R > div:hover > div:last-child > div {
+      color: #4e73f8;
+      background: #ffffff; }
+
+.styles__friends-list__aWT_R img {
+  width: 40px;
+  height: 40px; }
+
+.styles__button__XBeQ0 {
+  box-shadow: 0px 2px 4px -2px rgba(27, 46, 94, 0.08);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #4e73f8;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 24px; }
+  .styles__button__XBeQ0 svg {
+    margin-right: 8px;
+    fill: #4e73f8; }
+
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/search-list/styles.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+.styles__search___itr8 {
+  position: relative; }
+  .styles__search___itr8 .styles__search-list___AMQx {
+    position: absolute;
+    border: 1px solid #e1e3e6;
+    background: #fff;
+    border-radius: 8px;
+    width: 100%;
+    top: calc(100% + 10px);
+    z-index: 1; }
+    .styles__search___itr8 .styles__search-list___AMQx > div {
+      padding: 16px;
+      transition: 0.1s ease all;
+      cursor: pointer; }
+      .styles__search___itr8 .styles__search-list___AMQx > div span {
+        transition: 0.1s ease all; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover span {
+        color: #4e73f8; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover svg {
+        fill: #4e73f8; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover > div:first-child > div {
+        background: #ffffff;
+        border: 2px solid #4e73f8; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover > div:last-child > div {
+        color: #4e73f8;
+        background: #ffffff; }
+    .styles__search___itr8 .styles__search-list___AMQx img {
+      width: 40px;
+      height: 40px; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/chat/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.styles__chat__ihd16 {
+  background: #ffffff;
+  margin: 24px 0 16px 0;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 215px); }
+  .styles__chat__ihd16 .styles__info__wn_R0 {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    .styles__chat__ihd16 .styles__info__wn_R0 .styles__name__UbwyI {
+      font-size: 18px;
+      font-weight: 700;
+      color: #404d61; }
+    .styles__chat__ihd16 .styles__info__wn_R0 .styles__time___g78G {
+      color: #757d8a;
+      font-size: 14px; }
+  .styles__chat__ihd16 .styles__members__Zi7X6 {
+    display: flex;
+    align-items: center;
+    width: 20%; }
+    .styles__chat__ihd16 .styles__members__Zi7X6 .styles__circle__ehgPA {
+      border: 2px dashed rgba(78, 115, 248, 0.24);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      margin-left: 8px; }
+      .styles__chat__ihd16 .styles__members__Zi7X6 .styles__circle__ehgPA:before {
+        position: absolute;
+        content: "";
+        background: #4e73f8;
+        width: 16px;
+        height: 2px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
+      .styles__chat__ihd16 .styles__members__Zi7X6 .styles__circle__ehgPA:after {
+        position: absolute;
+        content: "";
+        background: #4e73f8;
+        width: 2px;
+        height: 16px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
+    .styles__chat__ihd16 .styles__members__Zi7X6 > div:not(:first-child):not(:last-child) {
+      margin-left: -10px; }
+    .styles__chat__ihd16 .styles__members__Zi7X6 img {
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px; }
+  .styles__chat__ihd16 .styles__header__iXYwA {
+    border-bottom: 1px solid #e1e3e6;
+    padding: 6px 24px;
+    min-height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .styles__chat__ihd16 .styles__actions__mVf_w {
+    display: flex;
+    align-items: center;
+    width: 20%; }
+    .styles__chat__ihd16 .styles__actions__mVf_w svg:not(:first-child) {
+      margin-left: 20px; }
+  .styles__chat__ihd16 .styles__user-item__Jd0Ag {
+    margin-top: 24px; }
+  .styles__chat__ihd16 .styles__messages__o4YMK {
+    padding: 0 24px 24px 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column-reverse;
+    max-height: calc(100vh - 270px);
+    overflow-y: scroll; }
+
+.styles__container___9Bzl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/chat/typing/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__typing__YRKqr {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  border-radius: 8px; }
+  .styles__typing__YRKqr > div {
+    flex-shrink: 0; }
+    .styles__typing__YRKqr > div:last-child {
+      display: flex;
+      align-items: center; }
+  .styles__typing__YRKqr .styles__actions__IYyt8 {
+    display: flex; }
+    .styles__typing__YRKqr .styles__actions__IYyt8 svg:not(:first-child) {
+      margin-left: 19px; }
+  .styles__typing__YRKqr .styles__input__Vr_kS {
+    margin: 0 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    flex-grow: 1; }
+  .styles__typing__YRKqr button {
+    background: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
+    border-radius: 8px;
+    margin-left: 20px; }
+    .styles__typing__YRKqr button svg {
+      margin: 8px 8px 4px 8px; }
+
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/contact-info/styles.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+.styles__contact-info___LVqD {
+  width: 378px;
+  flex-shrink: 0;
+  margin: 24px 24px 40px 24px;
+  background: #ffffff;
+  border-radius: 8px; }
+  .styles__contact-info___LVqD .styles__header___1cvq {
+    border-bottom: 1px solid #e1e3e6;
+    font-size: 18px;
+    font-weight: 700;
+    color: #404d61;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 24px; }
+  .styles__contact-info___LVqD .styles__avatar___vS5H {
+    background: linear-gradient(180deg, #fca549 0%, #f39531 100%);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    padding: 19px 0; }
+  .styles__contact-info___LVqD .styles__title__FS_kP {
+    margin-top: 16px;
+    color: #5a6474;
+    font-size: 18px;
+    font-weight: 700; }
+  .styles__contact-info___LVqD .styles__members__sAy4R {
+    color: #757d8a;
+    font-size: 14px;
+    font-weight: 400; }
+  .styles__contact-info___LVqD .styles__first-info__SKKrA {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #e1e3e6; }
+  .styles__contact-info___LVqD .styles__buttons__ZV9xM {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .styles__contact-info___LVqD .styles__buttons__ZV9xM button {
+      border: 1px solid #e1e3e6;
+      padding: 8px 0;
+      box-shadow: 0px 4px 2px -2px rgba(27, 46, 94, 0.02);
+      text-align: center;
+      width: 48%;
+      border-radius: 8px;
+      transition: 0.1s ease all;
+      background: #ffffff; }
+      .styles__contact-info___LVqD .styles__buttons__ZV9xM button:hover {
+        background: #4e73f8;
+        border: 1px solid #4e73f8; }
+        .styles__contact-info___LVqD .styles__buttons__ZV9xM button:hover svg {
+          fill: #ffffff; }
+  .styles__contact-info___LVqD .styles__second-info__R2bgY {
+    border-bottom: 1px solid #e1e3e6;
+    padding: 16px 24px; }
+    .styles__contact-info___LVqD .styles__second-info__R2bgY > div {
+      padding: 6px 0; }
+
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/templates/main/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+.styles__flex__PN5kB {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/search-input/styles.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+.styles__input__VDtDY {
+  border: 1px solid #e1e3e6;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative; }
+  .styles__input__VDtDY input {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 12px 0 12px 16px; }
+  .styles__input__VDtDY .styles__button__cfk4j {
+    background: #f8f8f8;
+    border-left: 1px solid #e1e3e6; }
+  .styles__input__VDtDY .styles__icon-search__N7P6Y {
+    margin: 10px 15px; }
+  .styles__input__VDtDY .styles__icon-close__DAtue {
+    transition: 0.2s ease all;
+    fill: #757d8a; }
+    .styles__input__VDtDY .styles__icon-close__DAtue:hover {
+      fill: #a8acb3; }
+  .styles__input__VDtDY .styles__close-button__WuZTc {
+    background: transparent;
+    position: absolute;
+    right: 60px;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+    .styles__input__VDtDY .styles__close-button__WuZTc.styles__empty-input___KCw6 {
+      display: none; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/avatar/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.styles__avatar__YseYp {
+  position: relative; }
+  .styles__avatar__YseYp .styles__online__yGb7_ {
+    position: absolute;
+    background: linear-gradient(180deg, #08b395 0%, #0c977f 100%);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    bottom: 1px;
+    right: 1px;
+    transition: 0.1s ease all; }
+  .styles__avatar__YseYp .styles__notifications__sQFjP {
+    position: absolute;
+    background: linear-gradient(180deg, #ff5959 0%, #ef2c2c 100%);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    right: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px; }
+
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/date/styles.scss ***!
+  \***************************************************************************************************************************************************************************************************************************/
+.styles__date__P8EYz {
+  position: relative;
+  text-align: center; }
+  .styles__date__P8EYz:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #e1e3e6;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0; }
+  .styles__date__P8EYz span {
+    color: #757d8a;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 5px 15px;
+    position: relative; }
+
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/badge/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.styles__badge__MotYu {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px 0;
+  background: linear-gradient(180deg, #08b395 0%, #0c977f 100%); }
+
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/field/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.styles__title__sNc4V {
+  color: #757d8a;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.styles__text__esBbm {
+  color: #757d8a;
+  font-size: 16px;
+  font-weight: 500; }
+
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/input/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.styles__input__JAVZK {
+  position: relative; }
+  .styles__input__JAVZK span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: #ffffff;
+    background: #f43c3c;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-size: 13px; }
+    .styles__input__JAVZK span:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #f43c3c;
+      top: -5px; }
+  .styles__input__JAVZK input {
+    border: 1px solid #e1e3e6;
+    padding: 12px 10px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    transition: 0.1s ease all; }
+    .styles__input__JAVZK input.styles__error__L_C8t {
+      border: 1px solid #f43c3c;
+      background: #fffbfb; }
+    .styles__input__JAVZK input:focus:not(.styles__error__L_C8t) {
+      border: 1px solid #afb1b3; }
+    .styles__input__JAVZK input::-webkit-input-placeholder {
+      color: #757d8a;
+      -webkit-transition: 0.1s ease border color;
+      transition: 0.1s ease border color; }
+    .styles__input__JAVZK input:-ms-input-placeholder {
+      color: #757d8a;
+      -ms-transition: 0.1s ease border color;
+      transition: 0.1s ease border color; }
+    .styles__input__JAVZK input::placeholder {
+      color: #757d8a;
+      transition: 0.1s ease border color; }
+    .styles__input__JAVZK input:focus::-webkit-input-placeholder {
+      color: #a4abb5; }
+    .styles__input__JAVZK input:focus:-ms-input-placeholder {
+      color: #a4abb5; }
+    .styles__input__JAVZK input:focus::placeholder {
+      color: #a4abb5; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/button/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.styles__button__dYv_I {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: 0.1s ease all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .styles__button__dYv_I.styles__is-loading__Sytqa {
+    pointer-events: none; }
+    .styles__button__dYv_I.styles__is-loading__Sytqa .styles__loader__tDdy2 {
+      opacity: 1; }
+    .styles__button__dYv_I.styles__is-loading__Sytqa span {
+      opacity: 0; }
+  .styles__button__dYv_I .styles__loader__tDdy2 {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0; }
+  .styles__button__dYv_I.styles__fill___hxyR {
+    background: #4e73f8;
+    color: #ffffff; }
+    .styles__button__dYv_I.styles__fill___hxyR:hover {
+      background: #3a59c9; }
+  .styles__button__dYv_I.styles__ghost___A0RU {
+    background: transparent;
+    color: #757d8a; }
+    .styles__button__dYv_I.styles__ghost___A0RU:hover {
+      background: #eee; }
+    .styles__button__dYv_I.styles__ghost___A0RU:active {
+      background: #e6e6e6; }
+  .styles__button__dYv_I.styles__outline__CCMWO {
+    background: #ffffff;
+    border: 1px solid #4e73f8;
+    color: #4e73f8; }
+    .styles__button__dYv_I.styles__outline__CCMWO .styles__loader__tDdy2 circle {
+      stroke: #4e73f8; }
+    .styles__button__dYv_I.styles__outline__CCMWO:hover {
+      border: 1px solid #3a59c9;
+      color: #3a59c9; }
+      .styles__button__dYv_I.styles__outline__CCMWO:hover .styles__loader__tDdy2 circle {
+        stroke: #3a59c9; }
+  .styles__button__dYv_I svg:first-child {
+    margin-right: 10px; }
+  .styles__button__dYv_I svg:last-child {
+    margin-left: 10px; }
+
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/input-group/styles.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+.styles__input-group__w8q2I {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .styles__input-group__w8q2I > * {
+    width: 48%; }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/error-message/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__error-message___MQOH {
+  border: 1px solid #f43c3c;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fffbfb;
+  text-align: left; }
+  .styles__error-message___MQOH .styles__title__SS4yX {
+    font-weight: 600;
+    color: #f43c3c;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative; }
+    .styles__error-message___MQOH .styles__title__SS4yX:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #f43c3c;
+      bottom: -2px;
+      left: 0; }
+  .styles__error-message___MQOH .styles__description___Qzih {
+    color: #5a6474;
+    display: block;
+    margin-top: 5px;
+    font-size: 16px; }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/molecules/user-item/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__user-item__SYfS9 {
+  display: flex;
+  border-radius: 8px; }
+  .styles__user-item__SYfS9 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .styles__user-item__SYfS9 > div:nth-child(2) {
+      width: calc(100% - 86px); }
+    .styles__user-item__SYfS9 > div:last-child {
+      align-items: center; }
+  .styles__user-item__SYfS9 svg {
+    transition: 0.1s ease all;
+    fill: #5a6474; }
+  .styles__user-item__SYfS9 .styles__info__iOn9v {
+    margin-left: 16px; }
+  .styles__user-item__SYfS9 .styles__title__YlmcI {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5a6474; }
+    .styles__user-item__SYfS9 .styles__title__YlmcI span {
+      margin-left: 8px; }
+  .styles__user-item__SYfS9 .styles__message__JIiOf {
+    font-size: 16px;
+    font-weight: 400;
+    color: #757d8a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .styles__user-item__SYfS9 .styles__time__VFcah {
+    font-size: 14px;
+    font-weight: 400;
+    color: #757d8a;
+    margin-bottom: 4px; }
+

@@ -1,0 +1,23 @@
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles.css ***!
+  \************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap);
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles.css (1) ***!
+  \****************************************************************************************************************************************************************************************************************/
+* {
+  font-family: "DM Sans";
+  box-sizing: border-box; }
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+a {
+  color: #5a6474;
+  text-decoration: none; }
+
+body {
+  background: linear-gradient(to right bottom, #f1f6f9, #f1f4f7, #f8f1f5, #f1f6f9); }
+

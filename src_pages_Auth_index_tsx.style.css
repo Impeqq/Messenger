@@ -1,0 +1,84 @@
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+.styles__main__pwin5 {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px; }
+  .styles__main__pwin5 .styles__auth-block__ARq7O {
+    width: 40%;
+    color: #5a6474; }
+    .styles__main__pwin5 .styles__auth-block__ARq7O input {
+      margin-bottom: 30px; }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/login-block/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__login-block__aVIeH {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px -2px rgba(27, 46, 94, 0.04); }
+  .styles__login-block__aVIeH .styles__error-message__Jnal7 {
+    margin-bottom: 30px; }
+  .styles__login-block__aVIeH .styles__button-group__BWvhj {
+    display: flex;
+    align-items: center; }
+    .styles__login-block__aVIeH .styles__button-group__BWvhj a {
+      margin-left: 20px; }
+
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/register-block/styles.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.styles__register-block__Gxr1B {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px -2px rgba(27, 46, 94, 0.04);
+  text-align: center; }
+  .styles__register-block__Gxr1B .styles__title__l997p {
+    font-size: 24px;
+    display: block;
+    font-weight: 500; }
+  .styles__register-block__Gxr1B .styles__description__GH_qF {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400; }
+  .styles__register-block__Gxr1B .styles__error-message__Ca_qY {
+    margin-bottom: 30px; }
+
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/mobile-images/styles.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+.styles__images___kY0s {
+  height: 800px;
+  width: 55%;
+  text-align: center;
+  position: relative;
+  color: #5a6474; }
+  .styles__images___kY0s .styles__title___DOtI {
+    font-size: 24px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px; }
+  .styles__images___kY0s .styles__description__VPkUW {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400; }
+  .styles__images___kY0s .styles__images-group__TqskX {
+    display: flex;
+    justify-content: space-between; }
+    .styles__images___kY0s .styles__images-group__TqskX img {
+      width: 45%; }
+  .styles__images___kY0s .styles__mobile-info__Obe_8 {
+    margin-top: 50px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400; }
+
