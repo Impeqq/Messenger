@@ -13,13 +13,14 @@ import { WebSocketLink } from "@apollo/client/link/ws";
 import { getMainDefinition } from "@apollo/client/utilities";
 import { onError } from "@apollo/client/link/error";
 import { setContext } from "@apollo/client/link/context";
-import { AUTH_TOKEN } from "@features/constants";
+import { API, AUTH_TOKEN } from "@features/constants";
+import "./styles.css";
 
 const cache = new InMemoryCache();
 const abortController = new AbortController();
 
 const wsLink = new WebSocketLink({
-  uri: "ws://localhost:5000/graphql",
+  uri: `ws://${API}/graphql`,
   options: {
     reconnect: true,
   },
@@ -36,7 +37,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const httpLink = new HttpLink({
-  uri: "http://localhost:5000/graphql",
+  uri: `http://${API}/graphql`,
   fetchOptions: {
     mode: "cors",
     signal: abortController.signal,

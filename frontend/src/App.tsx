@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Messenger">
       <Switch>{renderRoute(routesConfig)}</Switch>
     </Router>
   );

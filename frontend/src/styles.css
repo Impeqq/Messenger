@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  font-family: "DM Sans";
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  color: #5a6474;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(
+    to right bottom,
+    #f1f6f9,
+    #f1f4f7,
+    #f8f1f5,
+    #f1f6f9
+  );
+}

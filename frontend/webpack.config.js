@@ -2,12 +2,17 @@ const path = require("path");
 const miniCss = require("mini-css-extract-plugin");
 var LiveReloadPlugin = require("webpack-livereload-plugin");
 const postcssPresetEnv = require("postcss-preset-env");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js",
+    publicPath: "/",
+    filename: "static/[contenthash].js",
+    chunkFilename: "static/[contenthash].js",
+    clean: true,
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
@@ -35,7 +40,7 @@ module.exports = {
       {
         test: /\.(scss|css)$/i,
         use: [
-          "style-loader",
+          miniCss.loader,
           {
             loader: "css-loader",
             options: {
@@ -90,14 +95,18 @@ module.exports = {
     },
   },
   plugins: [
-    new miniCss({
-      filename: "style.css",
+    new webpack.DefinePlugin({
+      "process.env.API": JSON.stringify(process.env.API),
     }),
     new LiveReloadPlugin({
       protocol: "http",
       port: 9001,
       hostname: "localhost",
       appendScriptTag: true,
+    }),
+    new HtmlWebpackPlugin({ template: "src/assets/index.html" }),
+    new miniCss({
+      filename: "style.css",
     }),
   ],
 };
