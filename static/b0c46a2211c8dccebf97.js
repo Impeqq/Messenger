@@ -1686,7 +1686,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/" + {"vendors-node_modules_apollo_client_react_hooks_useLazyQuery_js-node_modules_apollo_client_rea-6a7af9":"030b6ac83cfcc1fa4a71","src_ui_index_ts":"5fefbb4d76cdd31d51d6","src_pages_Error404_index_tsx":"590fd9d7310d46a3abf3","src_pages_Home_index_tsx":"00f1746e58ff1ed3116f","src_pages_Chat_index_tsx":"ca31e1d1a1c6bad45658","src_pages_Auth_index_tsx":"9b96d24c69ca8b505890"}[chunkId] + ".js";
+/******/ 			return "static/" + {"vendors-node_modules_apollo_client_react_hooks_useLazyQuery_js-node_modules_apollo_client_rea-6a7af9":"030b6ac83cfcc1fa4a71","src_ui_index_ts":"a51f4993fb5bc00979f7","src_pages_Error404_index_tsx":"590fd9d7310d46a3abf3","src_pages_Home_index_tsx":"00f1746e58ff1ed3116f","src_pages_Chat_index_tsx":"ca31e1d1a1c6bad45658","src_pages_Auth_index_tsx":"9b96d24c69ca8b505890"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
