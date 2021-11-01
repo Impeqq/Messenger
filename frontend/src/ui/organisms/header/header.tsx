@@ -7,22 +7,43 @@ import LogoutIcon from "@assets/svg/logout.svg";
 import PersonIcon from "@assets/svg/person.svg";
 import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
-import { AUTH_TOKEN } from "@features/constants";
+import { AUTH_TOKEN, SOCKET_API } from "@features/constants";
 import { useLocalStorage } from "@features/hooks";
 import { getImage } from "@features/helpers/getImage";
+import { TUser } from "@features/types";
+import { io } from "socket.io-client";
+import { useLazyQuery } from "@apollo/client";
+import { FETCH_ME } from "@schemas";
 
 type TProps = {
-  firstName?: string;
-  lastName?: string;
-  avatarId?: string;
+  isGuest: boolean;
 };
 
-export const Header = ({ firstName, lastName, avatarId }: TProps) => {
+export const Header = ({ isGuest }: TProps) => {
+  const [me, setMe] = useState<null | TUser>(null);
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
-  const { removeItem } = useLocalStorage();
-
+  const { removeItem, getItem } = useLocalStorage();
   const history = useHistory();
+
+  const isChanges = getItem(AUTH_TOKEN);
+
+  const [fetchMe] = useLazyQuery(FETCH_ME, {
+    fetchPolicy: "network-only",
+    onCompleted: ({ me }) => setMe(me),
+    onError: () => {
+      setMe(null);
+      history.push(routePath.auth.path);
+    },
+  });
+
+  useEffect(() => {
+    if (me?.id) io(`http://${SOCKET_API}?user_id=${me?.id}`);
+  }, [me]);
+
+  useEffect(() => {
+    fetchMe();
+  }, [fetchMe, isChanges, history, isGuest]);
 
   useEffect(() => {
     const onClick: any = (e: React.MouseEvent) => {
@@ -56,13 +77,13 @@ export const Header = ({ firstName, lastName, avatarId }: TProps) => {
         <Link to={routePath.main.path} className={styles.logo}>
           Messenger 💬
         </Link>
-        {firstName && lastName && (
+        {!isGuest && (
           <>
             <div className={styles.userInfo} onClick={toggleOpen}>
-              <Avatar image={getImage(avatarId)} alt="Avatar" />
+              <Avatar image={getImage(me?.avatar?.id)} alt="Avatar" />
               <div className={styles.info}>
                 <span>
-                  {firstName} {lastName}
+                  {me?.firstName} {me?.lastName}
                 </span>
                 <span>Online</span>
               </div>
