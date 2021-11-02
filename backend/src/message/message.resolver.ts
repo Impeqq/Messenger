@@ -43,10 +43,10 @@ export class MessageResolver {
 
   @Subscription(() => MessageEntity, {
     filter: (payload: any, variables: any) => {
-      return payload.messageSent.chat.id === variables.chatId;
+      return payload.messageSent.chat.id === variables.chat_id;
     },
   })
-  messageSent(@Args('chatId') chatId: string) {
+  messageSent(@Args('chat_id') chat_id: string) {
     return pubsub.asyncIterator('messageSent');
   }
 }

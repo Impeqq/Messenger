@@ -1,7 +1,8 @@
-import React, { FunctionComponent, SVGAttributes } from "react";
+import { FunctionComponent, SVGAttributes } from "react";
 import styles from "./styles.scss";
 import cn from "classnames";
 import { Avatar, Badge } from "@ui";
+import { DateTime } from "@components";
 import { TUser } from "@features/types";
 
 type TProps = {
@@ -31,7 +32,7 @@ export const UserItem = ({
   message = "",
   className,
   isOnline = false,
-  date: unixDate,
+  date,
   notifications = 0,
   type,
   RightIcon,
@@ -42,11 +43,7 @@ export const UserItem = ({
   currentUser,
   isMessageFromMe = false,
 }: TProps) => {
-  const isSelf = currentUser === user?.id;
-  const dateModyfied = unixDate && new Date(Number(unixDate));
-  const date = dateModyfied
-    ? `${dateModyfied.getHours()}:${dateModyfied.getMinutes()}`
-    : "";
+  const isSelf = currentUser?.id === user?.id;
 
   const handleClick = () => {
     handleCreate && handleCreate(user?.id || "");
@@ -59,18 +56,14 @@ export const UserItem = ({
       <div className={styles.info}>
         <span className={styles.title}>
           {isSelf ? "You" : `${user?.firstName} ${user?.lastName}`}
-          {date && type === UserLocations.CHAT && (
-            <span className={styles.time}>{date}</span>
-          )}
+          {date && type === UserLocations.CHAT && <DateTime date={date} />}
         </span>
         <span className={styles.message}>
           {isMessageFromMe ? <b>You: </b> : ""} {message}
         </span>
       </div>
       <div>
-        {date && type === UserLocations.SIDEBAR && (
-          <span className={styles.time}>{date}</span>
-        )}
+        {date && type === UserLocations.SIDEBAR && <DateTime date={date} />}
         {notifications !== 0 && <Badge number={notifications} />}
         {RightIcon && <RightIcon width={30} height={25} />}
       </div>

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Route } from "react-router-dom";
 import { TRoutesConfiguration } from "@pages/routes";
 // import { TAuthUserData } from '~types/common';

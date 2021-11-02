@@ -1,4 +1,3 @@
-import React from "react";
 import MoreHorizontalIcon from "@assets/svg/more-horizontal.svg";
 import styles from "./styles.scss";
 import PhoneIcon from "@assets/svg/phone.svg";

@@ -27,6 +27,16 @@ export type TChat = {
   ];
 };
 
+export type TMessage = {
+  createdAt: string;
+  user_from: {
+    id: string;
+    firstName: string;
+    lastName: string;
+  };
+  message: string;
+};
+
 export type RouteParams = {
   id: string;
 };

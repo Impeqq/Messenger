@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.scss";
 import { FriendsList } from "./friends-list";
 import LogoutIcon from "@assets/svg/logout.svg";

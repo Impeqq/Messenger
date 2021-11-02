@@ -28,12 +28,8 @@
     flex-grow: 1;
   }
 
-  button {
-    background: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
+  .button {
     border-radius: 8px;
     margin-left: 20px;
-    & svg {
-      margin: 8px 8px 4px 8px;
-    }
   }
 }

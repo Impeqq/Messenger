@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.scss";
 import Avatar8 from "@assets/images/avatar8.png";
 import ArrowDown from "@assets/svg/arrow-down.svg";

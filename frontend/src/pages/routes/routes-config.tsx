@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 import { RouteProps } from "react-router-dom";
 import { routePath } from "./route-path";
 
@@ -11,7 +11,7 @@ export type TRoutesConfiguration = RouteProps & {
   routes?: RouteProps[];
 };
 
-const { registration, auth, main, notFound, chat } = routePath;
+const { auth, main, notFound, chat } = routePath;
 
 export const routesConfig: TRoutesConfiguration[] = [
   {

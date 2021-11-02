@@ -1,4 +1,3 @@
-import React from "react";
 import { Guest } from "@ui";
 import styles from "./styles.scss";
 import LoginBlock from "./login-block/login-block";

@@ -74,4 +74,10 @@
   & svg:last-child {
     margin-left: 10px;
   }
+
+  &.no-text {
+    svg {
+      margin: 0;
+    }
+  }
 }

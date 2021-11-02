@@ -1,4 +1,3 @@
-import React, { ChangeEvent, useState } from "react";
 import styles from "./styles.scss";
 import AttachIcon from "@assets/svg/attach.svg";
 import CameraIcon from "@assets/svg/camera.svg";
@@ -10,21 +9,21 @@ import { useMutation } from "@apollo/client";
 import { RouteParams } from "@features/types";
 import { useParams } from "react-router-dom";
 import { BaseForm } from "@components";
-import { useForm, UseFormOptions } from "react-hook-form";
-import { Input } from "@ui";
+import { useForm } from "react-hook-form";
+import { Button, Input } from "@ui";
 
 export const Typing = () => {
-  const [sendMessage, { loading, error }] = useMutation(SEND_MESSAGE);
+  const [sendMessage] = useMutation(SEND_MESSAGE);
 
   const { id } = useParams<RouteParams>();
 
-  const handleSendMessage = (data: UseFormOptions["defaultValues"]) => {
-    if (data?.message) {
+  const handleSendMessage = ({ message }: Record<string, any>) => {
+    if (message) {
       formMethods.reset({});
       sendMessage({
         variables: {
-          chat: id,
-          message: data?.message,
+          id,
+          message,
         },
       });
     }
@@ -55,9 +54,11 @@ export const Typing = () => {
       />
       <div>
         <MicIcon />
-        <button>
-          <SendIcon fill="#ffffff" />
-        </button>
+        <Button
+          className={styles.button}
+          text={""}
+          icon={<SendIcon fill="#ffffff" />}
+        />
       </div>
     </BaseForm>
   );

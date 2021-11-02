@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.scss";
 import cn from "classnames";
 import LoaderIcon from "@assets/svg/loader.svg";
@@ -11,6 +10,7 @@ type TProps = {
   style?: ButtonStyle;
   type?: ButtonType;
   loading?: boolean;
+  className?: string;
 };
 
 export enum IconDirection {
@@ -34,21 +34,23 @@ export const Button = ({
   onClick,
   text,
   icon,
-  iconDirection,
+  iconDirection = IconDirection.LEFT,
   style = ButtonStyle.FILL,
   type = ButtonType.BUTTON,
   loading = false,
+  className,
 }: TProps) => {
   return (
     <button
-      className={cn(styles.button, styles[style], {
+      className={cn(styles.button, className, styles[style], {
         [styles.isLoading]: loading,
+        [styles.noText]: !text,
       })}
       type={type}
       onClick={onClick}
     >
       {iconDirection === IconDirection.LEFT && icon}
-      <span>{text}</span>
+      {text && <span>{text}</span>}
       <LoaderIcon className={styles.loader} />
       {iconDirection === IconDirection.RIGHT && icon}
     </button>

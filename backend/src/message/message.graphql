@@ -16,5 +16,5 @@ input SendMessageInput {
 }
 
 type Subscription {
-  messageSent(chatId: String): Message
+  messageSent(chat_id: String): Message
 }

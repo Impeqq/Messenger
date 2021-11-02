@@ -47,7 +47,7 @@ export interface IMutation {
 
 export interface ISubscription {
     chatUpdated(user_id?: string): Chat | Promise<Chat>;
-    messageSent(chatId?: string): Message | Promise<Message>;
+    messageSent(chat_id?: string): Message | Promise<Message>;
 }
 
 export interface Message {

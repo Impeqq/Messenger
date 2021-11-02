@@ -1,4 +1,3 @@
-import React from "react";
 import Example1 from "@assets/images/example1.png";
 import Example2 from "@assets/images/example2.png";
 import styles from "./styles.scss";

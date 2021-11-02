@@ -66,8 +66,8 @@ export const FETCH_MY_CHATS = gql`
 `;
 
 export const SEND_MESSAGE = gql`
-  mutation sendMessage($chat: String!, $message: String!) {
-    sendMessage(input: { chat_id: $chat, message: $message }) {
+  mutation sendMessage($id: String!, $message: String!) {
+    sendMessage(input: { chat_id: $id, message: $message }) {
       message
       createdAt
       user_from {
@@ -112,8 +112,8 @@ export const SEND_REGISTER = gql`
 `;
 
 export const SUBSCRIBE_CHAT = gql`
-  subscription messageSent($chatId: String) {
-    messageSent(chatId: $chatId) {
+  subscription messageSent($chat_id: String) {
+    messageSent(chat_id: $chat_id) {
       id
       message
       createdAt

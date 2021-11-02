@@ -10,7 +10,7 @@
       width: calc(100% - 86px);
     }
     &:last-child {
-      align-items: center;
+      align-self: flex-start;
     }
   }
 
@@ -40,12 +40,5 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  .time {
-    font-size: 14px;
-    font-weight: 400;
-    color: #757d8a;
-    margin-bottom: 4px;
   }
 }

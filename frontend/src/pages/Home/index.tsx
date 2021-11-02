@@ -1,4 +1,3 @@
-import React from "react";
 import { Main } from "@ui";
 import styles from "./styles.scss";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.scss";
 import cn from "classnames";
 import { useFormContext } from "react-hook-form";

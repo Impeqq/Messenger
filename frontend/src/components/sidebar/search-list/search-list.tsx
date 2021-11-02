@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.scss";
 import { SearchInput, UserItem, UserLocations } from "@ui";
 import Avatar3 from "@assets/images/avatar3.png";
@@ -11,9 +10,9 @@ import { TUser } from "@features/types";
 
 export const SearchList = () => {
   const [fetchUsers, { data }] = useLazyQuery(FETCH_SEARCH_USERS);
-  const [sendCreateChat, { loading, error }] = useMutation(SEND_CREATE_CHAT, {
-    onCompleted: ({ createChat }) => {
-      history.push(`${routePath.chat.path}/${createChat.id}`);
+  const [sendCreateChat] = useMutation(SEND_CREATE_CHAT, {
+    onCompleted: ({ createChat: { id } }) => {
+      history.push(`${routePath.chat.path}/${id}`);
     },
   });
 
@@ -48,7 +47,7 @@ export const SearchList = () => {
               type={UserLocations.SIDEBAR}
               avatar={Avatar3}
               user={user}
-              message={"Hello"}
+              message={""}
               RightIcon={ChatIcon}
             />
           ))}
