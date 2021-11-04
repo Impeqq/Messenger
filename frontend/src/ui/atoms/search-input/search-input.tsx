@@ -1,44 +1,52 @@
-import { useState } from "react";
 import styles from "./styles.scss";
 import SearchIcon from "@assets/svg/search.svg";
 import CloseIcon from "@assets/svg/close.svg";
 import cn from "classnames";
+import { BaseForm } from "@components";
+import { useForm, UseFormOptions } from "react-hook-form";
+import { Input } from "..";
 
 type TProps = {
   handleClick: (name: string) => void;
   handleClear: () => void;
 };
 
+const searchName = "search";
+
 export const SearchInput = ({ handleClick, handleClear }: TProps) => {
-  const [value, setValue] = useState("");
+  const formMethods = useForm({
+    mode: "onBlur",
+    reValidateMode: "onBlur",
+  });
+
+  const value = formMethods.watch(searchName);
 
   const onClear = () => {
-    setValue("");
+    formMethods.setValue(searchName, "");
     handleClear();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-    if (!e.target.value) {
-      handleClear();
-    }
-  };
-
-  const handleSearch = () => {
+  const handleSearch = (data: UseFormOptions["defaultValues"]) => {
+    const value = data?.[searchName];
     if (value) {
       handleClick(value);
     }
   };
 
   return (
-    <div className={styles.input}>
-      <input
-        type="text"
+    <BaseForm
+      formMethods={formMethods}
+      onSubmit={handleSearch}
+      className={styles.input}
+    >
+      <Input
+        className={styles.realInput}
+        name={searchName}
+        rules={{}}
         placeholder="Search"
-        value={value}
-        onChange={handleChange}
       />
       <button
+        type="button"
         className={cn(styles.closeButton, { [styles.emptyInput]: !value })}
         onClick={onClear}
       >
@@ -49,7 +57,7 @@ export const SearchInput = ({ handleClick, handleClear }: TProps) => {
           viewBox="0 0 26 26"
         />
       </button>
-      <button className={styles.searchButton} onClick={handleSearch}>
+      <button className={styles.searchButton} type="submit">
         <SearchIcon
           className={styles.iconSearch}
           width="20px"
@@ -57,6 +65,6 @@ export const SearchInput = ({ handleClick, handleClear }: TProps) => {
           viewBox="0 0 24 24"
         />
       </button>
-    </div>
+    </BaseForm>
   );
 };
