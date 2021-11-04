@@ -24,4 +24,6 @@ body {
     #f8f1f5,
     #f1f6f9
   );
+  min-height: 100vh;
+  margin: 0;
 }

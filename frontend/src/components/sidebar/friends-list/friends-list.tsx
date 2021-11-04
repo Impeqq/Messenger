@@ -3,7 +3,6 @@ import ArrowTop from "@assets/svg/arrow-top.svg";
 import styles from "./styles.scss";
 import { UserItem, UserLocations } from "@ui";
 import Avatar3 from "@assets/images/avatar3.png";
-import AddFriendIcon from "@assets/svg/add-friend.svg";
 import { useQuery, useSubscription } from "@apollo/client";
 import { FETCH_ME, FETCH_MY_CHATS, SUBSCRIBE_MY_CHAT } from "@schemas";
 import { TChat, TUser } from "@features/types";
@@ -76,10 +75,6 @@ export const FriendsList = () => {
           );
         })}
       </div>
-      <button className={styles.button}>
-        <AddFriendIcon />
-        Add Friends
-      </button>
     </div>
   );
 };

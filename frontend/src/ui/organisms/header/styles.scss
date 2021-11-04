@@ -1,9 +1,7 @@
 .header {
-  padding: 19px 24px;
+  padding: 19px 0;
   background: #ffffff;
   border-bottom: 1px solid #e1e3e6;
-  display: flex;
-  justify-content: space-between;
 
   .logo {
     font-size: 32px;
@@ -63,4 +61,12 @@
       }
     }
   }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
 }

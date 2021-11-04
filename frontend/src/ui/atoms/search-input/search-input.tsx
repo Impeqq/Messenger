@@ -6,20 +6,27 @@ import cn from "classnames";
 
 type TProps = {
   handleClick: (name: string) => void;
+  handleClear: () => void;
 };
 
-export const SearchInput = ({ handleClick }: TProps) => {
+export const SearchInput = ({ handleClick, handleClear }: TProps) => {
   const [value, setValue] = useState("");
 
-  const handleClear = () => {
+  const onClear = () => {
     setValue("");
-    handleClick("");
+    handleClear();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
     if (!e.target.value) {
-      handleClick(e.target.value);
+      handleClear();
+    }
+  };
+
+  const handleSearch = () => {
+    if (value) {
+      handleClick(value);
     }
   };
 
@@ -33,7 +40,7 @@ export const SearchInput = ({ handleClick }: TProps) => {
       />
       <button
         className={cn(styles.closeButton, { [styles.emptyInput]: !value })}
-        onClick={handleClear}
+        onClick={onClear}
       >
         <CloseIcon
           className={styles.iconClose}
@@ -42,10 +49,7 @@ export const SearchInput = ({ handleClick }: TProps) => {
           viewBox="0 0 26 26"
         />
       </button>
-      <button
-        className={styles.searchButton}
-        onClick={() => handleClick(value)}
-      >
+      <button className={styles.searchButton} onClick={handleSearch}>
         <SearchIcon
           className={styles.iconSearch}
           width="20px"

@@ -13,23 +13,25 @@ type TProps = {
 export const Header = ({ firstName, lastName }: TProps) => {
   return (
     <div className={styles.header}>
-      <Link to={routePath.main.path} className={styles.logo}>
-        Messenger 💬
-      </Link>
-      {firstName && lastName && (
-        <div className={styles.userInfo}>
-          <Avatar image={Avatar8} alt="Avatar" notifications={6} />
-          <div className={styles.info}>
-            <span>
-              {firstName} {lastName}
-            </span>
-            <span>Online</span>
+      <div className={styles.container}>
+        <Link to={routePath.main.path} className={styles.logo}>
+          Messenger 💬
+        </Link>
+        {firstName && lastName && (
+          <div className={styles.userInfo}>
+            <Avatar image={Avatar8} alt="Avatar" notifications={6} />
+            <div className={styles.info}>
+              <span>
+                {firstName} {lastName}
+              </span>
+              <span>Online</span>
+            </div>
+            <div className={styles.arrow}>
+              <ArrowDown />
+            </div>
           </div>
-          <div className={styles.arrow}>
-            <ArrowDown />
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
