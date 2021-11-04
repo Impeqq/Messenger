@@ -4,6 +4,7 @@ import {
   PrimaryGeneratedColumn,
   Column,
   ManyToMany,
+  CreateDateColumn,
 } from 'typeorm';
 import { ObjectType, Field } from '@nestjs/graphql';
 import { ChatEntity } from 'src/chat/chat.entity';
@@ -33,4 +34,8 @@ export class UserEntity extends BaseEntity {
 
   @ManyToMany(() => ChatEntity, (chat) => chat.users)
   chats: ChatEntity[];
+
+  @Field()
+  @CreateDateColumn()
+  createdAt: Date;
 }

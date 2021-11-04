@@ -1,4 +1,3 @@
-import React from "react";
 import { Header } from "@ui";
 import { useQuery } from "@apollo/client";
 import { FETCH_ME } from "@schemas";
@@ -20,12 +19,12 @@ export const Main: React.FC<TProps> = ({ children, className }) => {
     },
   });
   return (
-    <div>
+    <>
       <Header firstName={data?.me?.firstName} lastName={data?.me?.lastName} />
       <div className={cn(styles.flex, className)}>
         <Sidebar />
         {children}
       </div>
-    </div>
+    </>
   );
 };

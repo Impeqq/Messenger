@@ -26,6 +26,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
 }
 
 .date {

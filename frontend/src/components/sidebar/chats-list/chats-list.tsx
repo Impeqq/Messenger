@@ -1,7 +1,6 @@
 import { useState } from "react";
-import ArrowTop from "@assets/svg/arrow-top.svg";
 import styles from "./styles.scss";
-import { UserItem, UserLocations } from "@ui";
+import { SiebarItem, UserItem, UserLocations } from "@ui";
 import Avatar3 from "@assets/images/avatar3.png";
 import { useQuery, useSubscription } from "@apollo/client";
 import { FETCH_ME, FETCH_MY_CHATS, SUBSCRIBE_MY_CHAT } from "@schemas";
@@ -9,7 +8,7 @@ import { TChat, TUser } from "@features/types";
 import { useHistory } from "react-router-dom";
 import { routePath } from "@pages/routes";
 
-export const FriendsList = () => {
+export const ChatsList = () => {
   const [chats, setChats] = useState<TChat[]>([]);
 
   const { data: userData } = useQuery(FETCH_ME, { fetchPolicy: "cache-only" });
@@ -46,35 +45,35 @@ export const FriendsList = () => {
   if (loading) return <h1>Loading...</h1>;
 
   return (
-    <div>
-      <div className={styles.header}>
-        <span>My chats</span>
-        <ArrowTop />
-      </div>
-      <div className={styles.friendsList}>
-        {chats?.map((chat: TChat) => {
-          const data = {
-            user: chat.users.filter((user: TUser) => user.id !== me?.id)[0],
-            date: chat.messages[0]?.createdAt,
-            message: chat.messages[0]?.message,
-            isMessageFromMe: chat.messages[0]?.user_from.id === me?.id,
-          };
+    <SiebarItem title={"My chats"}>
+      {chats.length === 0 && !loading && (
+        <span className={styles.notChats}>
+          You do not have chats, start chatting with someone right now! Find
+          friends through search
+        </span>
+      )}
+      {chats?.map((chat: TChat) => {
+        const data = {
+          user: chat.users.filter((user: TUser) => user.id !== me?.id)[0],
+          date: chat.messages[0]?.createdAt,
+          message: chat.messages[0]?.message,
+          isMessageFromMe: chat.messages[0]?.user_from.id === me?.id,
+        };
 
-          return (
-            <UserItem
-              className={styles.userItem}
-              isOnline={true}
-              // notifications={4}
-              handleRoute={handleClick}
-              currentUser={me}
-              type={UserLocations.SIDEBAR}
-              avatar={Avatar3}
-              {...data}
-              chat={chat}
-            />
-          );
-        })}
-      </div>
-    </div>
+        return (
+          <UserItem
+            className={styles.userItem}
+            isOnline={true}
+            // notifications={4}
+            handleRoute={handleClick}
+            currentUser={me}
+            type={UserLocations.SIDEBAR}
+            avatar={Avatar3}
+            {...data}
+            chat={chat}
+          />
+        );
+      })}
+    </SiebarItem>
   );
 };

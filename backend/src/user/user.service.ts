@@ -47,10 +47,18 @@ export class UserService {
   }
 
   async signIn({ email, password }: SignInInput) {
-    const user = await this.userRepo.findOne({ email });
+    const user = await this.userRepo.findOne({ email: email.toLowerCase() });
     if (!user) return false;
     const isCorrectPassword = await bcrypt.compare(password, user.password);
 
     return isCorrectPassword ? user : false;
+  }
+
+  async newUsers() {
+    return await this.userRepo
+      .createQueryBuilder('user')
+      .orderBy('user.createdAt', 'DESC')
+      .take(5)
+      .getMany();
   }
 }

@@ -1,0 +1,36 @@
+.user-item {
+  padding: 16px;
+  transition: 0.1s ease all;
+  cursor: pointer;
+
+  & span {
+    transition: 0.1s ease all;
+  }
+
+  &:hover {
+    background: #4e73f8;
+    & span {
+      color: #ffffff;
+    }
+
+    & > div:first-child > div {
+      background: #ffffff;
+      border: 2px solid #4e73f8;
+    }
+
+    & > div:last-child > div {
+      color: #4e73f8;
+      background: #ffffff;
+    }
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.not-chats {
+  font-size: 18px;
+  color: #404d61;
+}

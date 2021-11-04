@@ -49,7 +49,11 @@ export const SearchList = () => {
   return (
     <div className={styles.search}>
       <SearchInput handleClick={searchUsers} handleClear={clearUsers} />
-      {users?.length ? (
+      {users?.length === 0 ? (
+        <div className={cn(styles.searchList, styles.notFound)}>
+          There are no such users
+        </div>
+      ) : users !== undefined ? (
         <div className={styles.searchList}>
           {users?.map((user: TUser) => (
             <UserItem
@@ -59,14 +63,10 @@ export const SearchList = () => {
               type={UserLocations.SIDEBAR}
               avatar={Avatar3}
               user={user}
-              message={""}
               RightIcon={ChatIcon}
             />
           ))}
         </div>
-      ) : null}
-      {users?.length === 0 ? (
-        <div className={cn(styles.searchList, styles.notFound)}>Not found</div>
       ) : null}
     </div>
   );

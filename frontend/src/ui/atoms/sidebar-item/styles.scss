@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #757d8a;
+  padding: 0 0 14px 0;
+  cursor: pointer;
+
+  .icon {
+    transition: 0.2s ease all;
+    transform: rotate(-180deg);
+
+    &.active {
+      transform: rotate(0);
+    }
+  }
+}
+
+.content {
+  transition: 0.2s ease all;
+  overflow: hidden;
+  max-height: 400px;
+  &.hidden {
+    max-height: 0px;
+  }
+}

@@ -6,3 +6,4 @@ export * from "./input";
 export * from "./button";
 export * from "./input-group";
 export * from "./error-message";
+export * from "./sidebar-item";

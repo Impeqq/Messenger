@@ -7,8 +7,8 @@ import { TUser } from "@features/types";
 
 type TProps = {
   avatar: string;
-  message: string;
-  className: string;
+  message?: string;
+  className?: string;
   isOnline?: boolean;
   date?: string;
   notifications?: number;

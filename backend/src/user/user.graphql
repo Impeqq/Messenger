@@ -4,11 +4,12 @@ type User {
   password: String!
   firstName: String!
   lastName: String!
+  createdAt: String!
 }
 
 type Query {
   me: User
-  myMessages: [Message]
+  getNewUsers: [User]
   searchUser(name: String): [User]
 }
 

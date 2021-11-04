@@ -9,10 +9,18 @@
   }
 
   .arrow {
+    transition: 0.2s ease all;
     background: #f1f2f3;
     border-radius: 8px;
     width: 24px;
     height: 24px;
+    svg {
+      transition: 0.2s ease all;
+      transform: rotate(0deg);
+    }
+    &.active svg {
+      transform: rotate(180deg);
+    }
   }
 
   .not-auth-block {
@@ -38,9 +46,77 @@
     }
   }
 
+  .profile-nav {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    z-index: 1;
+    background: #ffffff;
+    padding: 16px 0;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #e1e3e6;
+    box-shadow: 0px 4px 2px -2px rgba(27, 46, 94, 0.02);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      border-left: 1px solid #e1e3e6;
+      border-top: 1px solid #e1e3e6;
+      transform: rotate(45deg);
+      background: #ffffff;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 6px 16px;
+      width: 100%;
+      transition: 0.1s ease all;
+      span {
+        color: #757d8a;
+        font-size: 16px;
+        margin-left: 10px;
+        font-weight: 500;
+        transition: 0.1s ease all;
+      }
+      svg {
+        fill: #757d8a;
+        transition: 0.1s ease all;
+      }
+      &:hover {
+        background: #4e73f8;
+        & span {
+          color: #ffffff;
+        }
+
+        & svg {
+          fill: #fff;
+        }
+
+        & > div:first-child > div {
+          background: #ffffff;
+          border: 2px solid #4e73f8;
+        }
+
+        & > div:last-child > div {
+          color: #4e73f8;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+
   .user-info {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     .info {
       margin-left: 16px;
@@ -69,4 +145,5 @@
   padding: 0 24px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }

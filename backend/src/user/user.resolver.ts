@@ -20,6 +20,12 @@ export class UserResolver {
 
   @Query()
   @UseGuards(new AuthGuard())
+  getNewUsers() {
+    return this.userService.newUsers();
+  }
+
+  @Query()
+  @UseGuards(new AuthGuard())
   searchUser(@Args('name') name: string) {
     return this.userService.findByName(name);
   }

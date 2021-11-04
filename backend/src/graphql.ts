@@ -34,7 +34,7 @@ export interface IQuery {
     getChat(id?: string, offset?: number, limit?: number): Chat | Promise<Chat>;
     getMyChats(): Chat[] | Promise<Chat[]>;
     me(): User | Promise<User>;
-    myMessages(): Message[] | Promise<Message[]>;
+    getNewUsers(): User[] | Promise<User[]>;
     searchUser(name?: string): User[] | Promise<User[]>;
 }
 
@@ -64,4 +64,5 @@ export interface User {
     password: string;
     firstName: string;
     lastName: string;
+    createdAt: string;
 }

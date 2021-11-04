@@ -65,6 +65,17 @@ export const FETCH_MY_CHATS = gql`
   }
 `;
 
+export const FETCH_NEW_USERS = gql`
+  query getNewUsers {
+    getNewUsers {
+      id
+      email
+      firstName
+      lastName
+    }
+  }
+`;
+
 export const SEND_MESSAGE = gql`
   mutation sendMessage($id: String!, $message: String!) {
     sendMessage(input: { chat_id: $id, message: $message }) {
