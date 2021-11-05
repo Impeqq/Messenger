@@ -183,6 +183,7 @@ export const SUBSCRIBE_MY_CHAT = gql`
           lastName
         }
         message
+        read
       }
     }
   }

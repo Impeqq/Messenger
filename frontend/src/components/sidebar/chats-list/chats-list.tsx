@@ -29,7 +29,15 @@ export const ChatsList = () => {
         data: { chatUpdated: _chat },
       },
     }) => {
-      if (_chat) {
+      if (_chat.messages[0].read) {
+        const newChats = chats.map((chat) => {
+          if (chat.id === _chat.id) {
+            return _chat;
+          }
+          return chat;
+        });
+        setChats(newChats);
+      } else {
         setChats([
           { ..._chat },
           ...chats.filter((chat) => chat.id !== _chat.id),

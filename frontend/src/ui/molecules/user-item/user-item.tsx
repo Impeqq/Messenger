@@ -1,11 +1,9 @@
 import { FunctionComponent, SVGAttributes } from "react";
 import styles from "./styles.scss";
 import cn from "classnames";
-import { Avatar, Badge } from "@ui";
+import { Avatar, Badge, ReadCheck } from "@ui";
 import { DateTime } from "@components";
 import { TUser } from "@features/types";
-import CheckmarkIcon from "@assets/svg/checkmark.svg";
-import AllDoneIcon from "@assets/svg/all-done.svg";
 
 type TProps = {
   avatar: string;
@@ -61,20 +59,7 @@ export const UserItem = ({
           {date && type === UserLocations.CHAT && (
             <>
               <DateTime date={date} />
-              {isSelf &&
-                (!read ? (
-                  <CheckmarkIcon
-                    width={20}
-                    height={20}
-                    className={styles.messageIcon}
-                  />
-                ) : (
-                  <AllDoneIcon
-                    width={20}
-                    height={20}
-                    className={styles.messageIcon}
-                  />
-                ))}
+              {isSelf && <ReadCheck read={read} />}
             </>
           )}
         </span>
@@ -82,10 +67,12 @@ export const UserItem = ({
           {isMessageFromMe ? <b>You: </b> : ""} {message}
         </span>
       </div>
-      <div>
-        {date && type === UserLocations.SIDEBAR && <DateTime date={date} />}
-        {read === false && type === UserLocations.SIDEBAR && (
-          <Badge number={1} />
+      <div className={styles.sidebarDate}>
+        {date && type === UserLocations.SIDEBAR && (
+          <>
+            <ReadCheck read={read} />
+            <DateTime date={date} />
+          </>
         )}
         {RightIcon && <RightIcon width={30} height={25} />}
       </div>

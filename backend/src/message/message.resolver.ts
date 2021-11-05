@@ -49,12 +49,16 @@ export class MessageResolver {
     @Args('chat_id') chat_id: string,
   ) {
     await this.messageService.setMessagesRead(message_ids);
+    const chat = await this.chatService.getMyChat(chat_id);
+
     pubsub.publish('messagesUpdated', {
       messagesUpdated: {
         chat_id,
         message_ids,
       },
     });
+    pubsub.publish('chatUpdated', { chatUpdated: chat });
+
     return true;
   }
 

@@ -22,6 +22,9 @@
       color: #4e73f8;
       background: #ffffff;
     }
+    & > div:last-child > svg {
+      fill: #fff;
+    }
   }
 
   img {

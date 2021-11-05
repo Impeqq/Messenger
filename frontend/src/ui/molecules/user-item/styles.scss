@@ -2,6 +2,17 @@
   display: flex;
   border-radius: 8px;
 
+  .sidebar-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+
+    & span {
+      margin-left: 8px;
+    }
+  }
+
   & > div {
     display: flex;
     flex-direction: column;
@@ -9,14 +20,6 @@
     &:nth-child(2) {
       width: calc(100% - 86px);
     }
-    &:last-child {
-      align-self: flex-start;
-    }
-  }
-
-  svg {
-    transition: 0.1s ease all;
-    fill: #5a6474;
   }
 
   .info {
@@ -32,7 +35,6 @@
 
     & span {
       margin-left: 8px;
-      margin-bottom: 0;
     }
   }
 
@@ -43,10 +45,5 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  .message-icon {
-    fill: #4e73f8;
-    margin-left: 6px;
   }
 }
