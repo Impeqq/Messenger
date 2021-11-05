@@ -16,6 +16,7 @@ import { CurrentUser } from '../user/user.decorator';
 import { MessageEntity } from './message.entity';
 import { ChatService } from 'src/chat/chat.service';
 import { pubsub } from '../lib/pubsub';
+import { MessageUpdates } from './dto/message-updates';
 
 @Resolver('Message')
 export class MessageResolver {
@@ -41,12 +42,37 @@ export class MessageResolver {
     return message;
   }
 
+  @Mutation('setMessagesRead')
+  @UseGuards(new AuthGuard())
+  async setMessagesRead(
+    @Args('message_ids') message_ids: string[],
+    @Args('chat_id') chat_id: string,
+  ) {
+    await this.messageService.setMessagesRead(message_ids);
+    pubsub.publish('messagesUpdated', {
+      messagesUpdated: {
+        chat_id,
+        message_ids,
+      },
+    });
+    return true;
+  }
+
+  @Subscription(() => MessageUpdates, {
+    filter: (payload: any, variables: any) => {
+      return payload.messagesUpdated.chat_id === variables.chat_id;
+    },
+  })
+  messagesUpdated() {
+    return pubsub.asyncIterator('messagesUpdated');
+  }
+
   @Subscription(() => MessageEntity, {
     filter: (payload: any, variables: any) => {
       return payload.messageSent.chat.id === variables.chat_id;
     },
   })
-  messageSent(@Args('chat_id') chat_id: string) {
+  messageSent() {
     return pubsub.asyncIterator('messageSent');
   }
 }

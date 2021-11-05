@@ -28,4 +28,13 @@ export class MessageService {
       throw new UnprocessableEntityException();
     }
   }
+
+  async setMessagesRead(message_ids: string[]) {
+    await this.messageRepo
+      .createQueryBuilder('message')
+      .update(MessageEntity)
+      .set({ read: true })
+      .where('id IN (:...id)', { id: message_ids })
+      .execute();
+  }
 }

@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const FETCH_ME = gql`
-  query {
+  query me {
     me {
       id
       email
@@ -31,7 +31,9 @@ export const FETCH_CHAT = gql`
         lastName
       }
       messages {
+        id
         createdAt
+        read
         user_from {
           id
           firstName
@@ -54,6 +56,7 @@ export const FETCH_MY_CHATS = gql`
       }
       messages {
         createdAt
+        read
         user_from {
           id
           firstName
@@ -81,12 +84,19 @@ export const SEND_MESSAGE = gql`
     sendMessage(input: { chat_id: $id, message: $message }) {
       message
       createdAt
+      read
       user_from {
         id
         firstName
         lastName
       }
     }
+  }
+`;
+
+export const UPDATE_MESSAGES_READ = gql`
+  mutation setMessagesRead($ids: [String]!, $chat_id: String!) {
+    setMessagesRead(message_ids: $ids, chat_id: $chat_id)
   }
 `;
 
@@ -122,6 +132,15 @@ export const SEND_REGISTER = gql`
   }
 `;
 
+export const SUBSCRIBE_MESSAGES_UPDATED = gql`
+  subscription messagesUpdated($chat_id: String!) {
+    messagesUpdated(chat_id: $chat_id) {
+      chat_id
+      message_ids
+    }
+  }
+`;
+
 export const SUBSCRIBE_CHAT = gql`
   subscription messageSent($chat_id: String) {
     messageSent(chat_id: $chat_id) {
@@ -133,6 +152,16 @@ export const SUBSCRIBE_CHAT = gql`
         firstName
         lastName
       }
+    }
+  }
+`;
+
+export const SUBSCRIBE_NEW_USER = gql`
+  subscription userRegistred {
+    userRegistred {
+      id
+      firstName
+      lastName
     }
   }
 `;

@@ -1,12 +1,14 @@
 type Message {
   id: String
   message: String
+  read: Boolean
   chat: Chat
   user_from: User
   createdAt: String
 }
 
 type Mutation {
+  setMessagesRead(message_ids: [String], chat_id: String): Boolean
   sendMessage(input: SendMessageInput): Message
 }
 
@@ -17,4 +19,10 @@ input SendMessageInput {
 
 type Subscription {
   messageSent(chat_id: String): Message
+  messagesUpdated(chat_id: String): MessageUpdates
+}
+
+type MessageUpdates {
+  chat_id: String
+  message_ids: [String]
 }

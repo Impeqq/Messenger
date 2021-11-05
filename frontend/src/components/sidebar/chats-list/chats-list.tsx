@@ -58,13 +58,14 @@ export const ChatsList = () => {
           date: chat.messages[0]?.createdAt,
           message: chat.messages[0]?.message,
           isMessageFromMe: chat.messages[0]?.user_from.id === me?.id,
+          read: chat.messages[0]?.read,
         };
 
         return (
           <UserItem
+            key={chat.id}
             className={styles.userItem}
             isOnline={true}
-            // notifications={4}
             handleRoute={handleClick}
             currentUser={me}
             type={UserLocations.SIDEBAR}

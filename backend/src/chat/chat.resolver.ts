@@ -40,7 +40,7 @@ export class ChatResolver {
   @Subscription(() => MessageEntity, {
     filter: (payload: any, variables: any) => {
       return true;
-      // return payload.messageSent.chat.id === variables.chat_id;
+      // return payload.chat.id === variables.chat_id;
     },
   })
   chatUpdated(@Args('user_id') user_id: string) {

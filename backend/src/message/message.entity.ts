@@ -21,6 +21,10 @@ export class MessageEntity extends BaseEntity {
   @Column('text')
   message: string;
 
+  @Field()
+  @Column('boolean', { default: false })
+  read: boolean;
+
   @Field(() => [ChatEntity])
   @ManyToOne(() => ChatEntity, (chat) => chat.messages)
   chat: ChatEntity;

@@ -11,6 +11,7 @@ export type TChat = {
     {
       createdAt: string;
       message: string;
+      read: boolean;
       user_from: {
         firstName: string;
         id: string;
@@ -28,7 +29,9 @@ export type TChat = {
 };
 
 export type TMessage = {
+  id: string;
   createdAt: string;
+  read: boolean;
   user_from: {
     id: string;
     firstName: string;

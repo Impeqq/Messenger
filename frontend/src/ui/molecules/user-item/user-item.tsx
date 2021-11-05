@@ -4,6 +4,8 @@ import cn from "classnames";
 import { Avatar, Badge } from "@ui";
 import { DateTime } from "@components";
 import { TUser } from "@features/types";
+import CheckmarkIcon from "@assets/svg/checkmark.svg";
+import AllDoneIcon from "@assets/svg/all-done.svg";
 
 type TProps = {
   avatar: string;
@@ -11,7 +13,6 @@ type TProps = {
   className?: string;
   isOnline?: boolean;
   date?: string;
-  notifications?: number;
   type: UserLocations;
   RightIcon?: FunctionComponent<SVGAttributes<SVGElement>>;
   handleCreate?: (id: string) => void;
@@ -20,6 +21,7 @@ type TProps = {
   currentUser?: TUser;
   isMessageFromMe?: boolean;
   chat?: any;
+  read?: boolean;
 };
 
 export enum UserLocations {
@@ -33,7 +35,6 @@ export const UserItem = ({
   className,
   isOnline = false,
   date,
-  notifications = 0,
   type,
   RightIcon,
   handleCreate,
@@ -42,6 +43,7 @@ export const UserItem = ({
   chat,
   currentUser,
   isMessageFromMe = false,
+  read,
 }: TProps) => {
   const isSelf = currentUser?.id === user?.id;
 
@@ -56,7 +58,25 @@ export const UserItem = ({
       <div className={styles.info}>
         <span className={styles.title}>
           {isSelf ? "You" : `${user?.firstName} ${user?.lastName}`}
-          {date && type === UserLocations.CHAT && <DateTime date={date} />}
+          {date && type === UserLocations.CHAT && (
+            <>
+              <DateTime date={date} />
+              {isSelf &&
+                (!read ? (
+                  <CheckmarkIcon
+                    width={20}
+                    height={20}
+                    className={styles.messageIcon}
+                  />
+                ) : (
+                  <AllDoneIcon
+                    width={20}
+                    height={20}
+                    className={styles.messageIcon}
+                  />
+                ))}
+            </>
+          )}
         </span>
         <span className={styles.message}>
           {isMessageFromMe ? <b>You: </b> : ""} {message}
@@ -64,7 +84,9 @@ export const UserItem = ({
       </div>
       <div>
         {date && type === UserLocations.SIDEBAR && <DateTime date={date} />}
-        {notifications !== 0 && <Badge number={notifications} />}
+        {read === false && type === UserLocations.SIDEBAR && (
+          <Badge number={1} />
+        )}
         {RightIcon && <RightIcon width={30} height={25} />}
       </div>
     </div>

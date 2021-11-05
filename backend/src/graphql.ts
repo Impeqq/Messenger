@@ -40,6 +40,7 @@ export interface IQuery {
 
 export interface IMutation {
     createChat(user_to?: string): Chat | Promise<Chat>;
+    setMessagesRead(message_ids?: string[], chat_id?: string): boolean | Promise<boolean>;
     sendMessage(input?: SendMessageInput): Message | Promise<Message>;
     signUp(input?: SignUpInput): string | Promise<string>;
     signIn(input?: SignInInput): string | Promise<string>;
@@ -48,14 +49,22 @@ export interface IMutation {
 export interface ISubscription {
     chatUpdated(user_id?: string): Chat | Promise<Chat>;
     messageSent(chat_id?: string): Message | Promise<Message>;
+    messagesUpdated(chat_id?: string): MessageUpdates | Promise<MessageUpdates>;
+    userRegistred(): User | Promise<User>;
 }
 
 export interface Message {
     id?: string;
     message?: string;
+    read?: boolean;
     chat?: Chat;
     user_from?: User;
     createdAt?: string;
+}
+
+export interface MessageUpdates {
+    chat_id?: string;
+    message_ids?: string[];
 }
 
 export interface User {

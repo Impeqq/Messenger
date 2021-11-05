@@ -5,6 +5,7 @@ import { Avatar } from "@ui";
 import { routePath } from "@pages/routes";
 import { Link } from "react-router-dom";
 import LogoutIcon from "@assets/svg/logout.svg";
+import PersonIcon from "@assets/svg/person.svg";
 import { useState } from "react";
 import cn from "classnames";
 import { AUTH_TOKEN } from "@features/constants";
@@ -49,6 +50,10 @@ export const Header = ({ firstName, lastName }: TProps) => {
             </div>
             {isOpen && (
               <div className={styles.profileNav}>
+                <div className={styles.profileNavItem} onClick={handleLogout}>
+                  <PersonIcon />
+                  <span>Profile</span>
+                </div>
                 <div className={styles.profileNavItem} onClick={handleLogout}>
                   <LogoutIcon />
                   <span>Logout</span>

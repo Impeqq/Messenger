@@ -29,3 +29,7 @@ input SignInInput {
   email: String!
   password: String!
 }
+
+type Subscription {
+  userRegistred: User
+}

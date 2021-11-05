@@ -48,6 +48,7 @@
 
   .profile-nav {
     display: flex;
+    flex-direction: column;
     position: absolute;
     right: 10px;
     top: 60px;
@@ -76,7 +77,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      padding: 6px 16px;
+      padding: 10px 16px;
       width: 100%;
       transition: 0.1s ease all;
       span {

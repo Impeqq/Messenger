@@ -1,4 +1,11 @@
-import { Mutation, Args, Context, Query, Resolver } from '@nestjs/graphql';
+import {
+  Mutation,
+  Args,
+  Context,
+  Query,
+  Resolver,
+  Subscription,
+} from '@nestjs/graphql';
 import { UnprocessableEntityException, UseGuards } from '@nestjs/common';
 
 import { UserService } from './user.service';
@@ -7,6 +14,7 @@ import { User } from '../graphql';
 import { AuthGuard } from '../guards/auth.guard';
 import { UserEntity } from './user.entity';
 import { CurrentUser } from './user.decorator';
+import { pubsub } from '../lib/pubsub';
 
 @Resolver('User')
 export class UserResolver {
@@ -44,7 +52,12 @@ export class UserResolver {
   @Mutation()
   async signUp(@Args('input') signUpInput: SignUpInput) {
     const user = await this.userService.createUser({ ...signUpInput });
-
+    pubsub.publish('userRegistred', { userRegistred: user });
     return this.userService.createToken(user);
+  }
+
+  @Subscription(() => UserEntity)
+  userRegistred() {
+    return pubsub.asyncIterator('userRegistred');
   }
 }
