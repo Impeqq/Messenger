@@ -1,4 +1,10 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import {
+  ForbiddenException,
+  HttpException,
+  HttpStatus,
+  Injectable,
+  UnprocessableEntityException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ChatEntity } from './chat.entity';
 import { Repository } from 'typeorm';
@@ -62,11 +68,25 @@ export class ChatService {
     return existingChat[0];
   }
 
-  async getChatByIdWithMessages(id: string, limit: number, offset: number) {
+  async getChatByIdWithMessages(
+    id: string,
+    limit: number,
+    offset: number,
+    user: UserEntity,
+  ) {
     const chat = await this.chatRepo
       .createQueryBuilder('chat')
       .where('chat.id = :id', { id })
       .getOne();
+
+    chat.users = await this.userRepo
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.chats', 'chat')
+      .where('chat.id = :id', { id })
+      .getMany();
+
+    if (!chat.users.filter((u) => user.id === u.id).length)
+      throw new ForbiddenException('You want to get into someone else chat 🤥');
 
     chat.messages = await this.messageRepo
       .createQueryBuilder('message')
@@ -76,12 +96,6 @@ export class ChatService {
       .orderBy('message.createdAt', 'DESC')
       .skip(offset)
       .take(limit)
-      .getMany();
-
-    chat.users = await this.userRepo
-      .createQueryBuilder('user')
-      .leftJoinAndSelect('user.chats', 'chat')
-      .where('chat.id = :id', { id })
       .getMany();
 
     return chat;

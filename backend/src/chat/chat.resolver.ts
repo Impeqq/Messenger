@@ -18,8 +18,9 @@ export class ChatResolver {
     @Args('id') id: string,
     @Args('limit') limit: number,
     @Args('offset') offset: number,
+    @CurrentUser() user: UserEntity,
   ) {
-    return this.chatService.getChatByIdWithMessages(id, limit, offset);
+    return this.chatService.getChatByIdWithMessages(id, limit, offset, user);
   }
 
   @Query()
@@ -39,8 +40,9 @@ export class ChatResolver {
 
   @Subscription(() => MessageEntity, {
     filter: (payload: any, variables: any) => {
-      return true;
-      // return payload.chat.id === variables.chat_id;
+      return payload.chatUpdated.users.filter((user) => {
+        return user.id === variables.user_id;
+      }).length;
     },
   })
   chatUpdated(@Args('user_id') user_id: string) {

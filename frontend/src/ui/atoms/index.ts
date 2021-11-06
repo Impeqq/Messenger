@@ -8,3 +8,4 @@ export * from "./input-group";
 export * from "./error-message";
 export * from "./sidebar-item";
 export * from "./read-check";
+export * from "./scroll-list";

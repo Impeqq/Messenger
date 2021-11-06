@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.scss";
 import Avatar3 from "@assets/images/avatar3.png";
 import { Typing } from "./typing";
-import { UserItem, UserLocations } from "@ui";
+import { ScrollList, UserItem, UserLocations } from "@ui";
 import {
   FETCH_CHAT,
   FETCH_ME,
@@ -11,9 +11,10 @@ import {
   UPDATE_MESSAGES_READ,
 } from "@schemas";
 import { useMutation, useQuery, useSubscription } from "@apollo/client";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { RouteParams, TMessage, TUser } from "@features/types";
 import { ChatHeader } from "./chat-header";
+import { routePath } from "@pages/routes";
 
 const OFFSET = 10;
 
@@ -27,6 +28,8 @@ export const Chat = () => {
   const me = userData?.me;
   const { id } = useParams<RouteParams>();
 
+  const history = useHistory();
+
   useEffect(() => {
     setOffset(0);
     setMessages([]);
@@ -38,6 +41,9 @@ export const Chat = () => {
     variables: {
       id,
       offset,
+    },
+    onError: () => {
+      history.push(routePath.main.path);
     },
     onCompleted: ({ getChat: { users, messages: _messages } }) => {
       const reciever = users.filter((user: TUser) => user.id !== me?.id);
@@ -98,20 +104,19 @@ export const Chat = () => {
     },
   });
 
-  const handleScroll = (e: any) => {
-    const isTop =
-      e.target.scrollHeight - e.target.offsetHeight ===
-      Math.abs(e.target.scrollTop);
-    if (isTop && hasMessages && e.target.scrollTop !== 0) {
-      setOffset(offset + OFFSET);
-    }
+  const handleTop = () => {
+    setOffset(OFFSET + offset);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.chat}>
         <ChatHeader reciever={reciever} />
-        <div className={styles.messages} onScroll={handleScroll}>
+        <ScrollList
+          className={styles.messages}
+          additionalCond={hasMessages}
+          handleTop={handleTop}
+        >
           {messages?.map((message: TMessage) => {
             const data = {
               date: message.createdAt,
@@ -135,7 +140,7 @@ export const Chat = () => {
           <div className={styles.date}>
             <span>Today</span>
           </div>
-        </div>
+        </ScrollList>
       </div>
       <Typing />
     </div>

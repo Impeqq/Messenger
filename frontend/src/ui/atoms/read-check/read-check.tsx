@@ -2,11 +2,11 @@ import styles from "./styles.scss";
 import CheckmarkIcon from "@assets/svg/checkmark.svg";
 import AllDoneIcon from "@assets/svg/all-done.svg";
 
-type TReadCheck = {
+type TProps = {
   read?: boolean;
 };
 
-export const ReadCheck = ({ read }: TReadCheck) => {
+export const ReadCheck = ({ read }: TProps) => {
   return (
     <>
       {read ? (
