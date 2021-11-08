@@ -3,7 +3,7 @@ import { TUser } from "@features/types";
 import { FETCH_NEW_USERS, SUBSCRIBE_NEW_USER } from "@schemas";
 import { SiebarItem, UserItem, UserLocations } from "@ui";
 import { useState } from "react";
-import Avatar3 from "@assets/images/avatar3.png";
+import Avatar1 from "@assets/images/avatar1.png";
 import styles from "./styles.scss";
 
 export const NewUsersList = () => {
@@ -37,7 +37,7 @@ export const NewUsersList = () => {
           isOnline={true}
           // notifications={4}
           type={UserLocations.SIDEBAR}
-          avatar={Avatar3}
+          avatar={Avatar1}
           user={user}
         />
       ))}

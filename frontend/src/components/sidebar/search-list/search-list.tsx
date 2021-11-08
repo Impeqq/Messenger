@@ -1,6 +1,6 @@
 import styles from "./styles.scss";
 import { SearchInput, UserItem, UserLocations } from "@ui";
-import Avatar3 from "@assets/images/avatar3.png";
+import Avatar1 from "@assets/images/avatar1.png";
 import { useLazyQuery, useMutation } from "@apollo/client";
 import { FETCH_SEARCH_USERS, SEND_CREATE_CHAT } from "@schemas";
 import ChatIcon from "@assets/svg/chat.svg";
@@ -39,6 +39,7 @@ export const SearchList = () => {
   };
 
   const handleClick = (id: string) => {
+    clearUsers();
     sendCreateChat({
       variables: {
         user_to: id,
@@ -57,11 +58,12 @@ export const SearchList = () => {
         <div className={styles.searchList}>
           {users?.map((user: TUser) => (
             <UserItem
+              key={user.id}
               handleCreate={handleClick}
               className={styles.userItem}
               isOnline={true}
               type={UserLocations.SIDEBAR}
-              avatar={Avatar3}
+              avatar={Avatar1}
               user={user}
               RightIcon={ChatIcon}
             />

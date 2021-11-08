@@ -15,7 +15,7 @@ export const Avatar = ({
 }: TProps) => {
   return (
     <div className={styles.avatar}>
-      <img src={image} alt={alt} />
+      <img src={image} alt={alt} className={styles.image} />
       {isOnline && <div className={styles.online} />}
       {!!notifications && (
         <div className={styles.notifications}>{notifications}</div>

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.scss";
-import Avatar3 from "@assets/images/avatar3.png";
+import Avatar1 from "@assets/images/avatar1.png";
 import { Typing } from "./typing";
 import { ScrollList, UserItem, UserLocations } from "@ui";
 import {
@@ -131,7 +131,7 @@ export const Chat = () => {
                 className={styles.userItem}
                 isOnline={true}
                 type={UserLocations.CHAT}
-                avatar={Avatar3}
+                avatar={Avatar1}
                 currentUser={me}
                 {...data}
               />

@@ -1,9 +1,9 @@
 import styles from "./styles.scss";
-import Avatar8 from "@assets/images/avatar8.png";
+import Avatar1 from "@assets/images/avatar1.png";
 import ArrowDown from "@assets/svg/arrow-down.svg";
 import { Avatar } from "@ui";
 import { routePath } from "@pages/routes";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import LogoutIcon from "@assets/svg/logout.svg";
 import PersonIcon from "@assets/svg/person.svg";
 import { useState } from "react";
@@ -18,6 +18,8 @@ type TProps = {
 export const Header = ({ firstName, lastName }: TProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const history = useHistory();
+
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
@@ -26,6 +28,10 @@ export const Header = ({ firstName, lastName }: TProps) => {
     localStorage.removeItem(AUTH_TOKEN);
     // Reload page to reset all cache
     window.location.reload();
+  };
+
+  const handleProfile = () => {
+    history.push(routePath.profile.path);
   };
 
   return (
@@ -37,7 +43,7 @@ export const Header = ({ firstName, lastName }: TProps) => {
         {firstName && lastName && (
           <>
             <div className={styles.userInfo} onClick={toggleOpen}>
-              <Avatar image={Avatar8} alt="Avatar" notifications={6} />
+              <Avatar image={Avatar1} alt="Avatar" notifications={6} />
               <div className={styles.info}>
                 <span>
                   {firstName} {lastName}
@@ -50,7 +56,7 @@ export const Header = ({ firstName, lastName }: TProps) => {
             </div>
             {isOpen && (
               <div className={styles.profileNav}>
-                <div className={styles.profileNavItem} onClick={handleLogout}>
+                <div className={styles.profileNavItem} onClick={handleProfile}>
                   <PersonIcon />
                   <span>Profile</span>
                 </div>

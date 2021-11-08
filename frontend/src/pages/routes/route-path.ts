@@ -11,6 +11,9 @@ export const routePath = {
   auth: {
     path: "/auth",
   },
+  profile: {
+    path: "/profile",
+  },
   notFound: {
     path: "/404",
   },
