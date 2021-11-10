@@ -14,7 +14,6 @@ type Mutation {
 
 input SendMessageInput {
   chat_id: String!
-
   message: String!
 }
 

@@ -20,7 +20,11 @@ export const Main: React.FC<TProps> = ({ children, className }) => {
   });
   return (
     <>
-      <Header firstName={data?.me?.firstName} lastName={data?.me?.lastName} />
+      <Header
+        firstName={data?.me?.firstName}
+        lastName={data?.me?.lastName}
+        avatarId={data?.me?.avatar?.id}
+      />
       <div className={cn(styles.flex, className)}>
         <Sidebar />
         {children}

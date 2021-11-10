@@ -1,0 +1,7 @@
+scalar Buffer
+
+type File {
+  id: String
+  filename: String
+  data: Buffer
+}

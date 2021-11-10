@@ -7,6 +7,9 @@ export const FETCH_ME = gql`
       email
       firstName
       lastName
+      avatar {
+        id
+      }
     }
   }
 `;
@@ -17,6 +20,9 @@ export const FETCH_SEARCH_USERS = gql`
       id
       firstName
       lastName
+      avatar {
+        id
+      }
     }
   }
 `;
@@ -29,6 +35,9 @@ export const FETCH_CHAT = gql`
         id
         firstName
         lastName
+        avatar {
+          id
+        }
       }
       messages {
         id
@@ -38,6 +47,9 @@ export const FETCH_CHAT = gql`
           id
           firstName
           lastName
+          avatar {
+            id
+          }
         }
         message
       }
@@ -53,6 +65,9 @@ export const FETCH_MY_CHATS = gql`
         id
         firstName
         lastName
+        avatar {
+          id
+        }
       }
       messages {
         createdAt
@@ -75,6 +90,9 @@ export const FETCH_NEW_USERS = gql`
       email
       firstName
       lastName
+      avatar {
+        id
+      }
     }
   }
 `;
@@ -89,6 +107,9 @@ export const SEND_MESSAGE = gql`
         id
         firstName
         lastName
+        avatar {
+          id
+        }
       }
     }
   }
@@ -120,6 +141,7 @@ export const SEND_REGISTER = gql`
     $password: String!
     $firstName: String!
     $lastName: String!
+    $avatar: Upload
   ) {
     signUp(
       input: {
@@ -128,6 +150,7 @@ export const SEND_REGISTER = gql`
         email: $email
         password: $password
       }
+      file: $avatar
     )
   }
 `;
@@ -151,6 +174,9 @@ export const SUBSCRIBE_CHAT = gql`
         id
         firstName
         lastName
+        avatar {
+          id
+        }
       }
     }
   }
@@ -162,6 +188,9 @@ export const SUBSCRIBE_NEW_USER = gql`
       id
       firstName
       lastName
+      avatar {
+        id
+      }
     }
   }
 `;
@@ -181,6 +210,9 @@ export const SUBSCRIBE_MY_CHAT = gql`
           id
           firstName
           lastName
+          avatar {
+            id
+          }
         }
         message
         read

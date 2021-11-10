@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styles from "./styles.scss";
 import { SiebarItem, UserItem, UserLocations } from "@ui";
-import Avatar1 from "@assets/images/avatar1.png";
 import { useQuery, useSubscription } from "@apollo/client";
 import { FETCH_ME, FETCH_MY_CHATS, SUBSCRIBE_MY_CHAT } from "@schemas";
-import { TChat, TUser } from "@features/types";
-import { useHistory } from "react-router-dom";
+import { RouteParams, TChat, TUser } from "@features/types";
+import { useHistory, useParams } from "react-router-dom";
 import { routePath } from "@pages/routes";
 
 export const ChatsList = () => {
@@ -15,6 +14,8 @@ export const ChatsList = () => {
   const me = userData?.me;
 
   const history = useHistory();
+
+  const { id } = useParams<RouteParams>();
 
   const { loading } = useQuery(FETCH_MY_CHATS, {
     onCompleted: ({ getMyChats: data }) => {
@@ -46,8 +47,8 @@ export const ChatsList = () => {
     },
   });
 
-  const handleClick = (id: string) => {
-    history.push(`${routePath.chat.path}/${id}`);
+  const handleClick = (toId: string) => {
+    if (id !== toId) history.push(`${routePath.chat.path}/${toId}`);
   };
 
   if (loading) return <h1>Loading...</h1>;
@@ -77,7 +78,6 @@ export const ChatsList = () => {
             handleRoute={handleClick}
             currentUser={me}
             type={UserLocations.SIDEBAR}
-            avatar={Avatar1}
             {...data}
             chat={chat}
           />

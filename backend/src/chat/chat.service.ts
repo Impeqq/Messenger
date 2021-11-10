@@ -92,6 +92,7 @@ export class ChatService {
       .createQueryBuilder('message')
       .leftJoinAndSelect('message.chat', 'chat')
       .leftJoinAndSelect('message.user_from', 'user')
+      .leftJoinAndSelect('user.avatar', 'file')
       .where('chat.id = :id', { id: id })
       .orderBy('message.createdAt', 'DESC')
       .skip(offset)
@@ -132,6 +133,7 @@ export class ChatService {
     const users = await this.userRepo
       .createQueryBuilder('user')
       .leftJoinAndSelect('user.chats', 'chat')
+      .leftJoinAndSelect('user.avatar', 'file')
       .where('chat.id = :id', { id: chat.id })
       .getMany();
 

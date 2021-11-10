@@ -1,12 +1,11 @@
 import styles from "./styles.scss";
 import { SearchInput, UserItem, UserLocations } from "@ui";
-import Avatar1 from "@assets/images/avatar1.png";
 import { useLazyQuery, useMutation } from "@apollo/client";
 import { FETCH_SEARCH_USERS, SEND_CREATE_CHAT } from "@schemas";
 import ChatIcon from "@assets/svg/chat.svg";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { routePath } from "@pages/routes";
-import { TUser } from "@features/types";
+import { RouteParams, TUser } from "@features/types";
 import { useState } from "react";
 import cn from "classnames";
 
@@ -26,6 +25,8 @@ export const SearchList = () => {
 
   const history = useHistory();
 
+  const { id } = useParams<RouteParams>();
+
   const searchUsers = (name: string) => {
     fetchUsers({
       variables: {
@@ -38,13 +39,14 @@ export const SearchList = () => {
     setUsers(undefined);
   };
 
-  const handleClick = (id: string) => {
+  const handleClick = (toId: string) => {
     clearUsers();
-    sendCreateChat({
-      variables: {
-        user_to: id,
-      },
-    });
+    if (id !== toId)
+      sendCreateChat({
+        variables: {
+          user_to: toId,
+        },
+      });
   };
 
   return (
@@ -63,7 +65,6 @@ export const SearchList = () => {
               className={styles.userItem}
               isOnline={true}
               type={UserLocations.SIDEBAR}
-              avatar={Avatar1}
               user={user}
               RightIcon={ChatIcon}
             />

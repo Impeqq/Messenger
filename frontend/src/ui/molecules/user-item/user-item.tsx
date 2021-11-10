@@ -1,12 +1,13 @@
 import { FunctionComponent, SVGAttributes } from "react";
 import styles from "./styles.scss";
 import cn from "classnames";
-import { Avatar, Badge, ReadCheck } from "@ui";
+import { Avatar, ReadCheck } from "@ui";
 import { DateTime } from "@components";
 import { TUser } from "@features/types";
+import Avatar1 from "@assets/images/avatar1.png";
+import { API } from "@features/constants";
 
 type TProps = {
-  avatar: string;
   message?: string;
   className?: string;
   isOnline?: boolean;
@@ -28,7 +29,6 @@ export enum UserLocations {
 }
 
 export const UserItem = ({
-  avatar,
   message = "",
   className,
   isOnline = false,
@@ -49,6 +49,10 @@ export const UserItem = ({
     handleCreate && handleCreate(user?.id || "");
     handleRoute && handleRoute(chat?.id || "");
   };
+
+  const avatar = user?.avatar
+    ? `http://${API}/file/${user.avatar.id}`
+    : Avatar1;
 
   return (
     <div className={cn(className, styles.userItem)} onClick={handleClick}>

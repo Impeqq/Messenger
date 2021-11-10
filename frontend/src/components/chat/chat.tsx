@@ -131,7 +131,6 @@ export const Chat = () => {
                 className={styles.userItem}
                 isOnline={true}
                 type={UserLocations.CHAT}
-                avatar={Avatar1}
                 currentUser={me}
                 {...data}
               />

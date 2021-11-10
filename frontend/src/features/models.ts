@@ -8,4 +8,5 @@ export const registerModel = {
   password: "password",
   firstName: "firstName",
   lastName: "lastName",
+  avatar: "avatar",
 };

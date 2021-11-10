@@ -5,9 +5,12 @@ import {
   Column,
   ManyToMany,
   CreateDateColumn,
+  JoinColumn,
+  OneToOne,
 } from 'typeorm';
 import { ObjectType, Field } from '@nestjs/graphql';
 import { ChatEntity } from 'src/chat/chat.entity';
+import { FileEntity } from 'src/file/file.entity';
 
 @ObjectType()
 @Entity('users')
@@ -31,6 +34,10 @@ export class UserEntity extends BaseEntity {
   @Field()
   @Column('text')
   lastName: string;
+
+  @OneToOne(() => FileEntity)
+  @JoinColumn()
+  avatar?: FileEntity;
 
   @ManyToMany(() => ChatEntity, (chat) => chat.users)
   chats: ChatEntity[];

@@ -1,3 +1,5 @@
+scalar Upload
+
 type User {
   id: ID!
   email: String!
@@ -5,6 +7,7 @@ type User {
   firstName: String!
   lastName: String!
   createdAt: String!
+  avatar: File
 }
 
 type Query {
@@ -14,7 +17,7 @@ type Query {
 }
 
 type Mutation {
-  signUp(input: SignUpInput): String
+  signUp(input: SignUpInput, file: Upload): String
   signIn(input: SignInInput): String
 }
 

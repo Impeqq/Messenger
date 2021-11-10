@@ -42,7 +42,7 @@ export interface IMutation {
     createChat(user_to?: string): Chat | Promise<Chat>;
     setMessagesRead(message_ids?: string[], chat_id?: string): boolean | Promise<boolean>;
     sendMessage(input?: SendMessageInput): Message | Promise<Message>;
-    signUp(input?: SignUpInput): string | Promise<string>;
+    signUp(input?: SignUpInput, file?: Upload): string | Promise<string>;
     signIn(input?: SignInInput): string | Promise<string>;
 }
 
@@ -51,6 +51,12 @@ export interface ISubscription {
     messageSent(chat_id?: string): Message | Promise<Message>;
     messagesUpdated(chat_id?: string): MessageUpdates | Promise<MessageUpdates>;
     userRegistred(): User | Promise<User>;
+}
+
+export interface File {
+    id?: string;
+    filename?: string;
+    data?: Buffer;
 }
 
 export interface Message {
@@ -74,4 +80,8 @@ export interface User {
     firstName: string;
     lastName: string;
     createdAt: string;
+    avatar?: File;
 }
+
+export type Buffer = any;
+export type Upload = any;

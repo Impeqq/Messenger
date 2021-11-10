@@ -8,14 +8,15 @@ import LogoutIcon from "@assets/svg/logout.svg";
 import PersonIcon from "@assets/svg/person.svg";
 import { useState } from "react";
 import cn from "classnames";
-import { AUTH_TOKEN } from "@features/constants";
+import { API, AUTH_TOKEN } from "@features/constants";
 
 type TProps = {
   firstName?: string;
   lastName?: string;
+  avatarId?: string;
 };
 
-export const Header = ({ firstName, lastName }: TProps) => {
+export const Header = ({ firstName, lastName, avatarId }: TProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const history = useHistory();
@@ -34,6 +35,8 @@ export const Header = ({ firstName, lastName }: TProps) => {
     history.push(routePath.profile.path);
   };
 
+  const avatar = avatarId ? `http://${API}/file/${avatarId}` : Avatar1;
+
   return (
     <div className={styles.header}>
       <div className={styles.container}>
@@ -43,7 +46,7 @@ export const Header = ({ firstName, lastName }: TProps) => {
         {firstName && lastName && (
           <>
             <div className={styles.userInfo} onClick={toggleOpen}>
-              <Avatar image={Avatar1} alt="Avatar" notifications={6} />
+              <Avatar image={avatar} alt="Avatar" notifications={6} />
               <div className={styles.info}>
                 <span>
                   {firstName} {lastName}

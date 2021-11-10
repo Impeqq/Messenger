@@ -3,6 +3,11 @@ export type TUser = {
   firstName: string;
   lastName: string;
   message?: string;
+  avatar?: {
+    filename: string;
+    data: Buffer;
+    id: string;
+  };
 };
 
 export type TChat = {

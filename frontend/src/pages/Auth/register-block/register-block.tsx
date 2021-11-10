@@ -42,6 +42,7 @@ export const RegisterBlock = () => {
         password: data?.[registerModel.password],
         firstName: data?.[registerModel.firstName],
         lastName: data?.[registerModel.lastName],
+        avatar: data?.[registerModel.avatar].item(0),
       },
     });
   };
@@ -58,6 +59,7 @@ export const RegisterBlock = () => {
     >
       <span className={styles.title}>New to the messenger?</span>
       <span className={styles.description}>Instant registration</span>
+      <Input placeholder={"Avatar"} type="file" name={registerModel.avatar} />
       <Input placeholder={"First name"} name={registerModel.firstName} />
       <Input placeholder={"Last name"} name={registerModel.lastName} />
       <Input placeholder={"Email"} name={registerModel.email} />

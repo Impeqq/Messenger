@@ -6,7 +6,6 @@ import {
   InMemoryCache,
   ApolloProvider,
   split,
-  HttpLink,
   from,
 } from "@apollo/client";
 import { WebSocketLink } from "@apollo/client/link/ws";
@@ -15,6 +14,7 @@ import { onError } from "@apollo/client/link/error";
 import { setContext } from "@apollo/client/link/context";
 import { API, AUTH_TOKEN } from "@features/constants";
 import "./styles.css";
+import { createUploadLink } from "apollo-upload-client";
 
 const cache = new InMemoryCache();
 const abortController = new AbortController();
@@ -36,7 +36,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const httpLink = new HttpLink({
+const httpLink = createUploadLink({
   uri: `http://${API}/graphql`,
   fetchOptions: {
     mode: "cors",
