@@ -203,6 +203,9 @@ export const SUBSCRIBE_MY_CHAT = gql`
         id
         firstName
         lastName
+        avatar {
+          id
+        }
       }
       messages {
         createdAt
@@ -210,9 +213,6 @@ export const SUBSCRIBE_MY_CHAT = gql`
           id
           firstName
           lastName
-          avatar {
-            id
-          }
         }
         message
         read
