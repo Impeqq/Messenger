@@ -2,20 +2,22 @@ import { BaseForm } from "@components";
 import { Button, ButtonType, ErrorMessage, Input } from "@ui";
 import styles from "./styles.scss";
 import { Link, useHistory } from "react-router-dom";
-import { useMutation } from "@apollo/client";
+import { useLazyQuery, useMutation } from "@apollo/client";
 import { SEND_LOGIN } from "@schemas";
 import { useForm, UseFormOptions } from "react-hook-form";
 import { loginModel } from "@features/models";
 import { AUTH_TOKEN } from "@features/constants";
 import { routePath } from "@pages/routes";
+import { useLocalStorage } from "@features/hooks";
 
 export default function LoginBlock() {
   const history = useHistory();
+  const { setItem } = useLocalStorage();
   const [sendLogin, { loading, error }] = useMutation(SEND_LOGIN, {
     notifyOnNetworkStatusChange: true,
     fetchPolicy: "network-only",
     onCompleted: ({ signIn }) => {
-      localStorage.setItem(AUTH_TOKEN, signIn);
+      setItem(AUTH_TOKEN, signIn);
       history.push(routePath.main.path);
     },
   });

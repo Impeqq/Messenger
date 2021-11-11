@@ -1,7 +1,5 @@
-import { Main } from "@ui";
-
 const Profile = () => {
-  return <Main>profile</Main>;
+  return <p>profile</p>;
 };
 
 export default Profile;

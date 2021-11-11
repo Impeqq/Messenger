@@ -9,6 +9,7 @@ import PersonIcon from "@assets/svg/person.svg";
 import { useState } from "react";
 import cn from "classnames";
 import { API, AUTH_TOKEN } from "@features/constants";
+import { useLocalStorage } from "@features/hooks";
 
 type TProps = {
   firstName?: string;
@@ -18,6 +19,7 @@ type TProps = {
 
 export const Header = ({ firstName, lastName, avatarId }: TProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { removeItem } = useLocalStorage();
 
   const history = useHistory();
 
@@ -26,9 +28,8 @@ export const Header = ({ firstName, lastName, avatarId }: TProps) => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem(AUTH_TOKEN);
-    // Reload page to reset all cache
-    window.location.reload();
+    removeItem(AUTH_TOKEN);
+    history.push(routePath.auth.path);
   };
 
   const handleProfile = () => {
