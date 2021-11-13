@@ -1,0 +1,188 @@
+@import "./color-variables.scss";
+
+// ---------- Text Colors ---------- //
+
+$c_text_primary: $c_grey_90; // Основной цвет текста
+$c_text_secondary: $c_grey_50; // Дополнительный цвет текста
+$c_text_white: $c_grey_white; // Цвет текста на темном фоне
+$c_text_disabled: $c_grey_40; // Disabled цвет текста в полях
+$c_text_disabled_light: $c_grey_30; // Disabled светлый цвет текста в полях
+$c_text_placeholder: $c_grey_50; // Цвет текста плейсхолдера
+$c_text_placeholder_active: $c_grey_30; // Цвет текста плейсхолдера в активном состоянии
+
+// ---------- Action Colors ---------- //
+
+$c_action: $c_blue_60;
+$c_action_hover: $c_blue_70;
+$c_action_pressed: $c_blue_80;
+$c_action_disabled: $c_grey_40;
+$c_action_light: $c_blue_40; // Ссылки на темном фоне
+
+// ---------- Success Colors ---------- //
+
+$c_success: $c_green_50;
+$c_success_light: $c_green_40;
+
+// ---------- Danger Colors ---------- //
+
+$c_danger: $c_red_60;
+$c_danger_hover: $c_red_70;
+$c_danger_pressed: $c_red_80;
+$c_danger_light: $c_red_50;
+
+// ---------- Warn Colors ---------- //
+
+$c_warning: $c_orange_50;
+
+// ---------- Line Colors ---------- //
+
+$c_line_primary: $c_grey_10; // Линии в табах, аккордеоне
+$c_line_secondary: $c_grey_20; // Линии в групповых чекбоксах
+
+// ---------- Border Colors ---------- //
+
+$c_border_base: $c_grey_30;
+$c_border_hover: $c_grey_50; // FIXME: нет в фигме!
+$c_border_active: $c_blue_60;
+$c_border_error: $c_red_60;
+$c_border_positive: $c_green_50;
+$c_border_date: $c_grey_90; // Курсор выбора даты
+
+// ---------- Icons Colors ---------- //
+
+$c_icon_fill: $c_grey_30;
+$c_icon_outline: $c_grey_50;
+$c_icon_hover: $c_blue_60;
+$c_icon_pressed: $c_blue_70;
+$c_icon_white: $c_grey_white; // Иконки на темном фоне
+$c_icon_blue_white: $c_blue_50; // Иконки на темном фоне
+
+// ---------- Background Colors ---------- //
+
+$c_bg_primary: $c_grey_white; // Рабочая область, лайтбокс, хедер, карточки, поля ввода
+$c_bg_secondary: $c_grey_5; // Фон страниц
+$c_bg_dark: $c_grey_80; // Информеры
+$c_bg_hover: $c_grey_5; // Hover полей ввода
+$c_bg_disabled: $c_grey_10; // Disabled полей ввода
+
+// ---------- Additional Colors ---------- //
+$c_add_blue_10: $c_blue_10; // line notification info status accordion dropzone hover
+$c_add_blue_20: $c_blue_20; // tag blue
+$c_add_blue_40: $c_blue_40; // switcher on disabled status neutral
+$c_add_blue_50: $c_blue_50; // system notification info
+$c_add_green_10: $c_green_10; // line notification success
+$c_add_green_20: $c_green_20; // tag green
+$c_add_green_40: $c_green_40; // line notification success status positive
+$c_add_orange_10: $c_orange_10; // line notification warn
+$c_add_orange_20: $c_orange_20; // tag orange
+$c_add_red_10: $c_red_10; // line notification error
+$c_add_red_20: $c_red_20; // tag red
+$c_add_red_50: $c_red_50; // system notification error status negative
+$c_add_grey_10: $c_grey_10; // tag grey choice chips
+$c_add_grey_20: $c_grey_20; // choice chips hover
+
+// ---------- Opacity Colors ---------- //
+
+$c_opacity_light_hover: rgba(
+  $c_grey_100,
+  0.05
+); // Hover на светлых поверхностях
+$c_opacity_light_focus: rgba($c_grey_100, 0.1); // Focus на светлых поверхностях
+$c_opacity_light_pressed: rgba(
+  $c_grey_100,
+  0.16
+); // Pressed на светлых поверхностях
+$c_opacity_light_screen: rgba(
+  $c_grey_100,
+  0.4
+); // Прозрачность различных элементов, например, затемнение экрана или скролла
+
+$c_opacity_dark_hover: rgba(
+  $c_grey_white,
+  0.08
+); // Hover на темных поверхностях
+$c_opacity_dark_focus: rgba(
+  $c_grey_white,
+  0.14
+); // Focus на темных поверхностях
+$c_opacity_dark_pressed: rgba(
+  $c_grey_white,
+  0.2
+); // Pressed на темных поверхностях
+$c_opacity_dark_screen: rgba(
+  $c_grey_white,
+  0.6
+); // Цвет вторичных элементов на черных поверхностяхs
+
+:export {
+  c_text_primary: $c_text_primary;
+  c_text_secondary: $c_text_secondary;
+  c_text_white: $c_text_white;
+  c_text_disabled: $c_text_disabled;
+  c_text_disabled_light: $c_text_disabled_light;
+  c_text_placeholder: $c_text_placeholder;
+  c_text_placeholder_active: $c_text_placeholder_active;
+
+  c_action: $c_action;
+  c_action_hover: $c_action_hover;
+  c_action_pressed: $c_action_pressed;
+  c_action_disabled: $c_action_disabled;
+  c_action_light: $c_action_light;
+
+  c_danger: $c_danger;
+  c_danger_hover: $c_danger_hover;
+  c_danger_pressed: $c_danger_pressed;
+  c_danger_light: $c_danger_light;
+
+  c_success: $c_success;
+  c_success_light: $c_success_light;
+
+  c_warning: $c_warning;
+
+  c_border_base: $c_border_base;
+  c_border_hover: $c_border_hover;
+  c_border_active: $c_border_active;
+  c_border_error: $c_border_error;
+  c_border_positive: $c_border_positive;
+  c_border_date: $c_border_date;
+
+  c_line_primary: $c_line_primary;
+  c_line_secondary: $c_line_secondary;
+
+  c_icon_fill: $c_icon_fill;
+  c_icon_outline: $c_icon_outline;
+  c_icon_hover: $c_icon_hover;
+  c_icon_pressed: $c_icon_pressed;
+  c_icon_white: $c_icon_white;
+  c_icon_blue_white: $c_icon_blue_white;
+
+  c_bg_primary: $c_bg_primary;
+  c_bg_secondary: $c_bg_secondary;
+  c_bg_dark: $c_bg_dark;
+  c_bg_hover: $c_bg_hover;
+  c_bg_disabled: $c_bg_disabled;
+
+  c_add_blue_10: $c_add_blue_10;
+  c_add_blue_20: $c_add_blue_20;
+  c_add_blue_40: $c_add_blue_40;
+  c_add_blue_50: $c_add_blue_50;
+  c_add_green_10: $c_add_green_10;
+  c_add_green_20: $c_add_green_20;
+  c_add_green_40: $c_add_green_40;
+  c_add_orange_10: $c_add_orange_10;
+  c_add_orange_20: $c_add_orange_20;
+  c_add_red_10: $c_add_red_10;
+  c_add_red_20: $c_add_red_20;
+  c_add_red_50: $c_add_red_50;
+  c_add_grey_10: $c_add_grey_10;
+  c_add_grey_20: $c_add_grey_20;
+
+  c_opacity_light_hover: $c_opacity_light_hover;
+  c_opacity_light_focus: $c_opacity_light_focus;
+  c_opacity_light_pressed: $c_opacity_light_pressed;
+  c_opacity_light_screen: $c_opacity_light_screen;
+  c_opacity_dark_hover: $c_opacity_dark_hover;
+  c_opacity_dark_focus: $c_opacity_dark_focus;
+  c_opacity_dark_pressed: $c_opacity_dark_pressed;
+  c_opacity_dark_screen: $c_opacity_dark_screen;
+}
