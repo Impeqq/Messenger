@@ -1,6 +1,8 @@
+@import "@styles/mixins.scss";
+
 .auth-block {
   width: 40%;
-  color: #5a6474;
+  color: $c_text_primary;
 
   input {
     margin-bottom: 30px;

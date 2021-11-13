@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.scss";
-import Avatar1 from "@assets/images/avatar1.png";
 import { Typing } from "./typing";
 import { ScrollList, UserItem, UserLocations } from "@ui";
 import {

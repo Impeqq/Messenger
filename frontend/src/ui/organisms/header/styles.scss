@@ -1,11 +1,13 @@
+@import "@styles/mixins.scss";
+
 .header {
   padding: 19px 0;
-  background: #ffffff;
+  background: $c_white;
   border-bottom: 1px solid #e1e3e6;
 
   .logo {
     font-size: 32px;
-    color: #5a6474;
+    color: $c_text_primary;
   }
 
   .arrow {
@@ -28,16 +30,16 @@
     font-size: 18px;
 
     .login {
-      color: #5a6474;
+      color: $c_text_primary;
       margin-right: 40px;
       &:hover {
-        color: #4e73f8;
+        color: $c_text_primary_hover;
       }
     }
 
     .register {
-      color: #fff;
-      background: #4e73f8;
+      color: $c_white;
+      background: $c_bg_blue;
       padding: 10px 20px;
       border-radius: 8px;
       &:hover {
@@ -53,7 +55,7 @@
     right: 10px;
     top: 60px;
     z-index: 1;
-    background: #ffffff;
+    background: $c_white;
     padding: 16px 0;
     width: 200px;
     border-radius: 5px;
@@ -70,7 +72,7 @@
       border-left: 1px solid #e1e3e6;
       border-top: 1px solid #e1e3e6;
       transform: rotate(45deg);
-      background: #ffffff;
+      background: $c_white;
     }
 
     &-item {
@@ -81,7 +83,7 @@
       width: 100%;
       transition: 0.1s ease all;
       span {
-        color: #757d8a;
+        color: $c_text_primary;
         font-size: 16px;
         margin-left: 10px;
         font-weight: 500;
@@ -92,23 +94,23 @@
         transition: 0.1s ease all;
       }
       &:hover {
-        background: #4e73f8;
+        background: $c_bg_blue;
         & span {
-          color: #ffffff;
+          color: $c_white;
         }
 
         & svg {
-          fill: #fff;
+          fill: $c_white;
         }
 
         & > div:first-child > div {
-          background: #ffffff;
-          border: 2px solid #4e73f8;
+          background: $c_white;
+          border: 2px solid $c_border_hover;
         }
 
         & > div:last-child > div {
-          color: #4e73f8;
-          background: #ffffff;
+          color: $c_text_primary_hover;
+          background: $c_white;
         }
       }
     }
@@ -128,13 +130,13 @@
       & > span:first-child {
         font-size: 18px;
         font-weight: 500;
-        color: #5a6474;
+        color: $c_text_primary;
       }
 
       & > span:last-child {
         font-size: 16px;
         font-weight: 400;
-        color: #4e73f8;
+        color: $c_text_primary_hover;
       }
     }
   }

@@ -9,4 +9,5 @@ export const registerModel = {
   firstName: "firstName",
   lastName: "lastName",
   avatar: "avatar",
+  description: "description",
 };

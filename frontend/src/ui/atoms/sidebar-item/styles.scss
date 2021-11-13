@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,7 +7,7 @@
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #757d8a;
+  color: $c_text_primary;
   padding: 0 0 14px 0;
   cursor: pointer;
 

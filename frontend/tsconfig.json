@@ -27,6 +27,7 @@
       "@components": ["./components"],
       "@ui": ["./ui"],
       "@pages/*": ["./pages/*"],
+      "@styles/*": ["./styles/*"],
       "~types/*": ["./types/*"],
     }
   },

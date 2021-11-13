@@ -1,10 +1,12 @@
+@import "@styles/mixins.scss";
+
 .search {
   position: relative;
 
   .search-list {
     position: absolute;
     border: 1px solid #e1e3e6;
-    background: #fff;
+    background: $c_white;
     border-radius: 8px;
     width: 100%;
     top: calc(100% + 10px);
@@ -12,7 +14,7 @@
 
     &.not-found {
       padding: 16px;
-      color: #404d61;
+      color: $c_text_primary;
       font-size: 18px;
     }
 
@@ -27,21 +29,21 @@
 
       &:hover {
         & span {
-          color: #4e73f8;
+          color: $c_text_primary_hover;
         }
 
         & svg {
-          fill: #4e73f8;
+          fill: $c_text_primary_hover;
         }
 
         & > div:first-child > div {
-          background: #ffffff;
-          border: 2px solid #4e73f8;
+          background: $c_white;
+          border: 2px solid $c_border_hover;
         }
 
         & > div:last-child > div {
-          color: #4e73f8;
-          background: #ffffff;
+          color: $c_text_primary_hover;
+          background: $c_white;
         }
       }
     }

@@ -1,8 +1,10 @@
+@import "@styles/mixins.scss";
+
 .badge {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  color: #ffffff;
+  color: $c_white;
   font-size: 14px;
   text-align: center;
   padding: 2px 0;

@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .info {
   display: flex;
   flex-direction: column;
@@ -6,11 +8,11 @@
   .name {
     font-size: 18px;
     font-weight: 700;
-    color: #404d61;
+    color: $c_text_primary;
   }
 
   .time {
-    color: #757d8a;
+    color: $c_text_primary;
     font-size: 14px;
   }
 }
@@ -30,7 +32,7 @@
     &:before {
       position: absolute;
       content: "";
-      background: #4e73f8;
+      background: $c_bg_blue;
       width: 16px;
       height: 2px;
       top: 0;
@@ -42,7 +44,7 @@
     &:after {
       position: absolute;
       content: "";
-      background: #4e73f8;
+      background: $c_bg_blue;
       width: 2px;
       height: 16px;
       top: 0;
@@ -58,7 +60,7 @@
   }
 
   & img {
-    border: 2px solid #ffffff;
+    border: 2px solid $c_white;
     border-radius: 50%;
     width: 32px;
     height: 32px;

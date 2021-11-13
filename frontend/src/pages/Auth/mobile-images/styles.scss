@@ -1,8 +1,10 @@
+@import "@styles/mixins.scss";
+
 .images {
   width: 55%;
   text-align: center;
   position: relative;
-  color: #5a6474;
+  color: $c_text_primary;
 
   .title {
     font-size: 24px;

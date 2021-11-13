@@ -1,6 +1,8 @@
+@import "@styles/mixins.scss";
+
 .input {
   border: 1px solid #e1e3e6;
-  background: #fff;
+  background: $c_white;
   display: flex;
   justify-content: space-between;
   border-radius: 8px;
@@ -19,7 +21,7 @@
   .search-button {
     border-left: 1px solid #e1e3e6;
     background: #f8f8f8;
-    color: #757d8a;
+    color: $c_text_primary;
     &:hover {
       background: #eee;
     }

@@ -1,5 +1,7 @@
+@import "@styles/mixins.scss";
+
 .typing {
-  background: #ffffff;
+  background: $c_white;
   display: flex;
   justify-content: space-between;
   align-items: center;

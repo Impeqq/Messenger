@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .button {
   font-size: 16px;
   font-weight: 500;
@@ -33,16 +35,16 @@
   }
 
   &.fill {
-    background: #4e73f8;
-    color: #ffffff;
+    background: $c_bg_blue;
+    color: $c_white;
     &:hover {
-      background: #3a59c9;
+      background: $c_bg_dark_blue;
     }
   }
 
   &.ghost {
     background: transparent;
-    color: #757d8a;
+    color: $c_text_primary;
     &:hover {
       background: #eee;
     }
@@ -52,17 +54,17 @@
   }
 
   &.outline {
-    background: #ffffff;
-    border: 1px solid #4e73f8;
-    color: #4e73f8;
+    background: $c_white;
+    border: 1px solid $c_border_hover;
+    color: $c_text_primary_hover;
     .loader circle {
-      stroke: #4e73f8;
+      stroke: $c_bg_blue;
     }
     &:hover {
-      border: 1px solid #3a59c9;
-      color: #3a59c9;
+      border: 1px solid $c_bg_dark_blue;
+      color: $c_bg_dark_blue;
       .loader circle {
-        stroke: #3a59c9;
+        stroke: $c_bg_dark_blue;
       }
     }
   }

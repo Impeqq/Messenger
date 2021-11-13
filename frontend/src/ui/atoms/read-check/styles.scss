@@ -1,4 +1,6 @@
+@import "@styles/mixins.scss";
+
 .message-icon {
-  fill: #4e73f8;
+  fill: $c_bg_blue;
   margin-left: 6px;
 }

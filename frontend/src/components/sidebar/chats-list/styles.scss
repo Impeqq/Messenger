@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .user-item {
   padding: 16px;
   transition: 0.1s ease all;
@@ -8,22 +10,22 @@
   }
 
   &:hover {
-    background: #4e73f8;
+    background: $c_bg_blue;
     & span {
-      color: #ffffff;
+      color: $c_white;
     }
 
     & > div:first-child > div {
-      background: #ffffff;
-      border: 2px solid #4e73f8;
+      background: $c_white;
+      border: 2px solid $c_border_hover;
     }
 
     & > div:last-child > div {
-      color: #4e73f8;
-      background: #ffffff;
+      color: $c_text_primary_hover;
+      background: $c_white;
     }
     & > div:last-child > svg {
-      fill: #fff;
+      fill: $c_white;
     }
   }
 
@@ -35,5 +37,5 @@
 
 .not-chats {
   font-size: 18px;
-  color: #404d61;
+  color: $c_text_primary;
 }

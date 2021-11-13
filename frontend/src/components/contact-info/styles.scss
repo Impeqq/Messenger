@@ -1,24 +1,25 @@
+@import "@styles/mixins.scss";
+
 .contact-info {
   width: 378px;
   flex-shrink: 0;
   margin: 24px 24px 40px 24px;
-  background: #ffffff;
+  background: $c_white;
   border-radius: 8px;
 
   .header {
     border-bottom: 1px solid #e1e3e6;
     font-size: 18px;
     font-weight: 700;
-    color: #404d61;
+    color: $c_text_primary;
     display: flex;
     justify-content: space-between;
     padding: 17px 24px;
   }
 
   .avatar {
-    background: linear-gradient(180deg, #fca549 0%, #f39531 100%);
     border-radius: 50%;
-    color: #ffffff;
+    color: $c_white;
     font-size: 24px;
     width: 72px;
     height: 72px;
@@ -28,13 +29,13 @@
 
   .title {
     margin-top: 16px;
-    color: #5a6474;
+    color: $c_text_primary;
     font-size: 18px;
     font-weight: 700;
   }
 
   .members {
-    color: #757d8a;
+    color: $c_text_primary;
     font-size: 14px;
     font-weight: 400;
   }
@@ -61,14 +62,14 @@
       width: 48%;
       border-radius: 8px;
       transition: 0.1s ease all;
-      background: #ffffff;
+      background: $c_white;
 
       &:hover {
-        background: #4e73f8;
-        border: 1px solid #4e73f8;
+        background: $c_bg_blue;
+        border: 1px solid $c_border_hover;
 
         & svg {
-          fill: #ffffff;
+          fill: $c_white;
         }
       }
     }

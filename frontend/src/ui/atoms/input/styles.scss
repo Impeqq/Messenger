@@ -1,25 +1,15 @@
+@import "@styles/mixins.scss";
+
 .input {
   position: relative;
 
   span {
+    color: $c_danger;
+    margin: 0;
+    font-size: 14px;
     position: absolute;
     bottom: 5px;
     left: 0;
-    color: #ffffff;
-    background: #f43c3c;
-    border-radius: 10px;
-    padding: 0 10px;
-    font-size: 13px;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom: 5px solid #f43c3c;
-      top: -5px;
-    }
   }
 
   input {
@@ -32,17 +22,16 @@
     transition: 0.1s ease all;
 
     &.error {
-      border: 1px solid #f43c3c;
-      background: #fffbfb;
+      border: 1px solid $c_border_error_hover;
+      box-shadow: 0 0 0 4px $c_border_error;
     }
-
-    &:focus:not(.error) {
-      border: 1px solid #afb1b3;
-    }
-
     &::placeholder {
-      color: #757d8a;
+      color: $c_text_primary;
       transition: 0.1s ease border color;
+    }
+    &:focus {
+      border: 1px solid $c_border_hover;
+      box-shadow: 0 0 0 4px $c_border_base;
     }
     &:focus::placeholder {
       color: #a4abb5;

@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .avatar {
   position: relative;
 
@@ -7,7 +9,7 @@
     border-radius: 50%;
     width: 12px;
     height: 12px;
-    border: 2px solid #ffffff;
+    border: 2px solid $c_white;
     bottom: 1px;
     right: 1px;
     transition: 0.1s ease all;
@@ -21,7 +23,7 @@
     height: 18px;
     top: 1px;
     right: 1px;
-    color: #ffffff;
+    color: $c_white;
     text-align: center;
     font-size: 14px;
   }

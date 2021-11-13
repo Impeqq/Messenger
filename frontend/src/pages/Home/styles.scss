@@ -1,6 +1,8 @@
+@import "@styles/mixins.scss";
+
 .title {
   margin-top: 200px;
   text-align: center;
-  color: #404d61;
+  color: $c_text_primary;
   flex-grow: 1;
 }

@@ -1,0 +1,98 @@
+// Grey colors
+$c_grey_6: #a5b9d8;
+$c_grey_5: #757d8a;
+$c_grey_4: #c3c7ce;
+$c_grey_3: #e1e3e6;
+$c_grey_2: #f1f2f3;
+$c_grey_1: #f8f8f8;
+
+// Blue colors
+$c_blue_6: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
+$c_blue_5: #4e73f8;
+$c_blue_4: rgba(78, 115, 248, 0.64);
+$c_blue_3: rgba(78, 115, 248, 0.4);
+$c_blue_2: rgba(78, 115, 248, 0.24);
+$c_blue_1: rgba(78, 115, 248, 0.08);
+
+// Red colors
+$c_red_6: linear-gradient(180deg, #ff5959 0%, #ef2c2c 100%);
+$c_red_5: #f43c3c;
+$c_red_4: rgba(244, 60, 60, 0.64);
+$c_red_3: rgba(244, 60, 60, 0.4);
+$c_red_2: rgba(244, 60, 60, 0.24);
+$c_red_1: rgba(244, 60, 60, 0.08);
+
+// Yellow colors
+$c_yellow_6: linear-gradient(180deg, #fca549 0%, #f39531 100%);
+$c_yellow_5: #fca549;
+$c_yellow_4: rgba(252, 165, 73, 0.64);
+$c_yellow_3: rgba(252, 165, 73, 0.4);
+$c_yellow_2: rgba(252, 165, 73, 0.24);
+$c_yellow_1: rgba(252, 165, 73, 0.08);
+
+// Green colors
+$c_green_6: linear-gradient(180deg, #08b395 0%, #0c977f 100%);
+$c_green_5: #07a287;
+$c_green_4: rgba(7, 162, 135, 0.64);
+$c_green_3: rgba(7, 162, 135, 0.45);
+$c_green_2: rgba(7, 162, 135, 0.2);
+$c_green_1: rgba(7, 162, 135, 0.08);
+
+// Pink colors
+$c_pink_6: linear-gradient(180deg, #ff4b6e 0%, #ec234a 100%);
+$c_pink_5: #ff4b6e;
+$c_pink_4: rgba(255, 75, 110, 0.64);
+$c_pink_3: rgba(255, 75, 110, 0.4);
+$c_pink_2: rgba(255, 75, 110, 0.24);
+$c_pink_1: rgba(255, 75, 110, 0.08);
+// Purple colors
+$c_purple_6: linear-gradient(180deg, #605cf3 0%, #4d4ac8 100%);
+$c_purple_5: #5552d9;
+$c_purple_4: rgba(85, 82, 217, 0.64);
+$c_purple_3: rgba(85, 82, 217, 0.4);
+$c_purple_2: rgba(85, 82, 217, 0.24);
+$c_purple_1: rgba(85, 82, 217, 0.08);
+
+:export {
+  c_grey_6: $c_grey_6;
+  c_grey_5: $c_grey_5;
+  c_grey_4: $c_grey_4;
+  c_grey_3: $c_grey_3;
+  c_grey_2: $c_grey_2;
+  c_grey_1: $c_grey_1;
+
+  c_blue_6: $c_blue_6;
+  c_blue_5: $c_blue_5;
+  c_blue_4: $c_blue_4;
+  c_blue_3: $c_blue_3;
+  c_blue_2: $c_blue_2;
+  c_blue_1: $c_blue_1;
+
+  c_red_6: $c_red_6;
+  c_red_5: $c_red_5;
+  c_red_4: $c_red_4;
+  c_red_3: $c_red_3;
+  c_red_2: $c_red_2;
+  c_red_1: $c_red_1;
+
+  c_yellow_6: $c_yellow_6;
+  c_yellow_5: $c_yellow_5;
+  c_yellow_4: $c_yellow_4;
+  c_yellow_3: $c_yellow_3;
+  c_yellow_2: $c_yellow_2;
+  c_yellow_1: $c_yellow_1;
+
+  c_pink_6: $c_pink_6;
+  c_pink_5: $c_pink_5;
+  c_pink_4: $c_pink_4;
+  c_pink_3: $c_pink_3;
+  c_pink_2: $c_pink_2;
+  c_pink_1: $c_pink_1;
+
+  c_purple_6: $c_purple_6;
+  c_purple_5: $c_purple_5;
+  c_purple_4: $c_purple_4;
+  c_purple_3: $c_purple_3;
+  c_purple_2: $c_purple_2;
+  c_purple_1: $c_purple_1;
+}

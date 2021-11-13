@@ -1,5 +1,7 @@
+@import "@styles/mixins.scss";
+
 .chat {
-  background: #ffffff;
+  background: $c_white;
   margin: 24px 0 16px 0;
   border-radius: 8px;
   height: 100%;
@@ -48,11 +50,11 @@
   }
 
   & span {
-    color: #757d8a;
+    color: $c_text_primary;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    background: #fff;
+    background: $c_white;
     padding: 5px 15px;
     position: relative;
   }
