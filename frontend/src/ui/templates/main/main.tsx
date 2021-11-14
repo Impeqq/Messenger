@@ -15,7 +15,7 @@ export const Main: React.FC = ({ children }) => {
   const history = useHistory();
   const [me, setMe] = useState<null | TUser>(null);
   const { getItem } = useLocalStorage();
-  const [fetchMe, { data }] = useLazyQuery(FETCH_ME, {
+  const [fetchMe] = useLazyQuery(FETCH_ME, {
     fetchPolicy: "network-only",
     onCompleted: ({ me }) => setMe(me),
     onError: () => {
@@ -29,8 +29,6 @@ export const Main: React.FC = ({ children }) => {
   useEffect(() => {
     fetchMe();
   }, [fetchMe, isGuest]);
-
-  console.log("rerender");
 
   return (
     <>

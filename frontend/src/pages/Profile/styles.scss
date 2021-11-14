@@ -8,6 +8,14 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 215px);
   flex-grow: 1;
+  transition: 0.2s ease all;
+
+  .tabs {
+    margin-bottom: 30px;
+  }
+
+  input {
+    margin-bottom: 30px;
+  }
 }

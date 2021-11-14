@@ -4,8 +4,7 @@ import cn from "classnames";
 import { Avatar, ReadCheck } from "@ui";
 import { DateTime } from "@components";
 import { TUser } from "@features/types";
-import Avatar1 from "@assets/images/avatar1.png";
-import { API } from "@features/constants";
+import { getImage } from "@features/helpers/getImage";
 
 type TProps = {
   message?: string;
@@ -16,8 +15,8 @@ type TProps = {
   RightIcon?: FunctionComponent<SVGAttributes<SVGElement>>;
   handleCreate?: (id: string) => void;
   handleRoute?: (id: string) => void;
-  user?: TUser;
-  currentUser?: TUser;
+  user?: Omit<TUser, "email">;
+  currentUser?: Omit<TUser, "email">;
   isMessageFromMe?: boolean;
   chat?: any;
   read?: boolean;
@@ -50,13 +49,18 @@ export const UserItem = ({
     handleRoute && handleRoute(chat?.id || "");
   };
 
-  const avatar = user?.avatar
-    ? `http://${API}/file/${user.avatar.id}`
-    : Avatar1;
-
   return (
-    <div className={cn(className, styles.userItem)} onClick={handleClick}>
-      <Avatar image={avatar} alt={"Avatar"} isOnline={isOnline} />
+    <div
+      className={cn(className, styles.userItem, {
+        [styles.wrap]: type === UserLocations.SIDEBAR,
+      })}
+      onClick={handleClick}
+    >
+      <Avatar
+        image={getImage(user?.avatar?.id)}
+        alt={"Avatar"}
+        isOnline={isOnline}
+      />
       <div className={styles.info}>
         <span className={styles.title}>
           {isSelf ? "You" : `${user?.firstName} ${user?.lastName}`}

@@ -63,7 +63,9 @@ export const ChatsList = () => {
       )}
       {chats?.map((chat: TChat) => {
         const data = {
-          user: chat.users.filter((user: TUser) => user.id !== me?.id)[0],
+          user: chat.users.filter(
+            (user: Omit<TUser, "email">) => user.id !== me?.id
+          )[0],
           date: chat.messages[0]?.createdAt,
           message: chat.messages[0]?.message,
           isMessageFromMe: chat.messages[0]?.user_from.id === me?.id,

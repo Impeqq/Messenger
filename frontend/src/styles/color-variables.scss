@@ -1,15 +1,17 @@
 // Grey colors
-$c_grey_6: #a5b9d8;
+$c_grey_6: #5a6474;
 $c_grey_5: #757d8a;
-$c_grey_4: #c3c7ce;
+$c_grey_4: rgb(159, 163, 170);
 $c_grey_3: #e1e3e6;
 $c_grey_2: #f1f2f3;
 $c_grey_1: #f8f8f8;
+$c_grey_0: #f1f2f3b5;
 
 // Blue colors
+$c_blue_7: linear-gradient(180deg, #5c7ae4 0%, #3559df 100%);
 $c_blue_6: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
 $c_blue_5: #4e73f8;
-$c_blue_4: rgba(78, 115, 248, 0.64);
+$c_blue_4: #3955bb;
 $c_blue_3: rgba(78, 115, 248, 0.4);
 $c_blue_2: rgba(78, 115, 248, 0.24);
 $c_blue_1: rgba(78, 115, 248, 0.08);

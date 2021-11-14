@@ -1,10 +1,17 @@
 @import "@styles/mixins.scss";
 
-.error-message {
-  color: $c_danger;
+.message {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+
+  &.success {
+    color: $c_success;
+  }
+
+  &.danger {
+    color: $c_danger;
+  }
 
   & p {
     margin: 0;
@@ -12,7 +19,12 @@
     font-size: 14px;
   }
 
-  svg {
+  &.success svg {
+    width: 20px;
+    fill: $c_success;
+  }
+
+  &.danger svg {
     width: 20px;
     fill: $c_danger;
   }

@@ -1,0 +1,19 @@
+@import "@styles/mixins.scss";
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $c_border_base;
+  background: $c_bg_grey;
+  border-radius: 8px;
+  padding: 4px;
+
+  div {
+    flex-grow: 1;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+}

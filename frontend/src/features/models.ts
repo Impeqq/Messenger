@@ -6,8 +6,9 @@ export const loginModel = {
 export const registerModel = {
   email: "email",
   password: "password",
+  newPassword: "newPassword",
+  repeatedPassword: "repeatedPassword",
   firstName: "firstName",
   lastName: "lastName",
   avatar: "avatar",
-  description: "description",
 };

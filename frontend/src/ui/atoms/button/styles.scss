@@ -6,7 +6,7 @@
   text-transform: uppercase;
   border-radius: 8px;
   padding: 10px 20px;
-  transition: 0.1s ease all;
+  transition: 0.2s ease all;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,10 +35,10 @@
   }
 
   &.fill {
-    background: $c_bg_blue;
+    background: $c_button_blue;
     color: $c_white;
     &:hover {
-      background: $c_bg_dark_blue;
+      background: $c_button_blue_hover;
     }
   }
 
@@ -66,6 +66,14 @@
       .loader circle {
         stroke: $c_bg_dark_blue;
       }
+    }
+  }
+
+  &.disabled {
+    background: $c_button_disabled;
+    color: $c_white;
+    &:hover {
+      background: $c_button_disabled_hover;
     }
   }
 

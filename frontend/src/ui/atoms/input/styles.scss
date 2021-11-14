@@ -3,6 +3,34 @@
 .input {
   position: relative;
 
+  .title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $c_text_primary;
+  }
+
+  .eye {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+    height: 20px;
+
+    &:hover svg {
+      fill: $c_icon_grey_hover;
+    }
+
+    svg {
+      transition: 0.2s ease all;
+      fill: $c_icon_grey;
+      width: 25px;
+    }
+  }
+
   span {
     color: $c_danger;
     margin: 0;

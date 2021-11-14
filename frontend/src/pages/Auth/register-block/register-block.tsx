@@ -3,7 +3,7 @@ import {
   Button,
   ButtonStyle,
   ButtonType,
-  ErrorMessage,
+  AlertMessage,
   IconDirection,
   Input,
   InputGroup,
@@ -17,15 +17,17 @@ import { useMutation } from "@apollo/client";
 import { AUTH_TOKEN } from "@features/constants";
 import { routePath } from "@pages/routes";
 import { useHistory } from "react-router-dom";
+import { useLocalStorage } from "@features/hooks";
+import { AlertTypes } from "@features/enum";
 
 export const RegisterBlock = () => {
   const history = useHistory();
-
+  const { setItem } = useLocalStorage();
   const [sendRegister, { loading, error }] = useMutation(SEND_REGISTER, {
     notifyOnNetworkStatusChange: true,
     fetchPolicy: "network-only",
     onCompleted: ({ signUp }) => {
-      localStorage.setItem(AUTH_TOKEN, signUp);
+      setItem(AUTH_TOKEN, signUp);
       history.push(routePath.main.path);
     },
   });
@@ -68,7 +70,11 @@ export const RegisterBlock = () => {
         name={registerModel.password}
         type={"password"}
       />
-      <ErrorMessage className={styles.errorMessage} message={error?.message} />
+      <AlertMessage
+        type={AlertTypes.DANGER}
+        className={styles.errorMessage}
+        message={error?.message}
+      />
       <InputGroup>
         <Button text={"Sign Up"} type={ButtonType.SUBMIT} loading={loading} />
         <Button

@@ -32,8 +32,7 @@ export class MessageService {
   async setMessagesRead(message_ids: string[]) {
     await this.messageRepo
       .createQueryBuilder('message')
-      .update(MessageEntity)
-      .set({ read: true })
+      .update(MessageEntity, { read: true })
       .where('id IN (:...id)', { id: message_ids })
       .execute();
   }

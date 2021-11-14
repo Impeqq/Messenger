@@ -1,0 +1,16 @@
+@import "@styles/mixins.scss";
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $c_text_primary;
+  margin: 0;
+}
+
+.description {
+  font-size: 18px;
+  color: $c_text_primary;
+  font-weight: 400;
+  margin-bottom: 32px;
+  margin-top: 8px;
+}

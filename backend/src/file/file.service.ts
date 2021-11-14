@@ -25,6 +25,12 @@ export class FileService {
     return newFile;
   }
 
+  async deleteDatabaseFile(id: string) {
+    const file = await this.fileRepository.findOne({ id });
+
+    await this.fileRepository.remove(file);
+  }
+
   async getFileById(fileId: string) {
     const file = await this.fileRepository.findOne(fileId);
     if (!file) {

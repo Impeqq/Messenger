@@ -1,0 +1,66 @@
+@import "@styles/mixins.scss";
+
+.flex-block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $c_text_primary;
+  margin: 0;
+}
+
+.description {
+  font-size: 18px;
+  color: $c_text_primary;
+  font-weight: 400;
+  margin-bottom: 32px;
+  margin-top: 8px;
+}
+
+.avatar-block {
+  margin: 0 25px;
+  border-radius: 50%;
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  &:hover .avatar-background {
+    opacity: 1;
+  }
+
+  .avatar-background {
+    cursor: pointer;
+    background: $c_bg_grey_opacity;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s ease all;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      fill: $c_text_primary_hover;
+      width: 30px;
+    }
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+  }
+}

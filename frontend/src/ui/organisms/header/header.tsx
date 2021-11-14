@@ -1,15 +1,15 @@
 import styles from "./styles.scss";
-import Avatar1 from "@assets/images/avatar1.png";
 import ArrowDown from "@assets/svg/arrow-down.svg";
 import { Avatar } from "@ui";
 import { routePath } from "@pages/routes";
 import { Link, useHistory } from "react-router-dom";
 import LogoutIcon from "@assets/svg/logout.svg";
 import PersonIcon from "@assets/svg/person.svg";
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
-import { API, AUTH_TOKEN } from "@features/constants";
+import { AUTH_TOKEN } from "@features/constants";
 import { useLocalStorage } from "@features/hooks";
+import { getImage } from "@features/helpers/getImage";
 
 type TProps = {
   firstName?: string;
@@ -19,24 +19,36 @@ type TProps = {
 
 export const Header = ({ firstName, lastName, avatarId }: TProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef(null);
   const { removeItem } = useLocalStorage();
 
   const history = useHistory();
+
+  useEffect(() => {
+    const onClick: any = (e: React.MouseEvent) => {
+      if (!(ref?.current as any)?.contains(e.target) && isOpen) {
+        setIsOpen(false);
+      }
+      return {} as EventListener;
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, [isOpen]);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
 
   const handleLogout = () => {
-    removeItem(AUTH_TOKEN);
     history.push(routePath.auth.path);
+    toggleOpen();
+    removeItem(AUTH_TOKEN);
   };
 
   const handleProfile = () => {
+    toggleOpen();
     history.push(routePath.profile.path);
   };
-
-  const avatar = avatarId ? `http://${API}/file/${avatarId}` : Avatar1;
 
   return (
     <div className={styles.header}>
@@ -47,7 +59,7 @@ export const Header = ({ firstName, lastName, avatarId }: TProps) => {
         {firstName && lastName && (
           <>
             <div className={styles.userInfo} onClick={toggleOpen}>
-              <Avatar image={avatar} alt="Avatar" notifications={6} />
+              <Avatar image={getImage(avatarId)} alt="Avatar" />
               <div className={styles.info}>
                 <span>
                   {firstName} {lastName}
@@ -59,7 +71,7 @@ export const Header = ({ firstName, lastName, avatarId }: TProps) => {
               </div>
             </div>
             {isOpen && (
-              <div className={styles.profileNav}>
+              <div className={styles.profileNav} ref={ref}>
                 <div className={styles.profileNavItem} onClick={handleProfile}>
                   <PersonIcon />
                   <span>Profile</span>

@@ -11,6 +11,18 @@ export interface SendMessageInput {
     message: string;
 }
 
+export interface UpdateInput {
+    email: string;
+    firstName: string;
+    lastName: string;
+}
+
+export interface UpdatePasswordInput {
+    password: string;
+    newPassword: string;
+    repeatedPassword: string;
+}
+
 export interface SignUpInput {
     email: string;
     password: string;
@@ -42,6 +54,8 @@ export interface IMutation {
     createChat(user_to?: string): Chat | Promise<Chat>;
     setMessagesRead(message_ids?: string[], chat_id?: string): boolean | Promise<boolean>;
     sendMessage(input?: SendMessageInput): Message | Promise<Message>;
+    updatePassword(input?: UpdatePasswordInput): string | Promise<string>;
+    updateUser(input?: UpdateInput, file?: Upload): string | Promise<string>;
     signUp(input?: SignUpInput, file?: Upload): string | Promise<string>;
     signIn(input?: SignInInput): string | Promise<string>;
 }

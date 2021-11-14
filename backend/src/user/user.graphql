@@ -17,8 +17,22 @@ type Query {
 }
 
 type Mutation {
+  updatePassword(input: UpdatePasswordInput): String
+  updateUser(input: UpdateInput, file: Upload): String
   signUp(input: SignUpInput, file: Upload): String
   signIn(input: SignInInput): String
+}
+
+input UpdateInput {
+  email: String!
+  firstName: String!
+  lastName: String!
+}
+
+input UpdatePasswordInput {
+  password: String!
+  newPassword: String!
+  repeatedPassword: String!
 }
 
 input SignUpInput {

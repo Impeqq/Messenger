@@ -155,6 +155,36 @@ export const SEND_REGISTER = gql`
   }
 `;
 
+export const SEND_UPDATE = gql`
+  mutation updateUser(
+    $email: String!
+    $firstName: String!
+    $lastName: String!
+    $avatar: Upload
+  ) {
+    updateUser(
+      input: { firstName: $firstName, lastName: $lastName, email: $email }
+      file: $avatar
+    )
+  }
+`;
+
+export const SEND_UPDATE_PASSWORD = gql`
+  mutation updatePassword(
+    $password: String!
+    $newPassword: String!
+    $repeatedPassword: String!
+  ) {
+    updatePassword(
+      input: {
+        password: $password
+        newPassword: $newPassword
+        repeatedPassword: $repeatedPassword
+      }
+    )
+  }
+`;
+
 export const SUBSCRIBE_MESSAGES_UPDATED = gql`
   subscription messagesUpdated($chat_id: String!) {
     messagesUpdated(chat_id: $chat_id) {

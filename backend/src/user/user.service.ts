@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  UnprocessableEntityException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from './user.entity';
 import { ILike, Repository } from 'typeorm';
@@ -7,6 +11,7 @@ import * as bcrypt from 'bcryptjs';
 import { SignInInput, SignUpInput } from './dto/auth.inputs';
 import { FileService } from 'src/file/file.service';
 import { FileUpload } from 'graphql-upload';
+import { UpdateInput, UpdatePasswordInput } from './dto/update.inputs';
 
 @Injectable()
 export class UserService {
@@ -49,7 +54,7 @@ export class UserService {
     const avatar = await this.fileService.uploadDatabaseFile(file);
 
     return this.userRepo
-      .create({ ...user, password, avatar })
+      .create({ ...user, email: user.email.toLowerCase(), password, avatar })
       .save()
       .catch((e) => {
         if (/(email)[\s\S]+(already exists)/.test(e.detail)) {
@@ -61,16 +66,64 @@ export class UserService {
       });
   }
 
+  async updateUser(user_id: string, input: UpdateInput, file: FileUpload) {
+    const avatar = file && (await this.fileService.uploadDatabaseFile(file));
+    let oldUser;
+    if (avatar) {
+      oldUser = await this.userRepo.findOne(user_id, {
+        relations: ['avatar'],
+      });
+    }
+
+    await this.userRepo
+      .createQueryBuilder('user')
+      .update(UserEntity, avatar ? { ...input, avatar } : { ...input })
+      .where('id = :id', { id: user_id })
+      .execute();
+
+    if (avatar) {
+      await this.fileService.deleteDatabaseFile(oldUser.avatar.id);
+    }
+
+    const user = await this.userRepo.findOne(user_id, {
+      relations: ['avatar'],
+    });
+    return await this.createToken(user);
+  }
+
+  async updatePassword(
+    user_id: string,
+    { password, newPassword, repeatedPassword }: UpdatePasswordInput,
+  ) {
+    const user = await this.userRepo.findOne({ id: user_id });
+    const isCorrectPassword = await bcrypt.compare(password, user.password);
+    if (!isCorrectPassword)
+      throw new UnprocessableEntityException('Invalid current password 🤥');
+    if (newPassword !== repeatedPassword)
+      throw new UnprocessableEntityException(
+        'Check if the input is correct 🤥',
+      );
+
+    await this.userRepo
+      .createQueryBuilder('user')
+      .update(UserEntity, { password: await bcrypt.hash(newPassword, 10) })
+      .where('id = :id', { id: user_id })
+      .execute();
+
+    return true;
+  }
+
   async signIn({ email, password }: SignInInput) {
     const user = await this.userRepo.findOne({
       relations: ['avatar'],
       where: { email: email.toLowerCase() },
     });
-    console.log(user);
-    if (!user) return false;
+    if (!user) throw new UnprocessableEntityException('Invalid credentials 🤥');
     const isCorrectPassword = await bcrypt.compare(password, user.password);
+    if (!isCorrectPassword)
+      throw new UnprocessableEntityException('Invalid credentials 🤥');
 
-    return isCorrectPassword ? user : false;
+    return this.createToken(user);
   }
 
   async newUsers() {
