@@ -1,6 +1,6 @@
 import styles from "./styles.scss";
 import { ChangeInformation } from "./change-information";
-import { ChangePassword } from "./change-password/change-password";
+import { ChangePassword } from "./change-password";
 import { Tabs } from "@ui";
 
 const TABS = ["Change information", "Change password"];

@@ -128,7 +128,6 @@ export const Chat = () => {
               <UserItem
                 key={message.id}
                 className={styles.userItem}
-                isOnline={true}
                 type={UserLocations.CHAT}
                 currentUser={me}
                 {...data}

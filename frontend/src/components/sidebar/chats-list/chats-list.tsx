@@ -76,7 +76,6 @@ export const ChatsList = () => {
           <UserItem
             key={chat.id}
             className={styles.userItem}
-            isOnline={true}
             handleRoute={handleClick}
             currentUser={me}
             type={UserLocations.SIDEBAR}

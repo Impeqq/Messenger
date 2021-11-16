@@ -35,6 +35,10 @@ export class UserEntity extends BaseEntity {
   @Column('text')
   lastName: string;
 
+  @Field()
+  @Column('boolean', { default: false, nullable: true })
+  online: boolean;
+
   @OneToOne(() => FileEntity)
   @JoinColumn()
   avatar?: FileEntity;

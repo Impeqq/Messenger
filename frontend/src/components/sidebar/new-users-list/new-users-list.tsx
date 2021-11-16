@@ -33,7 +33,6 @@ export const NewUsersList = () => {
         <UserItem
           key={user.id}
           className={styles.userItem}
-          isOnline={true}
           type={UserLocations.SIDEBAR}
           user={user}
         />

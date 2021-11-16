@@ -65,6 +65,7 @@ export interface ISubscription {
     messageSent(chat_id?: string): Message | Promise<Message>;
     messagesUpdated(chat_id?: string): MessageUpdates | Promise<MessageUpdates>;
     userRegistred(): User | Promise<User>;
+    userOnline(): UserOnline | Promise<UserOnline>;
 }
 
 export interface File {
@@ -94,7 +95,13 @@ export interface User {
     firstName: string;
     lastName: string;
     createdAt: string;
+    online?: boolean;
     avatar?: File;
+}
+
+export interface UserOnline {
+    id?: string;
+    online?: boolean;
 }
 
 export type Buffer = any;

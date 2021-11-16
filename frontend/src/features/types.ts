@@ -4,6 +4,7 @@ export type TUser = {
   lastName: string;
   email: string;
   message?: string;
+  online?: boolean;
   avatar?: {
     filename: string;
     data: Buffer;

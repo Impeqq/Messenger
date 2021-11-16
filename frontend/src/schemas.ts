@@ -20,6 +20,7 @@ export const FETCH_SEARCH_USERS = gql`
       id
       firstName
       lastName
+      online
       avatar {
         id
       }
@@ -35,6 +36,7 @@ export const FETCH_CHAT = gql`
         id
         firstName
         lastName
+        online
         avatar {
           id
         }
@@ -65,6 +67,7 @@ export const FETCH_MY_CHATS = gql`
         id
         firstName
         lastName
+        online
         avatar {
           id
         }
@@ -90,6 +93,7 @@ export const FETCH_NEW_USERS = gql`
       email
       firstName
       lastName
+      online
       avatar {
         id
       }
@@ -107,6 +111,7 @@ export const SEND_MESSAGE = gql`
         id
         firstName
         lastName
+        online
         avatar {
           id
         }
@@ -218,9 +223,19 @@ export const SUBSCRIBE_NEW_USER = gql`
       id
       firstName
       lastName
+      online
       avatar {
         id
       }
+    }
+  }
+`;
+
+export const SUBSCRIBE_ONLINE_USER = gql`
+  subscription userOnline {
+    userOnline {
+      id
+      online
     }
   }
 `;
@@ -233,6 +248,7 @@ export const SUBSCRIBE_MY_CHAT = gql`
         id
         firstName
         lastName
+        online
         avatar {
           id
         }

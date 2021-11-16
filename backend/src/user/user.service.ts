@@ -28,6 +28,7 @@ export class UserService {
         firstName,
         lastName,
         avatar: avatar ? { id: avatar.id } : null,
+        online: true,
       },
       'secret',
     );
@@ -111,6 +112,14 @@ export class UserService {
       .execute();
 
     return true;
+  }
+
+  async setOnlineStatus(online: boolean, id: string) {
+    await this.userRepo
+      .createQueryBuilder('user')
+      .update(UserEntity, { online })
+      .where('id = :id', { id })
+      .execute();
   }
 
   async signIn({ email, password }: SignInInput) {

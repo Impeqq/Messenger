@@ -6,8 +6,6 @@ import { join } from 'path';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './message/message.module';
 import { ChatModule } from './chat/chat.module';
-import { FileController } from './file/file.controller';
-import { FileService } from './file/file.service';
 import { FileModule } from './file/file.module';
 
 @Module({

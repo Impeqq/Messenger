@@ -63,7 +63,6 @@ export const SearchList = () => {
               key={user.id}
               handleCreate={handleClick}
               className={styles.userItem}
-              isOnline={true}
               type={UserLocations.SIDEBAR}
               user={user}
               RightIcon={ChatIcon}

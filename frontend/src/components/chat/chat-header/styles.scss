@@ -11,9 +11,17 @@
     color: $c_text_primary;
   }
 
-  .time {
-    color: $c_text_primary;
-    font-size: 14px;
+  .status {
+    font-size: 16px;
+    font-weight: 400;
+
+    &.online {
+      color: $c_text_primary_hover;
+    }
+
+    &.offline {
+      color: $c_danger;
+    }
   }
 }
 

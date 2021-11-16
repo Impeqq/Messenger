@@ -7,6 +7,7 @@ type User {
   firstName: String!
   lastName: String!
   createdAt: String!
+  online: Boolean
   avatar: File
 }
 
@@ -49,4 +50,10 @@ input SignInInput {
 
 type Subscription {
   userRegistred: User
+  userOnline: UserOnline
+}
+
+type UserOnline {
+  id: String
+  online: Boolean
 }
