@@ -31,6 +31,7 @@ export const NewUsersList = () => {
     <SiebarItem title={"Last 5 new users"}>
       {newUsers.map((user: TUser) => (
         <UserItem
+          hasOnline={false}
           key={user.id}
           className={styles.userItem}
           type={UserLocations.SIDEBAR}

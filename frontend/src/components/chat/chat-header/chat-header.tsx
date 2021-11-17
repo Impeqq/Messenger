@@ -6,14 +6,18 @@ import SearchIcon from "@assets/svg/search.svg";
 import cn from "classnames";
 import { SUBSCRIBE_ONLINE_USER } from "@schemas";
 import { useSubscription } from "@apollo/client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type TProps = {
   reciever?: TUser;
 };
 
 export const ChatHeader = ({ reciever }: TProps) => {
-  const [isOnline, setIsOnline] = useState(false);
+  const [isOnline, setIsOnline] = useState(reciever?.online);
+
+  useEffect(() => {
+    setIsOnline(reciever?.online);
+  }, [reciever?.online]);
 
   useSubscription(SUBSCRIBE_ONLINE_USER, {
     onSubscriptionData: ({
@@ -26,8 +30,6 @@ export const ChatHeader = ({ reciever }: TProps) => {
       }
     },
   });
-
-  const online = isOnline || reciever?.online;
 
   return (
     <div className={styles.header}>
@@ -43,11 +45,11 @@ export const ChatHeader = ({ reciever }: TProps) => {
         </span>
         <span
           className={cn(styles.status, {
-            [styles.online]: online,
-            [styles.offline]: !online,
+            [styles.online]: isOnline,
+            [styles.offline]: !isOnline,
           })}
         >
-          {online ? "Online" : "Offline"}
+          {isOnline ? "Online" : "Offline"}
         </span>
       </div>
       <div className={styles.actions}>

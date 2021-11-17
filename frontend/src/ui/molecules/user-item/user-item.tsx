@@ -21,6 +21,7 @@ type TProps = {
   isMessageFromMe?: boolean;
   chat?: any;
   read?: boolean;
+  hasOnline?: boolean;
 };
 
 export enum UserLocations {
@@ -41,6 +42,7 @@ export const UserItem = ({
   currentUser,
   isMessageFromMe = false,
   read,
+  hasOnline = true,
 }: TProps) => {
   const [isOnline, setIsOnline] = useState(user?.online);
   const isSelf = currentUser?.id === user?.id;
@@ -62,7 +64,7 @@ export const UserItem = ({
     },
   });
 
-  const online = type === UserLocations.CHAT ? false : isOnline;
+  const online = !hasOnline || type === UserLocations.CHAT ? false : isOnline;
 
   return (
     <div
