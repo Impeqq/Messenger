@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from './user.entity';
-import { ILike, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import * as jwt from 'jsonwebtoken';
 import * as bcrypt from 'bcryptjs';
 import { SignInInput, SignUpInput } from './dto/auth.inputs';
@@ -34,28 +34,27 @@ export class UserService {
     );
   }
 
-  async findByName(name: string) {
+  async findByName(name: string, id: string) {
     if (!name) return [];
-    return await this.userRepo.find({
-      relations: ['avatar'],
-      where: [
-        { firstName: ILike(`%${name}%`) },
-        { lastName: ILike(`%${name}%`) },
-      ],
-    });
+
+    return await this.userRepo
+      .createQueryBuilder('user')
+      .innerJoinAndSelect('user.avatar', 'file')
+      .where('user.firstName ILike :name', { name })
+      .orWhere('user.lastName ILike :name', { name })
+      .andWhere('user.id != :id', { id })
+      .getMany();
   }
 
   async findOne(id: string) {
     return await this.userRepo.findOne({ id });
   }
 
-  async createUser(user: SignUpInput, file: FileUpload) {
+  async createUser(user: SignUpInput) {
     const password = await bcrypt.hash(user.password, 10);
 
-    const avatar = await this.fileService.uploadDatabaseFile(file);
-
     return this.userRepo
-      .create({ ...user, email: user.email.toLowerCase(), password, avatar })
+      .create({ ...user, email: user.email.toLowerCase(), password })
       .save()
       .catch((e) => {
         if (/(email)[\s\S]+(already exists)/.test(e.detail)) {

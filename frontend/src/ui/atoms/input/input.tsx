@@ -43,6 +43,7 @@ export const Input = ({
         placeholder={placeholder}
         name={name}
         onChange={onChange}
+        autoComplete="off"
         className={cn({ [styles.error]: errors[name] })}
       />
       {hidden && (

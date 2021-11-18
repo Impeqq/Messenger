@@ -12,6 +12,10 @@
     top: calc(100% + 10px);
     z-index: 1;
 
+    & > div > div:last-child {
+      align-self: center;
+    }
+
     &.not-found {
       padding: 16px;
       color: $c_text_primary;

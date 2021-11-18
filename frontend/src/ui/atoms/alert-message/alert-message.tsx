@@ -22,11 +22,12 @@ export const AlertMessage = ({ message, className, type }: TProps) => {
   }, [message]);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       if (seconds !== 0) {
         setSeconds((seconds) => seconds - 1);
       }
     }, 1000);
+    return () => clearTimeout(timeout);
   }, [seconds]);
 
   if (!message || seconds === 0) return null;

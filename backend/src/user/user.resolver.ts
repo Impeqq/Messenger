@@ -27,8 +27,8 @@ export class UserResolver {
 
   @Query()
   @UseGuards(new AuthGuard())
-  searchUser(@Args('name') name: string) {
-    return this.userService.findByName(name);
+  searchUser(@Args('name') name: string, @CurrentUser() user: UserEntity) {
+    return this.userService.findByName(name, user.id);
   }
 
   @Mutation()
@@ -37,15 +37,8 @@ export class UserResolver {
   }
 
   @Mutation()
-  async signUp(
-    @Args('input') signUpInput: SignUpInput,
-    @Args('file') file: { file: FileUpload },
-  ) {
-    const _file = await file;
-    const user = await this.userService.createUser(
-      { ...signUpInput },
-      _file.file,
-    );
+  async signUp(@Args('input') signUpInput: SignUpInput) {
+    const user = await this.userService.createUser({ ...signUpInput });
     pubsub.publish('userRegistred', { userRegistred: user });
     return this.userService.createToken(user);
   }

@@ -30,11 +30,14 @@ export const Main: React.FC = ({ children }) => {
     },
   });
 
-  const isGuest = getItem(AUTH_TOKEN);
+  const isGuest = !getItem(AUTH_TOKEN);
 
   useEffect(() => {
     fetchMe();
-  }, [fetchMe, isGuest]);
+    if (!isGuest) {
+      history.push(routePath.main.path);
+    }
+  }, [fetchMe, isGuest, history]);
 
   return (
     <>
@@ -43,8 +46,8 @@ export const Main: React.FC = ({ children }) => {
         lastName={me?.lastName}
         avatarId={me?.avatar?.id}
       />
-      <div className={cn(styles.flex, { [styles.guest]: !me })}>
-        {me && <Sidebar />}
+      <div className={cn(styles.flex, { [styles.guest]: isGuest })}>
+        {!isGuest && <Sidebar />}
         {children}
       </div>
     </>

@@ -134,9 +134,9 @@ export const Chat = () => {
               />
             );
           })}
-          <div className={styles.date}>
+          {/* <div className={styles.date}>
             <span>Today</span>
-          </div>
+          </div> */}
         </ScrollList>
       </div>
       <Typing />

@@ -20,7 +20,7 @@ type Query {
 type Mutation {
   updatePassword(input: UpdatePasswordInput): String
   updateUser(input: UpdateInput, file: Upload): String
-  signUp(input: SignUpInput, file: Upload): String
+  signUp(input: SignUpInput): String
   signIn(input: SignInInput): String
 }
 

@@ -146,7 +146,6 @@ export const SEND_REGISTER = gql`
     $password: String!
     $firstName: String!
     $lastName: String!
-    $avatar: Upload
   ) {
     signUp(
       input: {
@@ -155,7 +154,6 @@ export const SEND_REGISTER = gql`
         email: $email
         password: $password
       }
-      file: $avatar
     )
   }
 `;

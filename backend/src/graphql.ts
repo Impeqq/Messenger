@@ -56,7 +56,7 @@ export interface IMutation {
     sendMessage(input?: SendMessageInput): Message | Promise<Message>;
     updatePassword(input?: UpdatePasswordInput): string | Promise<string>;
     updateUser(input?: UpdateInput, file?: Upload): string | Promise<string>;
-    signUp(input?: SignUpInput, file?: Upload): string | Promise<string>;
+    signUp(input?: SignUpInput): string | Promise<string>;
     signIn(input?: SignInInput): string | Promise<string>;
 }
 

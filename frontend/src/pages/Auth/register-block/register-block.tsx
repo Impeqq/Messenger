@@ -1,14 +1,5 @@
 import { BaseForm } from "@components";
-import {
-  Button,
-  ButtonStyle,
-  ButtonType,
-  AlertMessage,
-  IconDirection,
-  Input,
-  InputGroup,
-} from "@ui";
-import GoogleLogoIcon from "@assets/svg/google-logo.svg";
+import { Button, ButtonType, AlertMessage, Input } from "@ui";
 import styles from "./styles.scss";
 import { useForm, UseFormOptions } from "react-hook-form";
 import { registerModel } from "@features/models";
@@ -28,7 +19,7 @@ export const RegisterBlock = () => {
     fetchPolicy: "network-only",
     onCompleted: ({ signUp }) => {
       setItem(AUTH_TOKEN, signUp);
-      history.push(routePath.main.path);
+      history.push(routePath.profile.path);
     },
   });
 
@@ -44,13 +35,8 @@ export const RegisterBlock = () => {
         password: data?.[registerModel.password],
         firstName: data?.[registerModel.firstName],
         lastName: data?.[registerModel.lastName],
-        avatar: data?.[registerModel.avatar].item(0),
       },
     });
-  };
-
-  const handleRegisterGoogle = () => {
-    console.log("google");
   };
 
   return (
@@ -61,7 +47,6 @@ export const RegisterBlock = () => {
     >
       <span className={styles.title}>New to the messenger?</span>
       <span className={styles.description}>Instant registration</span>
-      <Input placeholder={"Avatar"} type="file" name={registerModel.avatar} />
       <Input placeholder={"First name"} name={registerModel.firstName} />
       <Input placeholder={"Last name"} name={registerModel.lastName} />
       <Input placeholder={"Email"} name={registerModel.email} />
@@ -75,21 +60,13 @@ export const RegisterBlock = () => {
         className={styles.errorMessage}
         message={error?.message}
       />
-      <InputGroup>
-        <Button
-          text={"Sign Up"}
-          type={ButtonType.SUBMIT}
-          loading={loading}
-          withDisable={true}
-        />
-        <Button
-          text={"Sign Up"}
-          iconDirection={IconDirection.RIGHT}
-          icon={<GoogleLogoIcon />}
-          style={ButtonStyle.OUTLINE}
-          onClick={handleRegisterGoogle}
-        />
-      </InputGroup>
+      <Button
+        className={styles.button}
+        text={"Sign Up"}
+        type={ButtonType.SUBMIT}
+        loading={loading}
+        withDisable={true}
+      />
     </BaseForm>
   );
 };
