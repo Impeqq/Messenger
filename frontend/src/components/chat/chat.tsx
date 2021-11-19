@@ -49,7 +49,8 @@ export const Chat = () => {
       setReciever(reciever[0]);
       const unreadMessages = _messages
         .filter(
-          (message: TMessage) => !message.read && message.user_from.id !== me.id
+          (message: TMessage) =>
+            !message.read && message.user_from?.id !== me?.id
         )
         .map((message: TMessage) => message.id);
       if (unreadMessages.length) {

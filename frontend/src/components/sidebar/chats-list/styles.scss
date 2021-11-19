@@ -5,6 +5,10 @@
   transition: 0.1s ease all;
   cursor: pointer;
 
+  @include respond-max(xs) {
+    padding: 10px;
+  }
+
   & span {
     transition: 0.1s ease all;
   }
@@ -38,4 +42,8 @@
 .not-chats {
   font-size: 18px;
   color: $c_text_primary;
+
+  @include respond-max(xs) {
+    font-size: 16px;
+  }
 }

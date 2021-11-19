@@ -15,9 +15,26 @@
 
   .tabs {
     margin-bottom: 30px;
+
+    @include respond-max(xs) {
+      flex-direction: column;
+      padding: 10px 4px;
+    }
+
+    & > div {
+      @include respond-max(xs) {
+        width: calc(100% - 20px);
+      }
+    }
   }
 
   input {
     margin-bottom: 30px;
+  }
+
+  @include respond-max(sm) {
+    position: static;
+    margin-top: 16px;
+    padding: 20px;
   }
 }

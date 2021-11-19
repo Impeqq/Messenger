@@ -9,11 +9,17 @@
     font-size: 18px;
     font-weight: 700;
     color: $c_text_primary;
+    @include respond-max(xs) {
+      font-size: 16px;
+    }
   }
 
   .status {
     font-size: 16px;
     font-weight: 400;
+    @include respond-max(xs) {
+      font-size: 14px;
+    }
 
     &.online {
       color: $c_text_primary_hover;
@@ -29,6 +35,10 @@
   display: flex;
   align-items: center;
   width: 20%;
+
+  @include respond-max(md) {
+    width: 30%;
+  }
 
   .circle {
     border: 2px dashed rgba(78, 115, 248, 0.24);
@@ -89,7 +99,26 @@
   align-items: center;
   justify-content: flex-end;
   width: 20%;
+
   & svg:not(:first-child) {
     margin-left: 20px;
+
+    @include respond-max(xs) {
+      margin-left: 14px;
+    }
+  }
+
+  & svg {
+    width: 24px;
+    height: 24px;
+
+    @include respond-max(xs) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include respond-max(md) {
+    width: 30%;
   }
 }

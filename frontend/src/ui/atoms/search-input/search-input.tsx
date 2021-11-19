@@ -50,12 +50,7 @@ export const SearchInput = ({ handleClick, handleClear }: TProps) => {
         className={cn(styles.closeButton, { [styles.emptyInput]: !value })}
         onClick={onClear}
       >
-        <CloseIcon
-          className={styles.iconClose}
-          width="20px"
-          height="20px"
-          viewBox="0 0 26 26"
-        />
+        <CloseIcon className={styles.iconClose} />
       </button>
       <button className={styles.searchButton} type="submit">
         <SearchIcon

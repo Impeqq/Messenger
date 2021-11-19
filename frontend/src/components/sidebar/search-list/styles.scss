@@ -20,6 +20,10 @@
       padding: 16px;
       color: $c_text_primary;
       font-size: 18px;
+
+      @include respond-max(xs) {
+        font-size: 16px;
+      }
     }
 
     & > div {

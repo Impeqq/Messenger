@@ -11,6 +11,11 @@
   padding: 0 0 14px 0;
   cursor: pointer;
 
+  @include respond-max(xs) {
+    font-size: 12px;
+    padding: 0;
+  }
+
   .icon {
     transition: 0.2s ease all;
     transform: rotate(-180deg);
@@ -23,7 +28,7 @@
 
 .content {
   transition: 0.2s ease all;
-  overflow: hidden;
+  overflow: auto;
   max-height: 400px;
   &.hidden {
     max-height: 0px;

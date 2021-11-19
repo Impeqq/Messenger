@@ -1,8 +1,8 @@
 import styles from "./styles.scss";
 import ArrowDown from "@assets/svg/arrow-down.svg";
-import { Avatar } from "@ui";
+import { Avatar, Logo } from "@ui";
 import { routePath } from "@pages/routes";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import LogoutIcon from "@assets/svg/logout.svg";
 import PersonIcon from "@assets/svg/person.svg";
 import React, { useEffect, useRef, useState } from "react";
@@ -17,9 +17,11 @@ import { FETCH_ME } from "@schemas";
 
 type TProps = {
   isGuest: boolean;
+  toggleSidebar: () => void;
+  isOpenSidebar: boolean;
 };
 
-export const Header = ({ isGuest }: TProps) => {
+export const Header = ({ isGuest, toggleSidebar, isOpenSidebar }: TProps) => {
   const [me, setMe] = useState<null | TUser>(null);
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
@@ -74,9 +76,17 @@ export const Header = ({ isGuest }: TProps) => {
   return (
     <div className={styles.header}>
       <div className={styles.container}>
-        <Link to={routePath.main.path} className={styles.logo}>
-          Messenger 💬
-        </Link>
+        <div>
+          <div
+            className={cn(styles.burger, { [styles.active]: isOpenSidebar })}
+            onClick={toggleSidebar}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <Logo />
+        </div>
         {!isGuest && (
           <>
             <div className={styles.userInfo} onClick={toggleOpen}>

@@ -10,9 +10,9 @@ export const ReadCheck = ({ read }: TProps) => {
   return (
     <>
       {read ? (
-        <AllDoneIcon width={20} height={20} className={styles.messageIcon} />
+        <AllDoneIcon className={styles.messageIcon} />
       ) : (
-        <CheckmarkIcon width={20} height={20} className={styles.messageIcon} />
+        <CheckmarkIcon className={styles.messageIcon} />
       )}
     </>
   );

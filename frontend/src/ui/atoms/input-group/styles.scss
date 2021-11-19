@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .input-group {
   display: flex;
   justify-content: space-between;
@@ -5,5 +7,19 @@
 
   & > * {
     width: 48%;
+
+    @include respond-max(sm) {
+      width: 100%;
+    }
+  }
+
+  & > button:first-child {
+    @include respond-max(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  @include respond-max(sm) {
+    flex-direction: column-reverse;
   }
 }

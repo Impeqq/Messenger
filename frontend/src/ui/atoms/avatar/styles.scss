@@ -28,6 +28,9 @@
     color: $c_white;
     text-align: center;
     font-size: 14px;
+    @include respond-max(xs) {
+      font-size: 12px;
+    }
   }
 }
 

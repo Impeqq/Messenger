@@ -12,6 +12,10 @@
   color: $c_text_primary;
   transition: 0.1s ease all;
 
+  @include respond-max(xs) {
+    font-size: 14px;
+  }
+
   &:hover {
     color: $c_text_primary_hover;
   }

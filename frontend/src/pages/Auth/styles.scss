@@ -7,4 +7,10 @@
   input {
     margin-bottom: 30px;
   }
+
+  @include respond-max(sm) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

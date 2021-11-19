@@ -10,3 +10,4 @@ export * from "./sidebar-item";
 export * from "./read-check";
 export * from "./scroll-list";
 export * from "./tab";
+export * from "./logo";

@@ -9,7 +9,11 @@ import { RouteParams, TUser } from "@features/types";
 import { useState } from "react";
 import cn from "classnames";
 
-export const SearchList = () => {
+type TProps = {
+  toggleSidebar: () => void;
+};
+
+export const SearchList = ({ toggleSidebar }: TProps) => {
   const [users, setUsers] = useState<TUser[]>();
   const [fetchUsers] = useLazyQuery(FETCH_SEARCH_USERS, {
     fetchPolicy: "network-only",
@@ -40,6 +44,7 @@ export const SearchList = () => {
   };
 
   const handleClick = (toId: string) => {
+    toggleSidebar();
     clearUsers();
     if (id !== toId)
       sendCreateChat({

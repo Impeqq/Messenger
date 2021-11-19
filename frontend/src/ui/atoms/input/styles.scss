@@ -9,6 +9,9 @@
     font-size: 18px;
     font-weight: 500;
     color: $c_text_primary;
+    @include respond-max(xs) {
+      font-size: 16px;
+    }
   }
 
   .eye {
@@ -28,6 +31,10 @@
       transition: 0.2s ease all;
       fill: $c_icon_grey;
       width: 25px;
+
+      @include respond-max(xs) {
+        width: 20px;
+      }
     }
   }
 
@@ -38,6 +45,9 @@
     position: absolute;
     bottom: 5px;
     left: 0;
+    @include respond-max(xs) {
+      font-size: 12px;
+    }
   }
 
   input {
@@ -48,6 +58,11 @@
     font-size: 16px;
     outline: none;
     transition: 0.1s ease all;
+
+    @include respond-max(xs) {
+      padding: 10px;
+      font-size: 14px;
+    }
 
     &.error {
       border: 1px solid $c_border_error_hover;

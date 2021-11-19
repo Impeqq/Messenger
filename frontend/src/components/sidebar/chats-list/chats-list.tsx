@@ -7,7 +7,11 @@ import { RouteParams, TChat, TUser } from "@features/types";
 import { useHistory, useParams } from "react-router-dom";
 import { routePath } from "@pages/routes";
 
-export const ChatsList = () => {
+type TProps = {
+  toggleSidebar: () => void;
+};
+
+export const ChatsList = ({ toggleSidebar }: TProps) => {
   const [chats, setChats] = useState<TChat[]>([]);
 
   const { data: userData } = useQuery(FETCH_ME, { fetchPolicy: "cache-only" });
@@ -48,6 +52,7 @@ export const ChatsList = () => {
   });
 
   const handleClick = (toId: string) => {
+    toggleSidebar();
     if (id !== toId) history.push(`${routePath.chat.path}/${toId}`);
   };
 

@@ -11,6 +11,9 @@
     font-size: 24px;
     display: block;
     font-weight: 500;
+    @include respond-max(xs) {
+      font-size: 22px;
+    }
   }
 
   .description {
@@ -18,6 +21,9 @@
     display: block;
     margin-bottom: 20px;
     font-weight: 400;
+    @include respond-max(xs) {
+      font-size: 16px;
+    }
   }
 
   .error-message {

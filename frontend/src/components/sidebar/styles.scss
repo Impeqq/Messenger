@@ -1,7 +1,30 @@
+@import "@styles/mixins.scss";
+
 .sidebar {
   width: 378px;
   padding: 24px 24px 0 0;
   flex-shrink: 0;
+
+  @media screen and (max-width: 920px) {
+    width: 300px;
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  @include respond-max(sm) {
+    transition: 0.2s ease all;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    background: $c_white;
+    z-index: 1;
+    padding: 100px 16px 16px 16px;
+    height: 100vh;
+  }
 
   & > div:not(:first-child) {
     margin-top: 24px;

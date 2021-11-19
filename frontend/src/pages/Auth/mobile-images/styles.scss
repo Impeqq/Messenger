@@ -6,11 +6,24 @@
   position: relative;
   color: $c_text_primary;
 
+  @include respond-max(sm) {
+    margin-top: 20px;
+    width: 70%;
+  }
+
+  @include respond-max(xs) {
+    width: 100%;
+  }
+
   .title {
     font-size: 24px;
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
+
+    @include respond-max(xs) {
+      font-size: 22px;
+    }
   }
 
   .description {
@@ -18,14 +31,28 @@
     display: block;
     margin-bottom: 20px;
     font-weight: 400;
+    @include respond-max(xs) {
+      font-size: 16px;
+    }
   }
 
   .images-group {
     display: flex;
     justify-content: space-between;
 
+    @include respond-max(xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     img {
       width: 45%;
+
+      &:last-child {
+        @include respond-max(xs) {
+          margin-top: 30px;
+        }
+      }
     }
   }
 
@@ -35,5 +62,8 @@
     display: block;
     margin-bottom: 20px;
     font-weight: 400;
+    @include respond-max(xs) {
+      font-size: 16px;
+    }
   }
 }
