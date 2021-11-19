@@ -197,6 +197,11 @@
     height: 25px;
     margin-right: 20px;
     position: relative;
+    display: none;
+
+    @include respond-max(sm) {
+      display: block;
+    }
 
     @include respond-max(xs) {
       width: 20px;
