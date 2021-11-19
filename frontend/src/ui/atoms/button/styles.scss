@@ -11,6 +11,11 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  white-space: nowrap;
+
+  @include respond-max(xs) {
+    font-size: 14px;
+  }
 
   &.is-loading {
     pointer-events: none;
@@ -84,6 +89,11 @@
 
   & svg:last-child {
     margin-left: 10px;
+  }
+
+  & svg {
+    width: 24px;
+    height: 24px;
   }
 
   &.no-text {

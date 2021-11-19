@@ -1,0 +1,15 @@
+@import "@styles/mixins.scss";
+
+.logo {
+  font-size: 32px;
+  color: $c_text_primary;
+
+  @include respond-max(xs) {
+    font-size: 25px;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 440px) {
+    font-size: 20px;
+  }
+}

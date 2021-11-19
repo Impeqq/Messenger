@@ -1,0 +1,13 @@
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1240px,
+);
+
+:export {
+  xs: map-get($breakpoints, xs);
+  sm: map-get($breakpoints, sm);
+  md: map-get($breakpoints, md);
+  lg: map-get($breakpoints, lg);
+}

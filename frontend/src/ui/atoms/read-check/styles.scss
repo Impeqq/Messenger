@@ -3,4 +3,11 @@
 .message-icon {
   fill: $c_bg_blue;
   margin-left: 6px;
+  width: 20px;
+  height: 20px;
+
+  @media screen and (max-width: 470px) {
+    width: 18px;
+    height: 18px;
+  }
 }

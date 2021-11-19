@@ -8,6 +8,11 @@
   padding: 8px 24px;
   border-radius: 8px;
 
+  @media screen and (max-width: 470px) {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
   & > div {
     flex-shrink: 0;
     &:last-child {
@@ -18,8 +23,20 @@
 
   .actions {
     display: flex;
+
+    @media screen and (max-width: 470px) {
+      width: 100%;
+      justify-content: space-around;
+      order: 3;
+      margin: 16px 0 10px 0;
+    }
+
     & svg:not(:first-child) {
       margin-left: 19px;
+
+      @media screen and (max-width: 920px) {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -28,10 +45,34 @@
     border-radius: 8px;
     font-size: 18px;
     flex-grow: 1;
+
+    @include respond-max(xs) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 920px) {
+      margin: 0 14px;
+    }
+
+    @media screen and (max-width: 470px) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    @include respond-max(xs) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .button {
     border-radius: 8px;
     margin-left: 20px;
+    @media screen and (max-width: 470px) {
+      padding: 10px 14px;
+    }
   }
 }

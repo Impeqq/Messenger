@@ -1,3 +1,5 @@
+@import "@styles/mixins.scss";
+
 .flex {
   display: flex;
   width: 100%;
@@ -5,6 +7,10 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  @include respond-max(sm) {
+    padding: 0 16px 32px 16px;
+    flex-direction: column-reverse;
+  }
 }
 
 .guest {

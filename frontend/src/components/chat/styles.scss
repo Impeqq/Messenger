@@ -31,6 +31,10 @@
   align-self: flex-start;
   position: sticky;
   top: 0;
+
+  @include respond-max(sm) {
+    position: static;
+  }
 }
 
 .date {
@@ -57,5 +61,8 @@
     background: $c_white;
     padding: 5px 15px;
     position: relative;
+    @include respond-max(xs) {
+      font-size: 12px;
+    }
   }
 }

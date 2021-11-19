@@ -1,3 +1,16 @@
 @import "./colors.scss";
+@import "./breakpoints.scss";
 
 $c_white: #ffffff;
+
+@mixin respond-max($breakpoint) {
+  $breakpoint-value: $breakpoint;
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint) - 1;
+  }
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}

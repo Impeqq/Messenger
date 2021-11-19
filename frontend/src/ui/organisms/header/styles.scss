@@ -5,20 +5,25 @@
   background: $c_white;
   border-bottom: 1px solid #e1e3e6;
 
-  .logo {
-    font-size: 32px;
-    color: $c_text_primary;
-  }
-
   .arrow {
     transition: 0.2s ease all;
     background: #f1f2f3;
     border-radius: 8px;
     width: 24px;
     height: 24px;
+    @include respond-max(xs) {
+      width: 16px;
+      height: 16px;
+    }
     svg {
       transition: 0.2s ease all;
       transform: rotate(0deg);
+      width: 24px;
+      height: 24px;
+      @include respond-max(xs) {
+        width: 16px;
+        height: 16px;
+      }
     }
     &.active svg {
       transform: rotate(180deg);
@@ -62,6 +67,13 @@
     border: 1px solid #e1e3e6;
     box-shadow: 0px 4px 2px -2px rgba(27, 46, 94, 0.02);
 
+    @include respond-max(xs) {
+      padding: 10px 0;
+      width: 140px;
+      top: 50px;
+      right: 5px;
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -88,6 +100,9 @@
         margin-left: 10px;
         font-weight: 500;
         transition: 0.1s ease all;
+        @include respond-max(xs) {
+          font-size: 14px;
+        }
       }
       svg {
         fill: #757d8a;
@@ -121,22 +136,41 @@
     align-items: center;
     cursor: pointer;
 
+    @include respond-max(xs) {
+      margin-left: 20px;
+    }
+
+    & > div:first-child {
+      @include respond-max(xs) {
+        display: none;
+      }
+    }
+
     .info {
-      margin-left: 16px;
+      margin: 0 32px 0 16px;
       display: flex;
       flex-direction: column;
-      width: 240px;
+
+      @include respond-max(xs) {
+        margin: 0 10px 0 0;
+      }
 
       & > span:first-child {
         font-size: 18px;
         font-weight: 500;
         color: $c_text_primary;
+        @include respond-max(xs) {
+          font-size: 16px;
+        }
       }
 
       & > span:last-child {
         font-size: 16px;
         font-weight: 400;
         color: $c_text_primary_hover;
+        @include respond-max(xs) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -149,4 +183,73 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  align-items: center;
+
+  & > div:first-child {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .burger {
+    width: 30px;
+    height: 25px;
+    margin-right: 20px;
+    position: relative;
+
+    @include respond-max(xs) {
+      width: 20px;
+      height: 15px;
+    }
+
+    &.active > div {
+      &:first-child {
+        top: -100px;
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      &:last-child {
+        transform: rotate(45deg);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    & > div {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #000;
+      left: 0;
+      margin: auto;
+      opacity: 1;
+      transition: 0.2s ease all;
+
+      @include respond-max(xs) {
+        height: 2px;
+      }
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+      }
+
+      &:last-child {
+        bottom: 0;
+      }
+    }
+  }
 }

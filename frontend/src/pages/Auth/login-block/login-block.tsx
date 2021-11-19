@@ -57,7 +57,7 @@ export default function LoginBlock() {
           loading={loading}
           withDisable={true}
         />
-        <Link to={"passwordnepomny"}>Forgot your password?</Link>
+        <a>Forgot your password?</a>
       </div>
     </BaseForm>
   );

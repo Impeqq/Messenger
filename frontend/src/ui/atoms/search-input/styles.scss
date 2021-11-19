@@ -33,11 +33,22 @@
 
   .icon-search {
     margin: 10px 15px;
+    @include respond-max(xs) {
+      margin: 6px;
+      width: 16px;
+      height: 16px;
+    }
   }
 
   .icon-close {
     transition: 0.2s ease all;
     fill: #757d8a;
+    width: 32px;
+    height: 32px;
+    @include respond-max(xs) {
+      width: 20px;
+      height: 20px;
+    }
     &:hover {
       fill: #a8acb3;
     }
@@ -50,6 +61,10 @@
     top: 0;
     bottom: 0;
     margin: auto;
+
+    @include respond-max(xs) {
+      right: 50px;
+    }
 
     &.empty-input {
       display: none;

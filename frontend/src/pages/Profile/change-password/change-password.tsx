@@ -38,7 +38,11 @@ export const ChangePassword = () => {
   });
 
   return (
-    <BaseForm onSubmit={handleSubmit} formMethods={formMethods}>
+    <BaseForm
+      onSubmit={handleSubmit}
+      className={styles.changePassword}
+      formMethods={formMethods}
+    >
       <p className={styles.title}>User password</p>
       <p className={styles.description}>
         Enter your new password and repeat it to avoid errors
@@ -63,6 +67,7 @@ export const ChangePassword = () => {
           type={ButtonType.SUBMIT}
           withDisable={true}
           loading={loading}
+          className={styles.button}
         />
         <Input
           hidden={true}

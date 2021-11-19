@@ -1,6 +1,12 @@
+@import "@styles/mixins.scss";
+
 .user-item {
   padding: 16px;
   transition: 0.1s ease all;
+
+  @include respond-max(xs) {
+    padding: 10px;
+  }
 
   & span {
     transition: 0.1s ease all;
