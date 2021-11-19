@@ -9,14 +9,13 @@ module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
   output: {
-    publicPath: "/",
+    publicPath: "/Messenger/",
     filename: "static/[contenthash].js",
     chunkFilename: "static/[contenthash].js",
     clean: true,
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
@@ -105,7 +104,14 @@ module.exports = {
       hostname: "localhost",
       appendScriptTag: true,
     }),
-    new HtmlWebpackPlugin({ template: "src/assets/index.html" }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "src/assets/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "404.html",
+      template: "src/assets/404.html",
+    }),
     new miniCss({
       filename: "style.css",
     }),
