@@ -230,7 +230,11 @@
     width: 30px;
     height: 25px;
     margin-right: 20px;
-    position: relative; }
+    position: relative;
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .styles__container__wdbTm .styles__burger__bqw9b {
+        display: block; } }
     @media screen and (max-width: 575px) {
       .styles__container__wdbTm .styles__burger__bqw9b {
         width: 20px;
