@@ -1,10 +1,1287 @@
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+.styles__auth-block__ARq7O {
+  width: 40%;
+  color: #5a6474; }
+  .styles__auth-block__ARq7O input {
+    margin-bottom: 30px; }
+  @media screen and (max-width: 767px) {
+    .styles__auth-block__ARq7O {
+      width: 100%;
+      display: flex;
+      flex-direction: column; } }
+
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/styles.scss ***!
+  \********************************************************************************************************************************************************************************************************************************/
+.styles__sidebar__WtHVo {
+  width: 378px;
+  padding: 24px 24px 0 0;
+  flex-shrink: 0; }
+  @media screen and (max-width: 920px) {
+    .styles__sidebar__WtHVo {
+      width: 300px; } }
+  .styles__sidebar__WtHVo.styles__active__w0G24 {
+    left: 0; }
+  @media screen and (max-width: 767px) {
+    .styles__sidebar__WtHVo {
+      transition: 0.2s ease all;
+      width: 100%;
+      padding: 0;
+      position: absolute;
+      left: -100%;
+      top: 0;
+      background: #ffffff;
+      z-index: 1;
+      padding: 100px 16px 16px 16px;
+      height: 100vh; } }
+  .styles__sidebar__WtHVo > div:not(:first-child) {
+    margin-top: 24px; }
+
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/chats-list/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+.styles__user-item___8hdW {
+  padding: 16px;
+  transition: 0.1s ease all;
+  cursor: pointer; }
+  @media screen and (max-width: 575px) {
+    .styles__user-item___8hdW {
+      padding: 10px; } }
+  .styles__user-item___8hdW span {
+    transition: 0.1s ease all; }
+  .styles__user-item___8hdW:hover {
+    background: #4e73f8; }
+    .styles__user-item___8hdW:hover span {
+      color: #ffffff; }
+    .styles__user-item___8hdW:hover > div:first-child > div {
+      background: #ffffff;
+      border: 2px solid #4e73f8; }
+    .styles__user-item___8hdW:hover > div:last-child > div {
+      color: #4e73f8;
+      background: #ffffff; }
+    .styles__user-item___8hdW:hover > div:last-child > svg {
+      fill: #ffffff; }
+  .styles__user-item___8hdW img {
+    width: 40px;
+    height: 40px; }
+
+.styles__not-chats___v6dG {
+  font-size: 18px;
+  color: #5a6474; }
+  @media screen and (max-width: 575px) {
+    .styles__not-chats___v6dG {
+      font-size: 16px; } }
+
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/organisms/header/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+.styles__header___6NjK {
+  padding: 19px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e3e6; }
+  .styles__header___6NjK .styles__arrow__CJEtq {
+    transition: 0.2s ease all;
+    background: #f1f2f3;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px; }
+    @media screen and (max-width: 575px) {
+      .styles__header___6NjK .styles__arrow__CJEtq {
+        width: 16px;
+        height: 16px; } }
+    .styles__header___6NjK .styles__arrow__CJEtq svg {
+      transition: 0.2s ease all;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      width: 24px;
+      height: 24px; }
+      @media screen and (max-width: 575px) {
+        .styles__header___6NjK .styles__arrow__CJEtq svg {
+          width: 16px;
+          height: 16px; } }
+    .styles__header___6NjK .styles__arrow__CJEtq.styles__active__HonfO svg {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .styles__header___6NjK .styles__not-auth-block__kjMnF {
+    padding: 9px 0;
+    font-size: 18px; }
+    .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__login__jqunA {
+      color: #5a6474;
+      margin-right: 40px; }
+      .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__login__jqunA:hover {
+        color: #4e73f8; }
+    .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__register____9B_ {
+      color: #ffffff;
+      background: #4e73f8;
+      padding: 10px 20px;
+      border-radius: 8px; }
+      .styles__header___6NjK .styles__not-auth-block__kjMnF .styles__register____9B_:hover {
+        background: #3a59c9; }
+  .styles__header___6NjK .styles__profile-nav__KGX0S {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    z-index: 1;
+    background: #ffffff;
+    padding: 16px 0;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #e1e3e6;
+    box-shadow: 0px 4px 2px -2px rgba(27, 46, 94, 0.02); }
+    @media screen and (max-width: 575px) {
+      .styles__header___6NjK .styles__profile-nav__KGX0S {
+        padding: 10px 0;
+        width: 140px;
+        top: 50px;
+        right: 5px; } }
+    .styles__header___6NjK .styles__profile-nav__KGX0S:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      border-left: 1px solid #e1e3e6;
+      border-top: 1px solid #e1e3e6;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      background: #ffffff; }
+    .styles__header___6NjK .styles__profile-nav-item__pWwux {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px 16px;
+      width: 100%;
+      transition: 0.1s ease all; }
+      .styles__header___6NjK .styles__profile-nav-item__pWwux span {
+        color: #5a6474;
+        font-size: 16px;
+        margin-left: 10px;
+        font-weight: 500;
+        transition: 0.1s ease all; }
+        @media screen and (max-width: 575px) {
+          .styles__header___6NjK .styles__profile-nav-item__pWwux span {
+            font-size: 14px; } }
+      .styles__header___6NjK .styles__profile-nav-item__pWwux svg {
+        fill: #757d8a;
+        transition: 0.1s ease all; }
+      .styles__header___6NjK .styles__profile-nav-item__pWwux:hover {
+        background: #4e73f8; }
+        .styles__header___6NjK .styles__profile-nav-item__pWwux:hover span {
+          color: #ffffff; }
+        .styles__header___6NjK .styles__profile-nav-item__pWwux:hover svg {
+          fill: #ffffff; }
+        .styles__header___6NjK .styles__profile-nav-item__pWwux:hover > div:first-child > div {
+          background: #ffffff;
+          border: 2px solid #4e73f8; }
+        .styles__header___6NjK .styles__profile-nav-item__pWwux:hover > div:last-child > div {
+          color: #4e73f8;
+          background: #ffffff; }
+  .styles__header___6NjK .styles__user-info___UTWY {
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+    @media screen and (max-width: 575px) {
+      .styles__header___6NjK .styles__user-info___UTWY {
+        margin-left: 20px; } }
+    @media screen and (max-width: 575px) {
+      .styles__header___6NjK .styles__user-info___UTWY > div:first-child {
+        display: none; } }
+    .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 {
+      margin: 0 32px 0 16px;
+      display: flex;
+      flex-direction: column; }
+      @media screen and (max-width: 575px) {
+        .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 {
+          margin: 0 10px 0 0; } }
+      .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:first-child {
+        font-size: 18px;
+        font-weight: 500;
+        color: #5a6474; }
+        @media screen and (max-width: 575px) {
+          .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:first-child {
+            font-size: 16px; } }
+      .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:last-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4e73f8; }
+        @media screen and (max-width: 575px) {
+          .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:last-child {
+            font-size: 14px; } }
+
+.styles__container__wdbTm {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center; }
+  .styles__container__wdbTm > div:first-child {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center; }
+  .styles__container__wdbTm .styles__burger__bqw9b {
+    width: 30px;
+    height: 25px;
+    margin-right: 20px;
+    position: relative; }
+    @media screen and (max-width: 575px) {
+      .styles__container__wdbTm .styles__burger__bqw9b {
+        width: 20px;
+        height: 15px; } }
+    .styles__container__wdbTm .styles__burger__bqw9b.styles__active__HonfO > div:first-child {
+      top: -100px;
+      opacity: 0; }
+    .styles__container__wdbTm .styles__burger__bqw9b.styles__active__HonfO > div:nth-child(2) {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .styles__container__wdbTm .styles__burger__bqw9b.styles__active__HonfO > div:last-child {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .styles__container__wdbTm .styles__burger__bqw9b > div {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #000;
+      left: 0;
+      margin: auto;
+      opacity: 1;
+      transition: 0.2s ease all; }
+      @media screen and (max-width: 575px) {
+        .styles__container__wdbTm .styles__burger__bqw9b > div {
+          height: 2px; } }
+      .styles__container__wdbTm .styles__burger__bqw9b > div:first-child {
+        top: 0; }
+      .styles__container__wdbTm .styles__burger__bqw9b > div:nth-child(2) {
+        top: 0;
+        bottom: 0; }
+      .styles__container__wdbTm .styles__burger__bqw9b > div:last-child {
+        bottom: 0; }
+
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/templates/main/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+.styles__flex__PN5kB {
+  display: flex;
+  width: 100%;
+  padding: 0 24px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .styles__flex__PN5kB {
+      padding: 0 16px 32px 16px;
+      flex-direction: column-reverse; } }
+
+.styles__guest___F_l7 {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px; }
+
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/search-input/styles.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+.styles__input__VDtDY {
+  border: 1px solid #e1e3e6;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative; }
+  .styles__input__VDtDY .styles__real-input__U_3_o {
+    width: 100%; }
+    .styles__input__VDtDY .styles__real-input__U_3_o input {
+      border: none !important;
+      box-shadow: none !important;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+  .styles__input__VDtDY .styles__search-button__fG1vJ {
+    border-left: 1px solid #e1e3e6;
+    background: #f8f8f8;
+    color: #5a6474; }
+    .styles__input__VDtDY .styles__search-button__fG1vJ:hover {
+      background: #eee; }
+    .styles__input__VDtDY .styles__search-button__fG1vJ:active {
+      background: #e6e6e6; }
+  .styles__input__VDtDY .styles__icon-search__N7P6Y {
+    margin: 10px 15px; }
+    @media screen and (max-width: 575px) {
+      .styles__input__VDtDY .styles__icon-search__N7P6Y {
+        margin: 6px;
+        width: 16px;
+        height: 16px; } }
+  .styles__input__VDtDY .styles__icon-close__DAtue {
+    transition: 0.2s ease all;
+    fill: #757d8a;
+    width: 32px;
+    height: 32px; }
+    @media screen and (max-width: 575px) {
+      .styles__input__VDtDY .styles__icon-close__DAtue {
+        width: 20px;
+        height: 20px; } }
+    .styles__input__VDtDY .styles__icon-close__DAtue:hover {
+      fill: #a8acb3; }
+  .styles__input__VDtDY .styles__close-button__WuZTc {
+    background: transparent;
+    position: absolute;
+    right: 75px;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+    @media screen and (max-width: 575px) {
+      .styles__input__VDtDY .styles__close-button__WuZTc {
+        right: 50px; } }
+    .styles__input__VDtDY .styles__close-button__WuZTc.styles__empty-input___KCw6 {
+      display: none; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/avatar/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.styles__avatar__YseYp {
+  position: relative;
+  width: 50px;
+  height: 50px; }
+  .styles__avatar__YseYp .styles__online__yGb7_ {
+    position: absolute;
+    background: linear-gradient(180deg, #08b395 0%, #0c977f 100%);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    bottom: 3px;
+    right: 6px;
+    transition: 0.1s ease all; }
+  .styles__avatar__YseYp .styles__notifications__sQFjP {
+    position: absolute;
+    background: linear-gradient(180deg, #ff5959 0%, #ef2c2c 100%);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    right: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px; }
+    @media screen and (max-width: 575px) {
+      .styles__avatar__YseYp .styles__notifications__sQFjP {
+        font-size: 12px; } }
+
+.styles__image___JyMH {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; }
+
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/badge/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.styles__badge__MotYu {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px 0;
+  background: linear-gradient(180deg, #08b395 0%, #0c977f 100%); }
+  @media screen and (max-width: 575px) {
+    .styles__badge__MotYu {
+      font-size: 12px; } }
+
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/field/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.styles__title__sNc4V {
+  color: #5a6474;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.styles__text__esBbm {
+  color: #5a6474;
+  font-size: 16px;
+  font-weight: 500; }
+  @media screen and (max-width: 575px) {
+    .styles__text__esBbm {
+      font-size: 14px; } }
+
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/input/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.styles__input__JAVZK {
+  position: relative; }
+  .styles__input__JAVZK .styles__title__aYgAd {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a6474; }
+    @media screen and (max-width: 575px) {
+      .styles__input__JAVZK .styles__title__aYgAd {
+        font-size: 16px; } }
+  .styles__input__JAVZK .styles__eye__TRGC1 {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+    height: 20px; }
+    .styles__input__JAVZK .styles__eye__TRGC1:hover svg {
+      fill: #9fa3aa; }
+    .styles__input__JAVZK .styles__eye__TRGC1 svg {
+      transition: 0.2s ease all;
+      fill: #757d8a;
+      width: 25px; }
+      @media screen and (max-width: 575px) {
+        .styles__input__JAVZK .styles__eye__TRGC1 svg {
+          width: 20px; } }
+  .styles__input__JAVZK span {
+    color: #f43c3c;
+    margin: 0;
+    font-size: 14px;
+    position: absolute;
+    bottom: 5px;
+    left: 0; }
+    @media screen and (max-width: 575px) {
+      .styles__input__JAVZK span {
+        font-size: 12px; } }
+  .styles__input__JAVZK input {
+    border: 1px solid #e1e3e6;
+    padding: 12px 10px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    transition: 0.1s ease all; }
+    @media screen and (max-width: 575px) {
+      .styles__input__JAVZK input {
+        padding: 10px;
+        font-size: 14px; } }
+    .styles__input__JAVZK input.styles__error__L_C8t {
+      border: 1px solid #f43c3c;
+      box-shadow: 0 0 0 4px rgba(244, 60, 60, 0.24); }
+    .styles__input__JAVZK input::-webkit-input-placeholder {
+      color: #5a6474;
+      -webkit-transition: 0.1s ease border color;
+      transition: 0.1s ease border color; }
+    .styles__input__JAVZK input:-ms-input-placeholder {
+      color: #5a6474;
+      -ms-transition: 0.1s ease border color;
+      transition: 0.1s ease border color; }
+    .styles__input__JAVZK input::placeholder {
+      color: #5a6474;
+      transition: 0.1s ease border color; }
+    .styles__input__JAVZK input:focus {
+      border: 1px solid #4e73f8;
+      box-shadow: 0 0 0 4px rgba(78, 115, 248, 0.24); }
+    .styles__input__JAVZK input:focus::-webkit-input-placeholder {
+      color: #a4abb5; }
+    .styles__input__JAVZK input:focus:-ms-input-placeholder {
+      color: #a4abb5; }
+    .styles__input__JAVZK input:focus::placeholder {
+      color: #a4abb5; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/button/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.styles__button__dYv_I {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: 0.2s ease all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap; }
+  @media screen and (max-width: 575px) {
+    .styles__button__dYv_I {
+      font-size: 14px; } }
+  .styles__button__dYv_I.styles__is-loading__Sytqa {
+    pointer-events: none; }
+    .styles__button__dYv_I.styles__is-loading__Sytqa .styles__loader__tDdy2 {
+      opacity: 1; }
+    .styles__button__dYv_I.styles__is-loading__Sytqa span {
+      opacity: 0; }
+  .styles__button__dYv_I .styles__loader__tDdy2 {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0; }
+  .styles__button__dYv_I.styles__fill___hxyR {
+    background: linear-gradient(180deg, #6989fe 0%, #3c64f4 100%);
+    color: #ffffff; }
+    .styles__button__dYv_I.styles__fill___hxyR:hover {
+      background: linear-gradient(180deg, #5c7ae4 0%, #3559df 100%); }
+  .styles__button__dYv_I.styles__ghost___A0RU {
+    background: transparent;
+    color: #5a6474; }
+    .styles__button__dYv_I.styles__ghost___A0RU:hover {
+      background: #eee; }
+    .styles__button__dYv_I.styles__ghost___A0RU:active {
+      background: #e6e6e6; }
+  .styles__button__dYv_I.styles__outline__CCMWO {
+    background: #ffffff;
+    border: 1px solid #4e73f8;
+    color: #4e73f8; }
+    .styles__button__dYv_I.styles__outline__CCMWO .styles__loader__tDdy2 circle {
+      stroke: #4e73f8; }
+    .styles__button__dYv_I.styles__outline__CCMWO:hover {
+      border: 1px solid #3955bb;
+      color: #3955bb; }
+      .styles__button__dYv_I.styles__outline__CCMWO:hover .styles__loader__tDdy2 circle {
+        stroke: #3955bb; }
+  .styles__button__dYv_I.styles__disabled__Yux_A {
+    background: #757d8a;
+    color: #ffffff;
+    cursor: unset; }
+    .styles__button__dYv_I.styles__disabled__Yux_A:hover {
+      background: #9fa3aa; }
+  .styles__button__dYv_I svg:first-child {
+    margin-right: 10px; }
+  .styles__button__dYv_I svg:last-child {
+    margin-left: 10px; }
+  .styles__button__dYv_I svg {
+    width: 24px;
+    height: 24px; }
+  .styles__button__dYv_I.styles__no-text__GOvrv svg {
+    margin: 0; }
+
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/input-group/styles.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+.styles__input-group__w8q2I {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .styles__input-group__w8q2I > * {
+    width: 48%; }
+    @media screen and (max-width: 767px) {
+      .styles__input-group__w8q2I > * {
+        width: 100%; } }
+  @media screen and (max-width: 767px) {
+    .styles__input-group__w8q2I > button:first-child {
+      margin-top: 20px; } }
+  @media screen and (max-width: 767px) {
+    .styles__input-group__w8q2I {
+      flex-direction: column-reverse; } }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/alert-message/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__message__rMlJj {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; }
+  .styles__message__rMlJj.styles__success__iXv_v {
+    color: #07a287; }
+  .styles__message__rMlJj.styles__danger__R7LiJ {
+    color: #f43c3c; }
+  .styles__message__rMlJj p {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 14px; }
+    @media screen and (max-width: 575px) {
+      .styles__message__rMlJj p {
+        font-size: 12px; } }
+  .styles__message__rMlJj.styles__success__iXv_v svg {
+    width: 20px;
+    fill: #07a287; }
+  .styles__message__rMlJj.styles__danger__R7LiJ svg {
+    width: 20px;
+    fill: #f43c3c; }
+
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/sidebar-item/styles.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+.styles__header__GXPxO {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #5a6474;
+  padding: 0 0 14px 0;
+  cursor: pointer; }
+  @media screen and (max-width: 575px) {
+    .styles__header__GXPxO {
+      font-size: 12px;
+      padding: 0; } }
+  .styles__header__GXPxO .styles__icon___N2z6 {
+    transition: 0.2s ease all;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+    .styles__header__GXPxO .styles__icon___N2z6.styles__active__GywNX {
+      -webkit-transform: rotate(0);
+              transform: rotate(0); }
+
+.styles__content__hTGQE {
+  transition: 0.2s ease all;
+  overflow: auto;
+  max-height: 400px; }
+  .styles__content__hTGQE.styles__hidden___d9qh {
+    max-height: 0px; }
+
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/read-check/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+.styles__message-icon__WTbsX {
+  fill: #4e73f8;
+  margin-left: 6px;
+  width: 20px;
+  height: 20px; }
+  @media screen and (max-width: 470px) {
+    .styles__message-icon__WTbsX {
+      width: 18px;
+      height: 18px; } }
+
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/tab/styles.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+.styles__tab__lWD7Z {
+  padding: 8px 0;
+  box-shadow: 0px 4px 8px -6px rgba(27, 46, 94, 0.03), 0px 16px 8px -4px rgba(27, 46, 94, 0.03);
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #5a6474;
+  transition: 0.1s ease all; }
+  @media screen and (max-width: 575px) {
+    .styles__tab__lWD7Z {
+      font-size: 14px; } }
+  .styles__tab__lWD7Z:hover {
+    color: #4e73f8; }
+  .styles__tab__lWD7Z.styles__active__k63_L {
+    color: #4e73f8;
+    background: #ffffff; }
+
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/atoms/logo/styles.scss ***!
+  \***************************************************************************************************************************************************************************************************************************/
+.styles__logo__zkE_F {
+  font-size: 32px;
+  color: #5a6474; }
+  @media screen and (max-width: 575px) {
+    .styles__logo__zkE_F {
+      font-size: 25px;
+      white-space: nowrap; } }
+  @media screen and (max-width: 440px) {
+    .styles__logo__zkE_F {
+      font-size: 20px; } }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/molecules/user-item/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__user-item__SYfS9 {
+  display: flex;
+  border-radius: 8px; }
+  .styles__user-item__SYfS9 .styles__sidebar-date___0NuR {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start; }
+    .styles__user-item__SYfS9 .styles__sidebar-date___0NuR span {
+      margin-left: 8px; }
+  .styles__user-item__SYfS9 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .styles__user-item__SYfS9 > div:nth-child(2) {
+      width: calc(100% - 86px); }
+  .styles__user-item__SYfS9.styles__wrap__NC23P > div:nth-child(2) {
+    width: calc(100% - 115px); }
+  .styles__user-item__SYfS9 .styles__info__iOn9v {
+    margin-left: 16px; }
+  .styles__user-item__SYfS9 .styles__title__YlmcI {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5a6474;
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 575px) {
+      .styles__user-item__SYfS9 .styles__title__YlmcI {
+        font-size: 16px; } }
+    .styles__user-item__SYfS9 .styles__title__YlmcI span {
+      margin-left: 8px; }
+  .styles__user-item__SYfS9 .styles__message__JIiOf {
+    font-size: 16px;
+    font-weight: 400;
+    color: #5a6474; }
+    @media screen and (max-width: 575px) {
+      .styles__user-item__SYfS9 .styles__message__JIiOf {
+        font-size: 14px; } }
+  .styles__user-item__SYfS9.styles__wrap__NC23P .styles__message__JIiOf {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/ui/molecules/tabs/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+.styles__tabs___6G34 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(78, 115, 248, 0.24);
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 4px; }
+  .styles__tabs___6G34 div {
+    flex-grow: 1; }
+    .styles__tabs___6G34 div:not(:first-child) {
+      margin-left: 10px; }
+
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/search-list/styles.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+.styles__search___itr8 {
+  position: relative; }
+  .styles__search___itr8 .styles__search-list___AMQx {
+    position: absolute;
+    border: 1px solid #e1e3e6;
+    background: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    top: calc(100% + 10px);
+    z-index: 1; }
+    .styles__search___itr8 .styles__search-list___AMQx > div > div:last-child {
+      align-self: center; }
+    .styles__search___itr8 .styles__search-list___AMQx.styles__not-found__Krvgm {
+      padding: 16px;
+      color: #5a6474;
+      font-size: 18px; }
+      @media screen and (max-width: 575px) {
+        .styles__search___itr8 .styles__search-list___AMQx.styles__not-found__Krvgm {
+          font-size: 16px; } }
+    .styles__search___itr8 .styles__search-list___AMQx > div {
+      padding: 16px;
+      transition: 0.1s ease all;
+      cursor: pointer; }
+      .styles__search___itr8 .styles__search-list___AMQx > div span {
+        transition: 0.1s ease all; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover span {
+        color: #4e73f8; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover svg {
+        fill: #4e73f8; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover > div:first-child > div {
+        background: #ffffff;
+        border: 2px solid #4e73f8; }
+      .styles__search___itr8 .styles__search-list___AMQx > div:hover > div:last-child > div {
+        color: #4e73f8;
+        background: #ffffff; }
+    .styles__search___itr8 .styles__search-list___AMQx img {
+      width: 40px;
+      height: 40px; }
+
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/sidebar/new-users-list/styles.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+.styles__user-item__rjKSe {
+  padding: 16px;
+  transition: 0.1s ease all; }
+  @media screen and (max-width: 575px) {
+    .styles__user-item__rjKSe {
+      padding: 10px; } }
+  .styles__user-item__rjKSe span {
+    transition: 0.1s ease all; }
+  .styles__user-item__rjKSe img {
+    width: 40px;
+    height: 40px; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/chat/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.styles__chat__ihd16 {
+  background: #ffffff;
+  margin: 24px 0 16px 0;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 215px); }
+  .styles__chat__ihd16 .styles__user-item__Jd0Ag {
+    margin-top: 24px; }
+  .styles__chat__ihd16 .styles__messages__o4YMK {
+    padding: 0 24px 24px 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column-reverse;
+    max-height: calc(100vh - 270px);
+    overflow-y: scroll; }
+
+.styles__container___9Bzl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
+  @media screen and (max-width: 767px) {
+    .styles__container___9Bzl {
+      position: static; } }
+
+.styles__date___bq2o {
+  position: relative;
+  text-align: center; }
+  .styles__date___bq2o:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #e1e3e6;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0; }
+  .styles__date___bq2o span {
+    color: #5a6474;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 5px 15px;
+    position: relative; }
+    @media screen and (max-width: 575px) {
+      .styles__date___bq2o span {
+        font-size: 12px; } }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/chat/typing/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__typing__YRKqr {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  border-radius: 8px; }
+  @media screen and (max-width: 470px) {
+    .styles__typing__YRKqr {
+      flex-wrap: wrap;
+      padding: 10px; } }
+  .styles__typing__YRKqr > div {
+    flex-shrink: 0; }
+    .styles__typing__YRKqr > div:last-child {
+      display: flex;
+      align-items: center; }
+  .styles__typing__YRKqr .styles__actions__IYyt8 {
+    display: flex; }
+    @media screen and (max-width: 470px) {
+      .styles__typing__YRKqr .styles__actions__IYyt8 {
+        width: 100%;
+        justify-content: space-around;
+        order: 3;
+        margin: 16px 0 10px 0; } }
+    .styles__typing__YRKqr .styles__actions__IYyt8 svg:not(:first-child) {
+      margin-left: 19px; }
+      @media screen and (max-width: 920px) {
+        .styles__typing__YRKqr .styles__actions__IYyt8 svg:not(:first-child) {
+          margin-left: 10px; } }
+  .styles__typing__YRKqr .styles__input__Vr_kS {
+    margin: 0 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    flex-grow: 1; }
+    @media screen and (max-width: 575px) {
+      .styles__typing__YRKqr .styles__input__Vr_kS {
+        font-size: 16px; } }
+    @media screen and (max-width: 920px) {
+      .styles__typing__YRKqr .styles__input__Vr_kS {
+        margin: 0 14px; } }
+    @media screen and (max-width: 470px) {
+      .styles__typing__YRKqr .styles__input__Vr_kS {
+        margin: 0 10px 0 0; } }
+  .styles__typing__YRKqr svg {
+    width: 24px;
+    height: 24px; }
+    @media screen and (max-width: 575px) {
+      .styles__typing__YRKqr svg {
+        width: 20px;
+        height: 20px; } }
+  .styles__typing__YRKqr .styles__button__dIW_U {
+    border-radius: 8px;
+    margin-left: 20px; }
+    @media screen and (max-width: 470px) {
+      .styles__typing__YRKqr .styles__button__dIW_U {
+        padding: 10px 14px; } }
+
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/chat/chat-header/styles.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+.styles__info__sfitC {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .styles__info__sfitC .styles__name__Cw5Sm {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5a6474; }
+    @media screen and (max-width: 575px) {
+      .styles__info__sfitC .styles__name__Cw5Sm {
+        font-size: 16px; } }
+  .styles__info__sfitC .styles__status__DGRa5 {
+    font-size: 16px;
+    font-weight: 400; }
+    @media screen and (max-width: 575px) {
+      .styles__info__sfitC .styles__status__DGRa5 {
+        font-size: 14px; } }
+    .styles__info__sfitC .styles__status__DGRa5.styles__online__oQHSk {
+      color: #4e73f8; }
+    .styles__info__sfitC .styles__status__DGRa5.styles__offline___O9G1 {
+      color: #f43c3c; }
+
+.styles__members__j4wHA {
+  display: flex;
+  align-items: center;
+  width: 20%; }
+  @media screen and (max-width: 1023px) {
+    .styles__members__j4wHA {
+      width: 30%; } }
+  .styles__members__j4wHA .styles__circle__QHhHn {
+    border: 2px dashed rgba(78, 115, 248, 0.24);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    margin-left: 8px; }
+    .styles__members__j4wHA .styles__circle__QHhHn:before {
+      position: absolute;
+      content: "";
+      background: #4e73f8;
+      width: 16px;
+      height: 2px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto; }
+    .styles__members__j4wHA .styles__circle__QHhHn:after {
+      position: absolute;
+      content: "";
+      background: #4e73f8;
+      width: 2px;
+      height: 16px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto; }
+  .styles__members__j4wHA > div:not(:first-child):not(:last-child) {
+    margin-left: -10px; }
+  .styles__members__j4wHA img {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px; }
+
+.styles__header___O17y {
+  border-bottom: 1px solid #e1e3e6;
+  padding: 6px 24px;
+  min-height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.styles__actions___LEOU {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 20%; }
+  .styles__actions___LEOU svg:not(:first-child) {
+    margin-left: 20px; }
+    @media screen and (max-width: 575px) {
+      .styles__actions___LEOU svg:not(:first-child) {
+        margin-left: 14px; } }
+  .styles__actions___LEOU svg {
+    width: 24px;
+    height: 24px; }
+    @media screen and (max-width: 575px) {
+      .styles__actions___LEOU svg {
+        width: 20px;
+        height: 20px; } }
+  @media screen and (max-width: 1023px) {
+    .styles__actions___LEOU {
+      width: 30%; } }
+
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/date-time/styles.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+.styles__time__mrSUz {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a6474; }
+  @media screen and (max-width: 575px) {
+    .styles__time__mrSUz {
+      font-size: 12px; } }
+
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/login-block/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
+.styles__login-block__aVIeH {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px -2px rgba(27, 46, 94, 0.04); }
+  .styles__login-block__aVIeH .styles__button-group__BWvhj {
+    display: flex;
+    align-items: center; }
+    .styles__login-block__aVIeH .styles__button-group__BWvhj a {
+      margin-left: 20px; }
+
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/register-block/styles.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.styles__register-block__Gxr1B {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px -2px rgba(27, 46, 94, 0.04);
+  text-align: center; }
+  .styles__register-block__Gxr1B .styles__title__l997p {
+    font-size: 24px;
+    display: block;
+    font-weight: 500; }
+    @media screen and (max-width: 575px) {
+      .styles__register-block__Gxr1B .styles__title__l997p {
+        font-size: 22px; } }
+  .styles__register-block__Gxr1B .styles__description__GH_qF {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400; }
+    @media screen and (max-width: 575px) {
+      .styles__register-block__Gxr1B .styles__description__GH_qF {
+        font-size: 16px; } }
+  .styles__register-block__Gxr1B .styles__error-message__Ca_qY {
+    margin-bottom: 30px; }
+  .styles__register-block__Gxr1B .styles__button__LO0ch {
+    width: 100%; }
+
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Auth/mobile-images/styles.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+.styles__images___kY0s {
+  width: 55%;
+  text-align: center;
+  position: relative;
+  color: #5a6474; }
+  @media screen and (max-width: 767px) {
+    .styles__images___kY0s {
+      margin-top: 20px;
+      width: 70%; } }
+  @media screen and (max-width: 575px) {
+    .styles__images___kY0s {
+      width: 100%; } }
+  .styles__images___kY0s .styles__title___DOtI {
+    font-size: 24px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px; }
+    @media screen and (max-width: 575px) {
+      .styles__images___kY0s .styles__title___DOtI {
+        font-size: 22px; } }
+  .styles__images___kY0s .styles__description__VPkUW {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400; }
+    @media screen and (max-width: 575px) {
+      .styles__images___kY0s .styles__description__VPkUW {
+        font-size: 16px; } }
+  .styles__images___kY0s .styles__images-group__TqskX {
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (max-width: 575px) {
+      .styles__images___kY0s .styles__images-group__TqskX {
+        flex-direction: column;
+        align-items: center; } }
+    .styles__images___kY0s .styles__images-group__TqskX img {
+      width: 45%; }
+      @media screen and (max-width: 575px) {
+        .styles__images___kY0s .styles__images-group__TqskX img:last-child {
+          margin-top: 30px; } }
+  .styles__images___kY0s .styles__mobile-info__Obe_8 {
+    margin-top: 50px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400; }
+    @media screen and (max-width: 575px) {
+      .styles__images___kY0s .styles__mobile-info__Obe_8 {
+        font-size: 16px; } }
+
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+.styles__title__HvjjY {
+  margin-top: 200px;
+  text-align: center;
+  color: #5a6474;
+  flex-grow: 1; }
+  @media screen and (max-width: 575px) {
+    .styles__title__HvjjY {
+      font-size: 24px; } }
+
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Profile/styles.scss ***!
+  \***************************************************************************************************************************************************************************************************************************/
+.styles__container__KQjyh {
+  background: #ffffff;
+  margin: 24px 0 16px 0;
+  padding: 40px;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transition: 0.2s ease all;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 24px; }
+  .styles__container__KQjyh .styles__tabs__twlM_ {
+    margin-bottom: 30px; }
+    @media screen and (max-width: 575px) {
+      .styles__container__KQjyh .styles__tabs__twlM_ {
+        flex-direction: column;
+        padding: 10px 4px; } }
+    @media screen and (max-width: 575px) {
+      .styles__container__KQjyh .styles__tabs__twlM_ > div {
+        width: calc(100% - 20px); } }
+  .styles__container__KQjyh input {
+    margin-bottom: 30px; }
+  @media screen and (max-width: 767px) {
+    .styles__container__KQjyh {
+      position: static;
+      margin-top: 16px;
+      padding: 20px; } }
+
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Profile/change-information/styles.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+.styles__flex-block__eXsLb {
+  display: flex;
+  align-items: flex-start; }
+  @media screen and (max-width: 575px) {
+    .styles__flex-block__eXsLb {
+      flex-direction: column;
+      align-items: center; } }
+
+.styles__title__nHAi8 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #5a6474;
+  margin: 0; }
+  @media screen and (max-width: 575px) {
+    .styles__title__nHAi8 {
+      font-size: 22px; } }
+
+.styles__description__fRk7f {
+  font-size: 18px;
+  color: #5a6474;
+  font-weight: 400;
+  margin-bottom: 32px;
+  margin-top: 8px; }
+  @media screen and (max-width: 575px) {
+    .styles__description__fRk7f {
+      font-size: 16px; } }
+
+.styles__avatar-block___91V5 {
+  margin: 0 25px;
+  border-radius: 50%;
+  position: relative; }
+  @media screen and (max-width: 575px) {
+    .styles__avatar-block___91V5 {
+      margin-bottom: 20px; } }
+  .styles__avatar-block___91V5 input {
+    display: none; }
+  .styles__avatar-block___91V5:hover .styles__avatar-background__FyTLi {
+    opacity: 1; }
+  .styles__avatar-block___91V5 .styles__avatar-background__FyTLi {
+    cursor: pointer;
+    background: rgba(241,242,243,0.7098);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s ease all; }
+    .styles__avatar-block___91V5 .styles__avatar-background__FyTLi svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      fill: #4e73f8;
+      width: 30px; }
+  .styles__avatar-block___91V5 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative; }
+
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Profile/change-password/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+.styles__change-password__JpySG .styles__title__GN3Q8 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #5a6474;
+  margin: 0; }
+  @media screen and (max-width: 575px) {
+    .styles__change-password__JpySG .styles__title__GN3Q8 {
+      font-size: 22px; } }
+
+.styles__change-password__JpySG .styles__description___zQDL {
+  font-size: 18px;
+  color: #5a6474;
+  font-weight: 400;
+  margin-bottom: 32px;
+  margin-top: 8px; }
+  @media screen and (max-width: 575px) {
+    .styles__change-password__JpySG .styles__description___zQDL {
+      font-size: 16px; } }
+
+body .styles__change-password__JpySG .styles__button__JhB6_ {
+  margin-top: 0; }
+
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles.css ***!
   \************************************************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap);
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles.css (1) ***!
-  \****************************************************************************************************************************************************************************************************************/
 * {
   font-family: "DM Sans";
   box-sizing: border-box; }
@@ -15,9 +1292,14 @@ button {
   cursor: pointer; }
 
 a {
-  color: #5a6474;
+  color: #757d8a;
   text-decoration: none; }
 
+img {
+  object-fit: cover; }
+
 body {
-  background: linear-gradient(to right bottom, #f1f6f9, #f1f4f7, #f8f1f5, #f1f6f9); }
+  background: linear-gradient(to right bottom, #f1f6f9, #f1f4f7, #f8f1f5, #f1f6f9);
+  min-height: 100vh;
+  margin: 0; }
 
