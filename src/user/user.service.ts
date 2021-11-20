@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from './user.entity';
-import { Repository } from 'typeorm';
+import { ILike, Repository } from 'typeorm';
 import * as jwt from 'jsonwebtoken';
 import * as bcrypt from 'bcryptjs';
 import { SignInInput, SignUpInput } from './dto/auth.inputs';
@@ -34,16 +34,16 @@ export class UserService {
     );
   }
 
-  async findByName(name: string, id: string) {
+  async findByName(name: string) {
     if (!name) return [];
 
-    return await this.userRepo
-      .createQueryBuilder('user')
-      .innerJoinAndSelect('user.avatar', 'file')
-      .where('user.firstName ILike :name', { name })
-      .orWhere('user.lastName ILike :name', { name })
-      .andWhere('user.id != :id', { id })
-      .getMany();
+    return await this.userRepo.find({
+      relations: ['avatar'],
+      where: [
+        { firstName: ILike(`%${name}%`) },
+        { lastName: ILike(`%${name}%`) },
+      ],
+    });
   }
 
   async findOne(id: string) {
@@ -81,8 +81,8 @@ export class UserService {
       .where('id = :id', { id: user_id })
       .execute();
 
-    if (avatar) {
-      await this.fileService.deleteDatabaseFile(oldUser.avatar.id);
+    if (avatar && oldUser.avatar?.id) {
+      await this.fileService.deleteDatabaseFile(oldUser.avatar?.id);
     }
 
     const user = await this.userRepo.findOne(user_id, {

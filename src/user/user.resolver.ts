@@ -27,8 +27,8 @@ export class UserResolver {
 
   @Query()
   @UseGuards(new AuthGuard())
-  searchUser(@Args('name') name: string, @CurrentUser() user: UserEntity) {
-    return this.userService.findByName(name, user.id);
+  searchUser(@Args('name') name: string) {
+    return this.userService.findByName(name);
   }
 
   @Mutation()
