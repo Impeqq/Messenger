@@ -40,7 +40,7 @@ export const Header = ({ isGuest, toggleSidebar, isOpenSidebar }: TProps) => {
   });
 
   useEffect(() => {
-    if (me?.id) io(`https://${SOCKET_API}?user_id=${me?.id}`);
+    if (me?.id) io(`http://${SOCKET_API}?user_id=${me?.id}`);
   }, [me]);
 
   useEffect(() => {

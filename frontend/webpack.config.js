@@ -9,7 +9,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
   output: {
-    publicPath: "/Messenger/",
+    publicPath: "/",
     filename: "static/[contenthash].js",
     chunkFilename: "static/[contenthash].js",
     clean: true,
@@ -110,7 +110,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: "404.html",
-      template: "src/assets/404.html",
+      template: "src/assets/index.html",
     }),
     new miniCss({
       filename: "style.css",

@@ -10,7 +10,7 @@ import { Socket, Server } from 'socket.io';
 import { UserService } from './user.service';
 import { pubsub } from 'src/lib/pubsub';
 
-@WebSocketGateway({ cors: true })
+@WebSocketGateway(5001, { cors: true })
 export class UserGateway
   implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server: Server;
