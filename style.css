@@ -156,7 +156,8 @@
       cursor: pointer;
       padding: 10px 16px;
       width: 100%;
-      transition: 0.1s ease all; }
+      transition: 0.1s ease all;
+      position: relative; }
       .styles__header___6NjK .styles__profile-nav-item__pWwux span {
         color: #5a6474;
         font-size: 16px;
