@@ -8,6 +8,7 @@
 ## Frontend
 Frontend is created with:
 * JavaScript
+* TypeScript
 * ReactJS
 * GraphQL
 * WebSockets
@@ -23,6 +24,7 @@ $ yarn start
 Backend is created with:
 * PostgreSQL
 * Docker
+* TypeScript
 * NodeJS
 * NestJS
 * GraphQL
