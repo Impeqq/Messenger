@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.scss";
 import { SiebarItem, UserItem, UserLocations } from "@ui";
-import { useQuery, useSubscription } from "@apollo/client";
+import { useLazyQuery, useQuery, useSubscription } from "@apollo/client";
 import { FETCH_ME, FETCH_MY_CHATS, SUBSCRIBE_MY_CHAT } from "@schemas";
 import { RouteParams, TChat, TUser } from "@features/types";
 import { useHistory, useParams } from "react-router-dom";
 import { routePath } from "@pages/routes";
+import { useLocalStorage } from "@features/hooks";
+import { AUTH_TOKEN } from "@features/constants";
 
 type TProps = {
   toggleSidebar: () => void;
@@ -13,7 +15,8 @@ type TProps = {
 
 export const ChatsList = ({ toggleSidebar }: TProps) => {
   const [chats, setChats] = useState<TChat[]>([]);
-
+  const { getItem } = useLocalStorage();
+  const isGuest = !getItem(AUTH_TOKEN);
   const { data: userData } = useQuery(FETCH_ME, { fetchPolicy: "cache-only" });
   const me = userData?.me;
 
@@ -21,11 +24,15 @@ export const ChatsList = ({ toggleSidebar }: TProps) => {
 
   const { id } = useParams<RouteParams>();
 
-  const { loading } = useQuery(FETCH_MY_CHATS, {
+  const [fetchMyChats, { loading }] = useLazyQuery(FETCH_MY_CHATS, {
     onCompleted: ({ getMyChats: data }) => {
       setChats(data);
     },
   });
+
+  useEffect(() => {
+    fetchMyChats();
+  }, [fetchMyChats, isGuest]);
 
   useSubscription(SUBSCRIBE_MY_CHAT, {
     variables: { user_id: me?.id },
