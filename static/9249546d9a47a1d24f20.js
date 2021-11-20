@@ -1489,7 +1489,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"AUTH_TOKEN\": function() { return /* binding */ AUTH_TOKEN; },\n/* harmony export */   \"API\": function() { return /* binding */ API; },\n/* harmony export */   \"SOCKET_API\": function() { return /* binding */ SOCKET_API; },\n/* harmony export */   \"ALERT_SECONDS\": function() { return /* binding */ ALERT_SECONDS; }\n/* harmony export */ });\nvar AUTH_TOKEN = \"auth-token\";\nvar API = \"messenger-bravedevelopers.herokuapp.com\";\nvar SOCKET_API = \"messenger-bravedevelopers.herokuapp.com:5001\";\nvar ALERT_SECONDS = 5;\n\n//# sourceURL=webpack://frontend/./src/features/constants/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"AUTH_TOKEN\": function() { return /* binding */ AUTH_TOKEN; },\n/* harmony export */   \"API\": function() { return /* binding */ API; },\n/* harmony export */   \"SOCKET_API\": function() { return /* binding */ SOCKET_API; },\n/* harmony export */   \"ALERT_SECONDS\": function() { return /* binding */ ALERT_SECONDS; }\n/* harmony export */ });\nvar AUTH_TOKEN = \"auth-token\";\nvar API = \"messenger-bravedevelopers.herokuapp.com\";\nvar SOCKET_API = \"messenger-bravedevelopers.herokuapp.com\";\nvar ALERT_SECONDS = 5;\n\n//# sourceURL=webpack://frontend/./src/features/constants/index.ts?");
 
 /***/ }),
 
