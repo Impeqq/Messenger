@@ -29,7 +29,7 @@
       transition: 0.2s ease all;
       width: 100%;
       padding: 0;
-      position: absolute;
+      position: fixed;
       left: -100%;
       top: 0;
       background: #ffffff;
@@ -649,7 +649,7 @@
 .styles__content__hTGQE {
   transition: 0.2s ease all;
   overflow: auto;
-  max-height: 400px; }
+  max-height: 450px; }
   .styles__content__hTGQE.styles__hidden___d9qh {
     max-height: 0px; }
 
