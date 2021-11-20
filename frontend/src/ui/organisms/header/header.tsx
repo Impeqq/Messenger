@@ -40,7 +40,7 @@ export const Header = ({ isGuest, toggleSidebar, isOpenSidebar }: TProps) => {
   });
 
   useEffect(() => {
-    if (me?.id) io(`http://${SOCKET_API}?user_id=${me?.id}`);
+    if (me?.id) io(`https://${SOCKET_API}?user_id=${me?.id}`);
   }, [me]);
 
   useEffect(() => {
@@ -75,12 +75,9 @@ export const Header = ({ isGuest, toggleSidebar, isOpenSidebar }: TProps) => {
 
   return (
     <div className={styles.header}>
-      <div className={styles.container}>
+      <div className={cn(styles.container, { [styles.active]: isOpenSidebar })}>
         <div>
-          <div
-            className={cn(styles.burger, { [styles.active]: isOpenSidebar })}
-            onClick={toggleSidebar}
-          >
+          <div className={styles.burger} onClick={toggleSidebar}>
             <div></div>
             <div></div>
             <div></div>

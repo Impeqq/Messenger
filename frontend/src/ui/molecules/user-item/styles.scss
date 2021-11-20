@@ -19,12 +19,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &:nth-child(2) {
-      width: calc(100% - 86px);
-    }
   }
   &.wrap > div:nth-child(2) {
-    width: calc(100% - 115px);
+    width: calc(100% - 125px);
   }
 
   .info {

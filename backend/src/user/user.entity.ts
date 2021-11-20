@@ -39,7 +39,7 @@ export class UserEntity extends BaseEntity {
   @Column('boolean', { default: false, nullable: true })
   online: boolean;
 
-  @OneToOne(() => FileEntity)
+  @OneToOne(() => FileEntity, { nullable: true })
   @JoinColumn()
   avatar?: FileEntity;
 

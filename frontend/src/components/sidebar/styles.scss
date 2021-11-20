@@ -4,6 +4,7 @@
   width: 378px;
   padding: 24px 24px 0 0;
   flex-shrink: 0;
+  overflow: auto;
 
   @media screen and (max-width: 920px) {
     width: 300px;
@@ -17,7 +18,7 @@
     transition: 0.2s ease all;
     width: 100%;
     padding: 0;
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     background: $c_white;

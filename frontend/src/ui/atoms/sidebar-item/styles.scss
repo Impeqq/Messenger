@@ -29,7 +29,7 @@
 .content {
   transition: 0.2s ease all;
   overflow: auto;
-  max-height: 400px;
+  max-height: 450px;
   &.hidden {
     max-height: 0px;
   }

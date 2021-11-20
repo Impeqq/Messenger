@@ -20,7 +20,7 @@ const cache = new InMemoryCache();
 const abortController = new AbortController();
 
 const wsLink = new WebSocketLink({
-  uri: `ws://${API}/graphql`,
+  uri: `wss://${API}/graphql`,
   options: {
     reconnect: true,
   },
@@ -37,7 +37,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const httpLink = createUploadLink({
-  uri: `http://${API}/graphql`,
+  uri: `https://${API}/graphql`,
   fetchOptions: {
     mode: "cors",
     signal: abortController.signal,
