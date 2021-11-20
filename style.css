@@ -720,10 +720,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .styles__user-item__SYfS9 > div:nth-child(2) {
-      width: calc(100% - 86px); }
   .styles__user-item__SYfS9.styles__wrap__NC23P > div:nth-child(2) {
-    width: calc(100% - 115px); }
+    width: calc(100% - 125px); }
   .styles__user-item__SYfS9 .styles__info__iOn9v {
     margin-left: 16px; }
   .styles__user-item__SYfS9 .styles__title__YlmcI {
