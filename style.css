@@ -18,7 +18,8 @@
 .styles__sidebar__WtHVo {
   width: 378px;
   padding: 24px 24px 0 0;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  overflow: auto; }
   @media screen and (max-width: 920px) {
     .styles__sidebar__WtHVo {
       width: 300px; } }
