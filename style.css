@@ -227,8 +227,6 @@
     z-index: 2;
     display: flex;
     align-items: center; }
-  .styles__container__wdbTm.styles__active__HonfO > div:first-child {
-    position: fixed; }
   .styles__container__wdbTm.styles__active__HonfO .styles__burger__bqw9b > div:first-child {
     top: -100px;
     opacity: 0; }
