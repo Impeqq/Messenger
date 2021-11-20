@@ -8,6 +8,7 @@
 ## Frontend
 Frontend is created with:
 * JavaScript
+* TypeScript
 * ReactJS
 * GraphQL
 * WebSockets
@@ -23,6 +24,7 @@ $ yarn start
 Backend is created with:
 * PostgreSQL
 * Docker
+* TypeScript
 * NodeJS
 * NestJS
 * GraphQL
@@ -38,7 +40,7 @@ $ yarn start
 ```
 
 ## Screenshots
-![alt text](screen1.png "screen1")
+![alt text](screen7.png "screen7")
 ![alt text](screen2.png "screen2")
 ![alt text](screen3.png "screen3")
 ![alt text](screen4.png "screen4")
