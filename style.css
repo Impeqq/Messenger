@@ -203,7 +203,8 @@
       .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:first-child {
         font-size: 18px;
         font-weight: 500;
-        color: #5a6474; }
+        color: #5a6474;
+        text-transform: capitalize; }
         @media screen and (max-width: 575px) {
           .styles__header___6NjK .styles__user-info___UTWY .styles__info___ZLE7 > span:first-child {
             font-size: 16px; } }
@@ -730,7 +731,8 @@
     font-weight: 700;
     color: #5a6474;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    text-transform: capitalize; }
     @media screen and (max-width: 575px) {
       .styles__user-item__SYfS9 .styles__title__YlmcI {
         font-size: 16px; } }
