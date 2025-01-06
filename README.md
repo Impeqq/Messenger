@@ -1,5 +1,5 @@
 # Messenger
-[impeqq.github.io/Messenger](https://impeqq.github.io/Messenger/)
+
 ## Table of contents
 * [Frontend](#frontend)
 * [Backend](#backend)
@@ -7,18 +7,12 @@
 
 ## Frontend
 Frontend is created with:
+* Docker
 * JavaScript
 * TypeScript
 * ReactJS
 * GraphQL
 * WebSockets
-
-### Setup
-For locally launch frontend run 
-```
-$ yarn
-$ yarn start
-```
 	
 ## Backend
 Backend is created with:
@@ -33,11 +27,9 @@ Backend is created with:
 ### Setup
 For locally launch backend run 
 ```
-$ docker-compose up -d
-$ yarn
-$ nvm use 12.10.0 (GraphQL upload working in this version)
-$ yarn start
+$ docker-compose up
 ```
+Go to localhost:8080
 
 ## Screenshots
 ![alt text](screen7.png "screen7")
