@@ -1,0 +1,31 @@
+services:
+  db:
+    container_name: messenger_database
+    image: postgres:13.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: space_db
+  api:
+    container_name: messenger_backend
+    image: api:1.0.0
+    build: './backend'
+    volumes:
+      - ./backend:/usr/src/app
+    ports:
+      - 3000:3000
+      - 3001:3001
+    depends_on:
+      - db
+  web:
+    container_name: messenger_frontend
+    image: web:1.0.0
+    build: './frontend'
+    volumes:
+      - ./frontend:/usr/src/app
+    ports:
+      - 8080:8080
+      - 9001:9001
+    depends_on:
+      - api
+
