@@ -25,7 +25,7 @@ Backend is created with:
 * WebSockets
 
 ### Setup
-For locally launch backend run 
+For locally launch backend and frontend run 
 ```
 $ docker-compose up
 ```
